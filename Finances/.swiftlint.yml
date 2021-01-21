@@ -1,0 +1,62 @@
+# rule identifiers to exclude from running
+disabled_rules:
+  - empty_enum_arguments
+
+# rule identifiers to opt in
+opt_in_rules:
+  - vertical_whitespace
+
+# special configuration for rules
+line_length:
+  warning: 160
+  error: 200
+  ignores_urls: false
+  ignores_function_declarations: true
+  ignores_comments: true
+
+variable_name:
+  max_length:
+    warning: 40
+    error: 50
+  min_length:
+    error: 3
+  excluded:
+    - id
+    - url
+    - uri
+    - URI
+    - URL
+    - lhs
+    - rhs
+
+trailing_newline: error
+comma: error
+colon: error
+opening_brace: error
+empty_count: error
+legacy_constructor: error
+statement_position: error
+legacy_constant: error
+trailing_semicolon: error
+force_cast: warning
+force_try:
+    severity: warning
+force_unwrapping: error
+
+# reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+reporter: "xcode"
+
+excluded:
+ - FinancesTests
+ - Pods
+
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  .*?\.swift
+                    \/\/  <Project Name>
+                    \/\/
+                    \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
+                    \/\/  Copyright © \d{4} <Author Name>\. All rights reserved\.
+                    \/\/
+
