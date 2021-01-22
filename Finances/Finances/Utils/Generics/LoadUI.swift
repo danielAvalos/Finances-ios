@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum XibName: String {
-    case login = "Login"
-    case list = "List"
-}
-
 class LoadUI {
     static func load<T>(type: T.Type, from nibName: XibName) -> T? {
         let view = Bundle.main.loadNibNamed(nibName.rawValue,

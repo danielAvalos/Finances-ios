@@ -9,21 +9,38 @@ struct IndicatorsResponse {
     let version: String?
     let author: String?
     var date: String?
-    var uDeF: Indicator?
-    var ivp: Indicator?
-    var dolar: Indicator?
-    var dolarIntercambio: Indicator?
-    var euro: Indicator?
-    var ipc: Indicator?
-    var utm: Indicator?
-    var imacec: Indicator?
-    var tpm: Indicator?
-    var libraCobre: Indicator?
-    var tasaDesempleo: Indicator?
-    var bitCoin: Indicator?
+    var indicators: [Indicator] = []
 }
 
-extension IndicatorsResponse: Codable {
+extension IndicatorsResponse: Decodable {
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        version = try values.decodeIfPresent(String.self, forKey: .version)
+        date = try values.decodeIfPresent(String.self, forKey: .date)
+        author = try values.decodeIfPresent(String.self, forKey: .author)
+        try loadValue(values, key: .uDeF)
+        try loadValue(values, key: .ivp)
+        try loadValue(values, key: .dolar)
+        try loadValue(values, key: .dolarIntercambio)
+        try loadValue(values, key: .euro)
+        try loadValue(values, key: .ipc)
+        try loadValue(values, key: .utm)
+        try loadValue(values, key: .imacec)
+        try loadValue(values, key: .tpm)
+        try loadValue(values, key: .libraCobre)
+        try loadValue(values, key: .tasaDesempleo)
+        try loadValue(values, key: .bitcoin)
+    }
+
+    private mutating func loadValue(_ values: KeyedDecodingContainer<IndicatorsResponse.CodingKeys>, key: CodingKeys) throws {
+        if let value = try values.decodeIfPresent(Indicator.self, forKey: key) {
+            indicators.append(value)
+        }
+    }
+}
+
+extension IndicatorsResponse {
 
     enum CodingKeys: String, CodingKey {
         case version = "version"
@@ -40,6 +57,6 @@ extension IndicatorsResponse: Codable {
         case tpm = "tpm"
         case libraCobre = "libra_cobre"
         case tasaDesempleo = "tasa_desempleo"
-        case bitCoin = "bitCoin"
+        case bitcoin = "bitcoin"
     }
 }

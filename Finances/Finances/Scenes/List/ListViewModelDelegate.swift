@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ListViewModelDelegate: ViewModelDelegate {
-    func stateDidChange(previousState: ViewModelState<String>)
+    func stateDidChange(previousState: ViewModelState<ConnectionStatus>)
 }

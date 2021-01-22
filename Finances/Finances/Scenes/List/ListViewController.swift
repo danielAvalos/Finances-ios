@@ -57,7 +57,6 @@ extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
-
 }
 
 extension ListViewController: UITableViewDelegate {
@@ -88,6 +87,7 @@ private extension ListViewController {
     // MARK: - Actions
     @objc
     func refreshList(sender _: UIRefreshControl) {
+        viewModel?.prepareList()
         refreshControl.endRefreshing()
     }
 }
@@ -131,6 +131,15 @@ extension ListViewController: UISearchControllerDelegate {
 }
 
 extension ListViewController: ListViewModelDelegate {
-    func stateDidChange(previousState: ViewModelState<String>) {
+    func stateDidChange(previousState: ViewModelState<ConnectionStatus>) {
+        // Update UI
+        switch previousState {
+        case .initial, .loading:
+            break
+        case let .failed(error):
+            break
+        case let .ready(connectionStatus):
+            break
+        }
     }
 }
