@@ -25,7 +25,7 @@ final class Service {
             case 400:
                 completionHandler(nil, Error(code: .badRequest))
             case 404:
-                completionHandler(nil, Error(code: .notFound))
+                completionHandler(nil, Error(code: .requestNotFound))
             case 500:
                 completionHandler(nil, Error(code: .errorServer))
             default:

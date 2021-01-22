@@ -12,6 +12,12 @@
 		E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */; };
 		E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */; };
 		E9328BBA25BB2B250014DAE7 /* XibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BB925BB2B250014DAE7 /* XibName.swift */; };
+		E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BE925BB33DE0014DAE7 /* GenericMessageStatusView.swift */; };
+		E9328BEF25BB33EC0014DAE7 /* GenericMessageStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9328BEE25BB33EC0014DAE7 /* GenericMessageStatusView.xib */; };
+		E9328BF425BB346D0014DAE7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BF325BB346D0014DAE7 /* Message.swift */; };
+		E9328BFD25BB3B9C0014DAE7 /* IndicatorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BFB25BB3B9C0014DAE7 /* IndicatorViewCell.swift */; };
+		E9328BFE25BB3B9C0014DAE7 /* IndicatorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9328BFC25BB3B9C0014DAE7 /* IndicatorViewCell.xib */; };
+		E9328C0D25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328C0C25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift */; };
 		E9431BE325BA4222006D5E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BE225BA4222006D5E1A /* AppDelegate.swift */; };
 		E9431BE525BA4222006D5E1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BE425BA4222006D5E1A /* SceneDelegate.swift */; };
 		E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9431BEB25BA4223006D5E1A /* Finances.xcdatamodeld */; };
@@ -86,6 +92,12 @@
 		E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		E9328BB925BB2B250014DAE7 /* XibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibName.swift; sourceTree = "<group>"; };
+		E9328BE925BB33DE0014DAE7 /* GenericMessageStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMessageStatusView.swift; sourceTree = "<group>"; };
+		E9328BEE25BB33EC0014DAE7 /* GenericMessageStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericMessageStatusView.xib; sourceTree = "<group>"; };
+		E9328BF325BB346D0014DAE7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E9328BFB25BB3B9C0014DAE7 /* IndicatorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewCell.swift; sourceTree = "<group>"; };
+		E9328BFC25BB3B9C0014DAE7 /* IndicatorViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorViewCell.xib; sourceTree = "<group>"; };
+		E9328C0C25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegistrationHelpers.swift"; sourceTree = "<group>"; };
 		E9431BDF25BA4222006D5E1A /* Finances.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finances.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9431BE225BA4222006D5E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9431BE425BA4222006D5E1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +210,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		E9328BE825BB333D0014DAE7 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E9328BFB25BB3B9C0014DAE7 /* IndicatorViewCell.swift */,
+				E9328BFC25BB3B9C0014DAE7 /* IndicatorViewCell.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		E9431BD625BA4222006D5E1A = {
 			isa = PBXGroup;
 			children = (
@@ -281,10 +302,10 @@
 			isa = PBXGroup;
 			children = (
 				E9431C7025BA7D93006D5E1A /* Login.xib */,
+				E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */,
 				E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */,
 				E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */,
 				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
-				E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -293,8 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				E9431CA925BA8490006D5E1A /* UIColor+Brand.swift */,
-				E9431CAE25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift */,
+				E9328C0C25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift */,
 				E9431CB325BA84F0006D5E1A /* UITableView+RegisterCell.swift */,
+				E9431CAE25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift */,
 				E9431D0F25BA9CE4006D5E1A /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
@@ -331,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				E9431CB825BA8539006D5E1A /* Common */,
+				E9328BE825BB333D0014DAE7 /* List */,
 				E9431C9625BA8157006D5E1A /* Login */,
 			);
 			path = Views;
@@ -349,6 +372,8 @@
 			isa = PBXGroup;
 			children = (
 				E9431CB925BA8588006D5E1A /* CustomButton.swift */,
+				E9328BE925BB33DE0014DAE7 /* GenericMessageStatusView.swift */,
+				E9328BEE25BB33EC0014DAE7 /* GenericMessageStatusView.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -404,6 +429,7 @@
 				E9431DA725BABEA9006D5E1A /* Error.swift */,
 				E9431D8D25BABBA1006D5E1A /* Indicator.swift */,
 				E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */,
+				E9328BF325BB346D0014DAE7 /* Message.swift */,
 				E9431D2A25BAA4C0006D5E1A /* UserModel.swift */,
 			);
 			path = Models;
@@ -413,8 +439,8 @@
 			isa = PBXGroup;
 			children = (
 				E9431D4925BAB2AF006D5E1A /* List.xib */,
-				E9431D4825BAB2AF006D5E1A /* ListViewController.swift */,
 				E9431D6025BAB76F006D5E1A /* ListConfigurator.swift */,
+				E9431D4825BAB2AF006D5E1A /* ListViewController.swift */,
 				E9431D6525BAB80C006D5E1A /* ListViewModel.swift */,
 				E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */,
 			);
@@ -575,8 +601,10 @@
 				E9431C7225BA7D93006D5E1A /* Login.xib in Resources */,
 				E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */,
 				E9431D4B25BAB2AF006D5E1A /* List.xib in Resources */,
+				E9328BEF25BB33EC0014DAE7 /* GenericMessageStatusView.xib in Resources */,
 				E9431C9D25BA8191006D5E1A /* InputWithIconView.xib in Resources */,
 				E9431CA225BA843E006D5E1A /* Colors.xcassets in Resources */,
+				E9328BFE25BB3B9C0014DAE7 /* IndicatorViewCell.xib in Resources */,
 				E9431BEF25BA422D006D5E1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,10 +755,12 @@
 				E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */,
 				E9431D9325BABC4E006D5E1A /* IndicatorsResponse.swift in Sources */,
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
+				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
 				E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
 				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
+				E9328BF425BB346D0014DAE7 /* Message.swift in Sources */,
 				E9431D1725BAA44F006D5E1A /* UserCDManager.swift in Sources */,
 				E9431C8925BA801C006D5E1A /* NibLoadableView.swift in Sources */,
 				E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */,
@@ -739,6 +769,8 @@
 				E9431D8E25BABBA1006D5E1A /* Indicator.swift in Sources */,
 				E9431CAA25BA8490006D5E1A /* UIColor+Brand.swift in Sources */,
 				E9431CEE25BA9A0E006D5E1A /* LoginViewModelDelegate.swift in Sources */,
+				E9328BFD25BB3B9C0014DAE7 /* IndicatorViewCell.swift in Sources */,
+				E9328C0D25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift in Sources */,
 				E9431CC325BA8753006D5E1A /* AppCoordinator.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,

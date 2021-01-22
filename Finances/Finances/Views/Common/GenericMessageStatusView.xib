@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lQT-ZH-4H0" customClass="GenericMessageStatusView" customModule="Finances" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="577"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-dJ-hIp">
+                    <rect key="frame" x="145" y="50" width="124" height="124"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-fP-JDh">
+                            <rect key="frame" x="0.0" y="0.5" width="124" height="123"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="QBS-fP-JDh" secondAttribute="bottom" id="56T-EK-Re2"/>
+                        <constraint firstItem="QBS-fP-JDh" firstAttribute="top" secondItem="tG9-dJ-hIp" secondAttribute="top" id="Faj-yx-NZQ"/>
+                        <constraint firstAttribute="trailing" secondItem="QBS-fP-JDh" secondAttribute="trailing" id="GVD-Ek-kfm"/>
+                        <constraint firstAttribute="width" secondItem="tG9-dJ-hIp" secondAttribute="height" multiplier="1:1" id="HkZ-kO-LGh"/>
+                        <constraint firstItem="QBS-fP-JDh" firstAttribute="leading" secondItem="tG9-dJ-hIp" secondAttribute="leading" id="eqK-jP-N4U"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="125"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="vTv-CO-x74">
+                    <rect key="frame" x="49" y="194" width="316" height="160"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Conexión no detectada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-tg-L7b">
+                            <rect key="frame" x="0.0" y="0.0" width="316" height="20.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <color key="textColor" name="blackColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text=" Lo sentimos, no se pudo cargar la información, revise su conexion a internet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-0w-fnh">
+                            <rect key="frame" x="0.0" y="52.5" width="316" height="42.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <color key="textColor" name="grayLightColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny2-gQ-p10" customClass="CustomButton" customModule="Finances" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="127" width="316" height="33"/>
+                            <color key="backgroundColor" name="greenColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <state key="normal" title="ACTION">
+                                <color key="titleColor" name="whiteColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="activityIndicatorColor">
+                                    <color key="value" name="whiteColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapAddCard:" destination="lQT-ZH-4H0" eventType="touchUpInside" id="fWZ-wn-3W0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="kMM-vh-zGR"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kMM-vh-zGR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vTv-CO-x74" secondAttribute="bottom" constant="10" id="1Or-XB-lBF"/>
+                <constraint firstItem="vTv-CO-x74" firstAttribute="centerX" secondItem="kMM-vh-zGR" secondAttribute="centerX" id="1aw-MP-M5S"/>
+                <constraint firstItem="vTv-CO-x74" firstAttribute="top" secondItem="tG9-dJ-hIp" secondAttribute="bottom" constant="20" id="WMq-MO-eLO"/>
+                <constraint firstItem="tG9-dJ-hIp" firstAttribute="top" secondItem="lQT-ZH-4H0" secondAttribute="top" constant="50" id="oXR-Si-EvZ">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSEConstant">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="tG9-dJ-hIp" firstAttribute="width" secondItem="lQT-ZH-4H0" secondAttribute="width" multiplier="0.3" id="qgH-5Z-EcZ"/>
+                <constraint firstItem="tG9-dJ-hIp" firstAttribute="centerX" secondItem="lQT-ZH-4H0" secondAttribute="centerX" id="x4R-GG-jyu"/>
+                <constraint firstItem="vTv-CO-x74" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lQT-ZH-4H0" secondAttribute="leading" constant="30" id="xTc-Lb-B7H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actionButton" destination="ny2-gQ-p10" id="kdk-qt-vLi"/>
+                <outlet property="bottomLabel" destination="nTg-0w-fnh" id="yXw-u6-97f"/>
+                <outlet property="gifContainerView" destination="tG9-dJ-hIp" id="VRq-0Z-TzK"/>
+                <outlet property="topLabel" destination="pQO-tg-L7b" id="MOL-LL-Y1j"/>
+            </connections>
+            <point key="canvasLocation" x="163.768115942029" y="13.727678571428571"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="ny2-gQ-p10">
+            <size key="intrinsicContentSize" width="62" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="blackColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grayLightColor">
+            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenColor">
+            <color red="0.29800000786781311" green="0.85100001096725464" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

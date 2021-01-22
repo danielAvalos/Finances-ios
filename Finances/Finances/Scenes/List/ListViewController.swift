@@ -15,10 +15,11 @@ final class ListViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet private weak var tableView: UITableView!
 
-    lazy var searchController: UISearchController = {
+    // MARK: Private Properties
+    private lazy var genericStatusHeader: GenericMessageStatusView = GenericMessageStatusView.nibInstance
+    private lazy var searchController: UISearchController = {
         UISearchController()
     }()
-
     private lazy var refreshControl: UIRefreshControl = { [unowned self] in
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
@@ -51,44 +52,20 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel?.indicators.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: IndicatorViewCell = tableView.dequeueReusableCell(for: indexPath)
+        if let data = viewModel?.indicators[indexPath.row] {
+            cell.configure(with: data)
+        }
+        return cell
     }
 }
 
 extension ListViewController: UITableViewDelegate {
-}
-
-private extension ListViewController {
-
-    func setup() {
-        ListConfigurator.configure(self)
-    }
-
-    func setupNavigation() {
-        navigationItem.title = "Indicadores"
-        navigationItem.searchController = searchController
-        searchController.searchResultsUpdater = self
-        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-    func setupTableView() {
-        tableView.refreshControl = refreshControl
-        tableView.tableFooterView = UIView()
-        tableView.rowHeight = UITableView.automaticDimension
-    }
-
-    // MARK: - Actions
-    @objc
-    func refreshList(sender _: UIRefreshControl) {
-        viewModel?.prepareList()
-        refreshControl.endRefreshing()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
 
@@ -131,15 +108,82 @@ extension ListViewController: UISearchControllerDelegate {
 }
 
 extension ListViewController: ListViewModelDelegate {
-    func stateDidChange(previousState: ViewModelState<ConnectionStatus>) {
+    func stateDidChange(state: ViewModelState<ConnectionStatus>) {
         // Update UI
-        switch previousState {
+        switch state {
         case .initial, .loading:
             break
         case let .failed(error):
-            break
+            displayGenericViewStatus(message: Message(error: error))
         case let .ready(connectionStatus):
-            break
+            checkForEmptyContent(connectionStatus: connectionStatus)
         }
+    }
+
+    private func checkForEmptyContent(connectionStatus: ConnectionStatus) {
+        tableView.refreshControl?.endRefreshing()
+        if connectionStatus == .offline {
+            displayGenericViewStatus(message: Message(error: Error(code: .notConnection)))
+        } else if viewModel?.indicators.isEmpty == true {
+            displayGenericViewStatus(message: Message(error: Error(code: .dataNotFound)))
+        } else {
+            tableView.tableHeaderView = nil
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+}
+
+// MARK: GenericMessageStatusViewDelegate
+extension ListViewController: GenericMessageStatusViewDelegate {
+
+    func didTapAction(action: Message.ButtonItem) {
+    }
+}
+
+private extension ListViewController {
+
+    func setup() {
+        ListConfigurator.configure(self)
+    }
+
+    func setupNavigation() {
+        navigationItem.title = "Indicadores"
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
+    func setupTableView() {
+        tableView.registerCells([IndicatorViewCell.self])
+        tableView.refreshControl = refreshControl
+        tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+
+    func displayGenericViewStatus(message: Message) {
+        genericStatusHeader.setup(message)
+        genericStatusHeader.delegate = self
+        genericStatusHeader.autoresizingMask = .flexibleWidth
+        genericStatusHeader.translatesAutoresizingMaskIntoConstraints = true
+        genericStatusHeader.setNeedsLayout()
+        genericStatusHeader.layoutIfNeeded()
+        let size = CGSize(width: UIScreen.main.bounds.width, height: 0)
+        genericStatusHeader.frame.size.height = genericStatusHeader.systemLayoutSizeFitting(size,
+                                                                                      withHorizontalFittingPriority: UILayoutPriority.required,
+                                                                                      verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
+            .height
+        tableView.tableHeaderView = genericStatusHeader
+    }
+
+    // MARK: - Actions
+    @objc
+    func refreshList(sender _: UIRefreshControl) {
+        viewModel?.prepareList()
+        refreshControl.endRefreshing()
     }
 }

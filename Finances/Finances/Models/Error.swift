@@ -10,34 +10,38 @@ struct Error: ErrorRepresentable {
     var description: String {
         switch code {
         case .notConnection:
-            return "Please check your internet connection and try again"
-        case .unknown, .badRequest, .notFound:
-            return "Something went wrong, please check your connection and try again"
+            return "Comprueba tu conexión a Internet y vuelve a intentarlo."
+        case .unknown, .badRequest, .requestNotFound:
+            return "Algo salió mal, verifique su conexión e intente nuevamente"
         case .errorServer:
-            return "Something went wrong, the service is not available, please try again later"
+            return "Algo salió mal, el servicio no está disponible, inténtelo de nuevo más tarde"
         case .notAuthorized:
-            return "You are not authorized to use the service"
+            return "No está autorizado para utilizar el servicio"
         case .other:
             return descriptionLocalizable ?? ""
+        case .dataNotFound:
+            return "No se encontraron registros"
         }
     }
 
     var title: String {
         switch code {
         case .notConnection:
-            return "Not Connection"
+            return "Sin conexión"
         case .unknown:
-            return "Unknow"
+            return "Error desconocido"
         case .badRequest:
-            return "Bad Request"
-        case .notFound:
-            return "Not Found"
+            return "Solicitud incorrecta"
+        case .requestNotFound:
+            return "Petición no encontrada"
         case .errorServer:
-            return "Error in Server"
+            return "Error en el servidor"
         case .notAuthorized:
-            return "Not authorized"
+            return "No autorizado"
         case .other:
             return descriptionLocalizable ?? ""
+        case .dataNotFound:
+            return "No hay resultados"
         }
     }
 
@@ -55,6 +59,7 @@ enum ErrorCode {
     case badRequest
     case notAuthorized
     case errorServer
-    case notFound
+    case requestNotFound
+    case dataNotFound
     case other
 }
