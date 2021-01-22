@@ -7,23 +7,28 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
+
+    @IBOutlet private var logoImageView: UIImageView!
+    @IBOutlet private var userEmailInput: InputWithIconView!
+    @IBOutlet private var passwordInput: InputWithIconView!
+    @IBOutlet private var loginButton: CustomButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userEmailInput.delegate = self
+        passwordInput.delegate = self
     }
+}
 
+private extension LoginViewController {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapLoginButton(_: Any) {
+        loginButton.startActivityIndicator()
     }
-    */
+}
 
+extension LoginViewController: InputWithIconViewDelegate {
+    func inputTextDidChange(text: String?, inView: InputWithIconView) {
+    }
 }
