@@ -19,7 +19,7 @@ protocol InputWithIconViewDelegate: AnyObject {
     @IBOutlet private var textField: UITextField!
 
     @IBOutlet private var separatorView: UIView!
-    private var separatorColor: UIColor = UIColor.color(named: .grayLightColor) ?? .darkGray
+    private var separatorColor: UIColor = UIColor.color(named: .grayLight) ?? .darkGray
     @IBInspectable var placeholder: String? {
         didSet {
             textField.placeholder = placeholder

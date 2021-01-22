@@ -6,5 +6,6 @@
 //
 
 protocol LoginCoordinatorProtocol {
+    var delegate: AppCoordinatorProtocol? { get set }
     func navigateToList()
 }

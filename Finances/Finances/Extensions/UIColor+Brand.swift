@@ -13,7 +13,7 @@ enum ColorsCustomized: String {
     case yellow = "yellowColor"
     case red = "redColor"
     case black = "blackColor"
-    case grayLightColor = "grayLightColor"
+    case grayLight = "grayLightColor"
     case white = "whiteColor"
 }
 

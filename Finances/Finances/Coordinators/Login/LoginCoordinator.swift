@@ -10,16 +10,9 @@ import UIKit
 final class LoginCoordinator: LoginCoordinatorProtocol {
 
     weak var viewController: LoginViewController?
+    weak var delegate: AppCoordinatorProtocol?
 
     func navigateToList() {
-        guard let listViewController = LoadUI.load(type: ListViewController.self,
-                                                   from: XibName.list) else {
-            return
-        }
-        let navigationController = UINavigationController(rootViewController: listViewController)
-        navigationController.modalPresentationStyle = .fullScreen
-        viewController?.present(navigationController,
-                                animated: true,
-                                completion: nil)
+        delegate?.start()
     }
 }

@@ -69,6 +69,9 @@
 		E9431DB025BABEEC006D5E1A /* IndicatorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */; };
 		E98C912925BB6BD3006BF9EC /* SessionCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */; };
 		E98C913125BB6C17006BF9EC /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C913025BB6C17006BF9EC /* SessionModel.swift */; };
+		E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */; };
+		E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */; };
+		E98C916C25BB807D006BF9EC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */; };
 		F13C6A798F158E3215B8AC7C /* Pods_FinancesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD0C06F0748C658B202E88D /* Pods_FinancesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +167,9 @@
 		E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsService.swift; sourceTree = "<group>"; };
 		E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCDManager.swift; sourceTree = "<group>"; };
 		E98C913025BB6C17006BF9EC /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemTag.swift; sourceTree = "<group>"; };
+		E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigureProtocol.swift; sourceTree = "<group>"; };
+		E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		EEA038403FD9BECE90472C90 /* Pods-Finances-FinancesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances-FinancesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,6 +248,7 @@
 		E9328BA425BB25680014DAE7 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */,
 				E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */,
 				E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */,
 				E9328BB925BB2B250014DAE7 /* XibName.swift */,
@@ -421,9 +428,9 @@
 		E9431CC125BA86EA006D5E1A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				E98C916A25BB806C006BF9EC /* App */,
 				E9194E8A25BB540400B411A0 /* List */,
 				E9431D5225BAB516006D5E1A /* Login */,
-				E9431CC225BA8753006D5E1A /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -502,6 +509,7 @@
 		E9431D7225BAB9D0006D5E1A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -530,6 +538,15 @@
 				E9431DA225BABE57006D5E1A /* RequestService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E98C916A25BB806C006BF9EC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E9431CC225BA8753006D5E1A /* AppCoordinator.swift */,
+				E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -809,6 +826,7 @@
 				E9328BF425BB346D0014DAE7 /* Message.swift in Sources */,
 				E9431D1725BAA44F006D5E1A /* UserCDManager.swift in Sources */,
 				E9431C8925BA801C006D5E1A /* NibLoadableView.swift in Sources */,
+				E98C916C25BB807D006BF9EC /* AppCoordinatorProtocol.swift in Sources */,
 				E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */,
 				E9431D1025BA9CE4006D5E1A /* UIViewController+Alerts.swift in Sources */,
 				E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */,
@@ -820,6 +838,7 @@
 				E9328C0D25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift in Sources */,
 				E98C912925BB6BD3006BF9EC /* SessionCDManager.swift in Sources */,
 				E9431CC325BA8753006D5E1A /* AppCoordinator.swift in Sources */,
+				E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */,
 				E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,
@@ -828,6 +847,7 @@
 				E9431BE325BA4222006D5E1A /* AppDelegate.swift in Sources */,
 				E9194E9125BB541E00B411A0 /* ListCoordinatorProtocol.swift in Sources */,
 				E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */,
+				E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
 				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
 				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,

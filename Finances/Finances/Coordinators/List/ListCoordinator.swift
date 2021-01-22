@@ -10,6 +10,7 @@ import UIKit
 final class ListCoordinator: ListCoordinatorProtocol {
 
     weak var viewController: ListViewController?
+    weak var delegate: AppCoordinatorProtocol?
 
     func navigateToDetail(_ indicator: Indicator) {
         guard let detailIndicatorViewController = LoadUI.load(type: DetailIndicatorViewController.self,
@@ -20,4 +21,11 @@ final class ListCoordinator: ListCoordinatorProtocol {
         detailIndicatorViewController.viewModel?.indicator = indicator
         navigationController.pushViewController(detailIndicatorViewController, animated: true)
     }
+
+    func logout() {
+        delegate?.start()
+    }
+}
+
+private extension ListCoordinator {
 }

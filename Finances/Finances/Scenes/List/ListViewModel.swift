@@ -10,6 +10,7 @@ protocol ListViewModelProtocol {
     var state: ViewModelState<ConnectionStatus> { get set }
     func prepareList()
     func filterContent(forQuery: String?)
+    func logout()
 }
 
 protocol ListViewModelEntityProtocol {
@@ -70,6 +71,18 @@ extension ListViewModel: ListViewModelProtocol {
         }
         indicators = searchResult
         state = .ready(value: isConnectionStatus)
+    }
+
+    func logout() {
+        guard let sessionActive = SessionCDManager.getSessionActive(),
+              let username = sessionActive.username,
+              let lastConnection = sessionActive.lastConnection else {
+            return
+        }
+        _ = SessionCDManager.saveOrUpdate(username: username,
+                                      lastConnection: lastConnection,
+                                      isLogged: false)
+        delegate?.logout()
     }
 }
 

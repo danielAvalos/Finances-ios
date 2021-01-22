@@ -51,6 +51,18 @@ final class ListViewController: UIViewController {
     }
 }
 
+// MARK: - NavigationConfigureProtocol
+extension ListViewController: NavigationConfigureProtocol {
+    func didTapBarItem(sender: UIBarButtonItem) {
+        switch sender.tag {
+        case BarButtonItemTag.logout.rawValue:
+            showConfirmLogout()
+        default:
+            break
+        }
+    }
+}
+
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.indicators.count ?? 0
@@ -68,7 +80,11 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let indicator = viewModel?.indicators[indexPath.row] {
-            coordinator?.navigateToDetail(indicator)
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: { [weak self] () -> Void in
+                self?.navigationController?.navigationBar.prefersLargeTitles = false
+            }, completion: { [weak self] (_) -> Void in
+                self?.coordinator?.navigateToDetail(indicator)
+            })
         }
     }
 }
@@ -112,6 +128,11 @@ extension ListViewController: UISearchControllerDelegate {
 }
 
 extension ListViewController: ListViewModelDelegate {
+
+    func logout() {
+        coordinator?.logout()
+    }
+
     func stateDidChange(state: ViewModelState<ConnectionStatus>) {
         // Update UI
         switch state {
@@ -160,6 +181,7 @@ private extension ListViewController {
         searchController.searchBar.delegate = self
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = true
+        showBarButtonItem(navigationItem: navigationItem, items: [.logout])
     }
 
     func setupTableView() {
@@ -182,6 +204,16 @@ private extension ListViewController {
                                                                                       verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
             .height
         tableView.tableHeaderView = genericStatusHeader
+    }
+
+    func showConfirmLogout() {
+        showAlert(title: "Se cerrará la sesión",
+                  message: "¿Estas seguro que quieres cerrar la sesión actual?",
+                  customActionTitle: "SI",
+                  handler: { [weak self] (_) in
+                    self?.viewModel?.logout()
+                  },
+                  cancelActionTitle: "NO")
     }
 
     // MARK: - Actions

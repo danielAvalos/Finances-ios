@@ -6,5 +6,7 @@
 //
 
 protocol ListCoordinatorProtocol {
+    var delegate: AppCoordinatorProtocol? { get set }
     func navigateToDetail(_ indicator: Indicator)
+    func logout()
 }

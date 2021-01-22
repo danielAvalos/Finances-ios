@@ -7,4 +7,5 @@
 
 protocol ListViewModelDelegate: ViewModelDelegate {
     func stateDidChange(state: ViewModelState<ConnectionStatus>)
+    func logout()
 }
