@@ -30,6 +30,21 @@
 		E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CB925BA8588006D5E1A /* CustomButton.swift */; };
 		E9431CC325BA8753006D5E1A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CC225BA8753006D5E1A /* AppCoordinator.swift */; };
 		E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CDA25BA9359006D5E1A /* LoadUI.swift */; };
+		E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */; };
+		E9431CEE25BA9A0E006D5E1A /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */; };
+		E9431CF425BA9B24006D5E1A /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CF325BA9B24006D5E1A /* ViewModelProtocol.swift */; };
+		E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CF825BA9B3E006D5E1A /* ViewModelDelegate.swift */; };
+		E9431D1025BA9CE4006D5E1A /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D0F25BA9CE4006D5E1A /* UIViewController+Alerts.swift */; };
+		E9431D1725BAA44F006D5E1A /* UserCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D1625BAA44F006D5E1A /* UserCDManager.swift */; };
+		E9431D2B25BAA4C0006D5E1A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D2A25BAA4C0006D5E1A /* UserModel.swift */; };
+		E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D4825BAB2AF006D5E1A /* ListViewController.swift */; };
+		E9431D4B25BAB2AF006D5E1A /* List.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9431D4925BAB2AF006D5E1A /* List.xib */; };
+		E9431D5425BAB525006D5E1A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D5325BAB525006D5E1A /* LoginCoordinator.swift */; };
+		E9431D5C25BAB530006D5E1A /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D5B25BAB530006D5E1A /* LoginCoordinatorProtocol.swift */; };
+		E9431D6125BAB76F006D5E1A /* ListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6025BAB76F006D5E1A /* ListConfigurator.swift */; };
+		E9431D6625BAB80C006D5E1A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6525BAB80C006D5E1A /* ListViewModel.swift */; };
+		E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */; };
+		E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */; };
 		F13C6A798F158E3215B8AC7C /* Pods_FinancesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD0C06F0748C658B202E88D /* Pods_FinancesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +101,21 @@
 		E9431CB925BA8588006D5E1A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E9431CC225BA8753006D5E1A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E9431CDA25BA9359006D5E1A /* LoadUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUI.swift; sourceTree = "<group>"; };
+		E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
+		E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
+		E9431CF325BA9B24006D5E1A /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		E9431CF825BA9B3E006D5E1A /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
+		E9431D0F25BA9CE4006D5E1A /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		E9431D1625BAA44F006D5E1A /* UserCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCDManager.swift; sourceTree = "<group>"; };
+		E9431D2A25BAA4C0006D5E1A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E9431D4825BAB2AF006D5E1A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E9431D4925BAB2AF006D5E1A /* List.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = List.xib; sourceTree = "<group>"; };
+		E9431D5325BAB525006D5E1A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		E9431D5B25BAB530006D5E1A /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		E9431D6025BAB76F006D5E1A /* ListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListConfigurator.swift; sourceTree = "<group>"; };
+		E9431D6525BAB80C006D5E1A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelDelegate.swift; sourceTree = "<group>"; };
+		E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		EEA038403FD9BECE90472C90 /* Pods-Finances-FinancesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances-FinancesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +199,7 @@
 				E9431CC125BA86EA006D5E1A /* Coordinators */,
 				E9431C7B25BA7DE2006D5E1A /* Extensions */,
 				E9431C8025BA7E61006D5E1A /* DataPersistence */,
+				E9431D2925BAA4B3006D5E1A /* Models */,
 				E9431C8725BA7FF3006D5E1A /* Protocols */,
 				E9431C7C25BA7E00006D5E1A /* Resources */,
 				E9431C6D25BA7D6B006D5E1A /* Scenes */,
@@ -209,6 +240,8 @@
 		E9431C6D25BA7D6B006D5E1A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E9431D7225BAB9D0006D5E1A /* Common */,
+				E9431D4725BAB254006D5E1A /* List */,
 				E9431C6E25BA7D74006D5E1A /* Login */,
 			);
 			path = Scenes;
@@ -217,9 +250,11 @@
 		E9431C6E25BA7D74006D5E1A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
-				E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */,
 				E9431C7025BA7D93006D5E1A /* Login.xib */,
+				E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */,
+				E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */,
+				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
+				E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -230,6 +265,7 @@
 				E9431CA925BA8490006D5E1A /* UIColor+Brand.swift */,
 				E9431CAE25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift */,
 				E9431CB325BA84F0006D5E1A /* UITableView+RegisterCell.swift */,
+				E9431D0F25BA9CE4006D5E1A /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +326,7 @@
 		E9431CC125BA86EA006D5E1A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				E9431D5225BAB516006D5E1A /* Login */,
 				E9431CC225BA8753006D5E1A /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -298,9 +335,73 @@
 		E9431CD925BA933E006D5E1A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E9431CDA25BA9359006D5E1A /* LoadUI.swift */,
+				E9431D1525BAA3E9006D5E1A /* Generics */,
+				E9431D1425BAA3DB006D5E1A /* Managers */,
+				E9431CF225BA9B07006D5E1A /* MVVM */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E9431CF225BA9B07006D5E1A /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				E9431CF325BA9B24006D5E1A /* ViewModelProtocol.swift */,
+				E9431CF825BA9B3E006D5E1A /* ViewModelDelegate.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		E9431D1425BAA3DB006D5E1A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D1625BAA44F006D5E1A /* UserCDManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E9431D1525BAA3E9006D5E1A /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				E9431CDA25BA9359006D5E1A /* LoadUI.swift */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		E9431D2925BAA4B3006D5E1A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D2A25BAA4C0006D5E1A /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9431D4725BAB254006D5E1A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D4925BAB2AF006D5E1A /* List.xib */,
+				E9431D4825BAB2AF006D5E1A /* ListViewController.swift */,
+				E9431D6025BAB76F006D5E1A /* ListConfigurator.swift */,
+				E9431D6525BAB80C006D5E1A /* ListViewModel.swift */,
+				E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E9431D5225BAB516006D5E1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D5325BAB525006D5E1A /* LoginCoordinator.swift */,
+				E9431D5B25BAB530006D5E1A /* LoginCoordinatorProtocol.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E9431D7225BAB9D0006D5E1A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +515,7 @@
 			files = (
 				E9431C7225BA7D93006D5E1A /* Login.xib in Resources */,
 				E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */,
+				E9431D4B25BAB2AF006D5E1A /* List.xib in Resources */,
 				E9431C9D25BA8191006D5E1A /* InputWithIconView.xib in Resources */,
 				E9431CA225BA843E006D5E1A /* Colors.xcassets in Resources */,
 				E9431BEF25BA422D006D5E1A /* Assets.xcassets in Resources */,
@@ -562,20 +664,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9431D5C25BAB530006D5E1A /* LoginCoordinatorProtocol.swift in Sources */,
 				E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */,
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
+				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
+				E9431D1725BAA44F006D5E1A /* UserCDManager.swift in Sources */,
 				E9431C8925BA801C006D5E1A /* NibLoadableView.swift in Sources */,
+				E9431D1025BA9CE4006D5E1A /* UIViewController+Alerts.swift in Sources */,
+				E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */,
 				E9431CAA25BA8490006D5E1A /* UIColor+Brand.swift in Sources */,
+				E9431CEE25BA9A0E006D5E1A /* LoginViewModelDelegate.swift in Sources */,
 				E9431CC325BA8753006D5E1A /* AppCoordinator.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
+				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,
 				E9431CB425BA84F0006D5E1A /* UITableView+RegisterCell.swift in Sources */,
+				E9431D6125BAB76F006D5E1A /* ListConfigurator.swift in Sources */,
 				E9431BE325BA4222006D5E1A /* AppDelegate.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
+				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
+				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,
+				E9431D5425BAB525006D5E1A /* LoginCoordinator.swift in Sources */,
 				E9431C9125BA8037006D5E1A /* NibNameIdentifiable.swift in Sources */,
 				E9431C9825BA8186006D5E1A /* InputWithIconView.swift in Sources */,
+				E9431D6625BAB80C006D5E1A /* ListViewModel.swift in Sources */,
+				E9431CF425BA9B24006D5E1A /* ViewModelProtocol.swift in Sources */,
 				E9431BE525BA4222006D5E1A /* SceneDelegate.swift in Sources */,
+				E9431D2B25BAA4C0006D5E1A /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

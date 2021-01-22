@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="Finances" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="dU5-vG-W0i" customClass="ListViewController" customModule="Finances" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="bBq-AE-BoH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TC2-SH-7im">
+                        <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="dU5-vG-W0i" id="0gr-33-RSs"/>
+                            <outlet property="delegate" destination="dU5-vG-W0i" id="1h5-27-fMz"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="ewb-BG-5hL"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TC2-SH-7im" secondAttribute="bottom" id="8mr-Oc-cyg"/>
+                    <constraint firstItem="TC2-SH-7im" firstAttribute="top" secondItem="ewb-BG-5hL" secondAttribute="top" id="ACn-w1-AwC"/>
+                    <constraint firstItem="TC2-SH-7im" firstAttribute="leading" secondItem="ewb-BG-5hL" secondAttribute="leading" id="SJa-JS-Inu"/>
+                    <constraint firstAttribute="trailing" secondItem="TC2-SH-7im" secondAttribute="trailing" id="dxp-pm-Uwd"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="tableView" destination="TC2-SH-7im" id="3y4-39-Ibj"/>
+            </connections>
+            <point key="canvasLocation" x="-252.17391304347828" y="143.97321428571428"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

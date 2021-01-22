@@ -9,6 +9,7 @@ import UIKit
 
 enum XibName: String {
     case login = "Login"
+    case list = "List"
 }
 
 class LoadUI {
