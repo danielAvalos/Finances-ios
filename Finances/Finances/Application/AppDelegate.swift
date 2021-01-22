@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let userTest = UserModel(name: "Fallabela", userName: "prueba", password: "123456")
+        let userTest = UserModel(name: "Falabella", userName: "prueba", password: "123456")
         _ = UserCDManager.save(username: userTest.userName,
                                password: userTest.password,
                                name: userTest.name)
