@@ -18,6 +18,9 @@
 		E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9431BF025BA422D006D5E1A /* LaunchScreen.storyboard */; };
 		E9431BFD25BA422E006D5E1A /* FinancesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BFC25BA422E006D5E1A /* FinancesTests.swift */; };
 		E9431C0825BA422E006D5E1A /* FinancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C0725BA422E006D5E1A /* FinancesUITests.swift */; };
+		E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */; };
+		E9431C7225BA7D93006D5E1A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9431C7025BA7D93006D5E1A /* LoginViewController.xib */; };
+		E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */; };
 		F13C6A798F158E3215B8AC7C /* Pods_FinancesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD0C06F0748C658B202E88D /* Pods_FinancesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		E9431C0325BA422E006D5E1A /* FinancesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9431C0725BA422E006D5E1A /* FinancesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancesUITests.swift; sourceTree = "<group>"; };
 		E9431C0925BA422E006D5E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9431C7025BA7D93006D5E1A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EEA038403FD9BECE90472C90 /* Pods-Finances-FinancesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances-FinancesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,14 +147,11 @@
 		E9431BE125BA4222006D5E1A /* Finances */ = {
 			isa = PBXGroup;
 			children = (
-				E9431BE225BA4222006D5E1A /* AppDelegate.swift */,
-				E9431BE425BA4222006D5E1A /* SceneDelegate.swift */,
-				E9431BE625BA4222006D5E1A /* ViewController.swift */,
-				E9431BE825BA4222006D5E1A /* Main.storyboard */,
-				E9431BEE25BA422D006D5E1A /* Assets.xcassets */,
-				E9431BF025BA422D006D5E1A /* LaunchScreen.storyboard */,
-				E9431BF325BA422D006D5E1A /* Info.plist */,
-				E9431BEB25BA4223006D5E1A /* Finances.xcdatamodeld */,
+				E9431C6C25BA7D51006D5E1A /* Application */,
+				E9431C7B25BA7DE2006D5E1A /* Extensions */,
+				E9431C8025BA7E61006D5E1A /* DataPersistence */,
+				E9431C7C25BA7E00006D5E1A /* Resources */,
+				E9431C6D25BA7D6B006D5E1A /* Scenes */,
 			);
 			path = Finances;
 			sourceTree = "<group>";
@@ -169,6 +172,60 @@
 				E9431C0925BA422E006D5E1A /* Info.plist */,
 			);
 			path = FinancesUITests;
+			sourceTree = "<group>";
+		};
+		E9431C6C25BA7D51006D5E1A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E9431BE425BA4222006D5E1A /* SceneDelegate.swift */,
+				E9431BE225BA4222006D5E1A /* AppDelegate.swift */,
+				E9431BF025BA422D006D5E1A /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E9431C6D25BA7D6B006D5E1A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E9431C6E25BA7D74006D5E1A /* Login */,
+				E9431BE625BA4222006D5E1A /* ViewController.swift */,
+				E9431BE825BA4222006D5E1A /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E9431C6E25BA7D74006D5E1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
+				E9431C7025BA7D93006D5E1A /* LoginViewController.xib */,
+				E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E9431C7B25BA7DE2006D5E1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9431C7C25BA7E00006D5E1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9431BEE25BA422D006D5E1A /* Assets.xcassets */,
+				E9431BF325BA422D006D5E1A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E9431C8025BA7E61006D5E1A /* DataPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				E9431BEB25BA4223006D5E1A /* Finances.xcdatamodeld */,
+			);
+			path = DataPersistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9431C7225BA7D93006D5E1A /* LoginViewController.xib in Resources */,
 				E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */,
 				E9431BEF25BA422D006D5E1A /* Assets.xcassets in Resources */,
 				E9431BEA25BA4222006D5E1A /* Main.storyboard in Resources */,
@@ -430,7 +488,9 @@
 			files = (
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
 				E9431BE725BA4222006D5E1A /* ViewController.swift in Sources */,
+				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431BE325BA4222006D5E1A /* AppDelegate.swift in Sources */,
+				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
 				E9431BE525BA4222006D5E1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,7 +670,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56HKER56MM;
-				INFOPLIST_FILE = Finances/Info.plist;
+				INFOPLIST_FILE = Finances/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,7 +691,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56HKER56MM;
-				INFOPLIST_FILE = Finances/Info.plist;
+				INFOPLIST_FILE = Finances/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
