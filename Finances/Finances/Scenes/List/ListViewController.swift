@@ -40,6 +40,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel?.prepareList()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -126,5 +127,10 @@ extension ListViewController: UISearchControllerDelegate {
             return
         }
         navigationItem.title = "Resultado de busqueda"
+    }
+}
+
+extension ListViewController: ListViewModelDelegate {
+    func stateDidChange(previousState: ViewModelState<String>) {
     }
 }

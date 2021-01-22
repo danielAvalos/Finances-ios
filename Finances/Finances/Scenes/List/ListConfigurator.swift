@@ -10,5 +10,9 @@ import Foundation
 struct ListConfigurator {
 
     static func configure(_ viewController: ListViewController) {
+        let service = IndicatorsService()
+        let viewModel = ListViewModel(service: service)
+        viewController.viewModel = viewModel
+        viewModel.delegate = viewController
     }
 }

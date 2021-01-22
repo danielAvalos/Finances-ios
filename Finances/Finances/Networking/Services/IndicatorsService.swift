@@ -9,7 +9,7 @@ import Foundation
 
 import Alamofire
 
-final class MoviesService {
+final class IndicatorsService {
 
     func getIndicatorsList(completionHandler: @escaping (IndicatorsResponse?, Error?) -> Void) {
         Service.request(apiRouter: APIRouter.getIndicators,

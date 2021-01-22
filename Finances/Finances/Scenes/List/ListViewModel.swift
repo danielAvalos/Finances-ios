@@ -18,13 +18,22 @@ protocol ListViewModelEntityProtocol {
 
 // MARK: - LoginViewModelEntityProtocol
 final class ListViewModel: ListViewModelEntityProtocol {
+
     weak var delegate: ListViewModelDelegate?
+    let service: IndicatorsService
+
+    init(service: IndicatorsService) {
+        self.service = service
+    }
 }
 
 // MARK: - ListViewModelProtocol
 extension ListViewModel: ListViewModelProtocol {
 
     func prepareList() {
+        service.getIndicatorsList { [weak self] (response, error) in
+            print(response)
+        }
     }
 
     func filterContent(forQuery: String?) {
