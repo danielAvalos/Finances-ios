@@ -5,8 +5,6 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-import Foundation
-
 struct UserModel {
 
     static let entityName: String = "User"
