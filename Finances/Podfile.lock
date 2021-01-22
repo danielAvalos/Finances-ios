@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.4.1)
+  - IQKeyboardManagerSwift (6.5.6)
   - ReachabilitySwift (5.0.0)
   - SwiftLint (0.41.0)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - ReachabilitySwift
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManagerSwift
     - ReachabilitySwift
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: 255b15782d5c7e482849b24f914ae5ec1028867b
+PODFILE CHECKSUM: cd9f4c2bd3430dbbfa8dcc34c4db9a63bd1d01ce
 
 COCOAPODS: 1.10.0
