@@ -8,4 +8,5 @@
 enum XibName: String {
     case login = "Login"
     case list = "List"
+    case detailIndicator = "DetailIndicator"
 }

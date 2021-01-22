@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailIndicatorViewController" customModule="Finances" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="qMk-Cv-jWH" customClass="DetailIndicatorViewController" customModule="Finances" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="Sbh-5t-faI">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="95x-en-nvk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-NS-Jhd">
+                                <rect key="frame" x="20" y="30" width="374" height="158.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-w0-vRI">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad de Medida" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bN-Yfl">
+                                        <rect key="frame" x="0.0" y="44" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-sG-CiF">
+                                        <rect key="frame" x="0.0" y="84.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tU-Bf-dU3">
+                                        <rect key="frame" x="0.0" y="125" width="374" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ofk-NS-Jhd" firstAttribute="top" secondItem="95x-en-nvk" secondAttribute="top" constant="30" id="0eB-kx-SBc"/>
+                            <constraint firstAttribute="bottom" secondItem="ofk-NS-Jhd" secondAttribute="bottom" constant="20" id="6ZP-m0-wva"/>
+                            <constraint firstItem="ofk-NS-Jhd" firstAttribute="leading" secondItem="95x-en-nvk" secondAttribute="leading" constant="20" id="QyH-9U-jIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ofk-NS-Jhd" secondAttribute="trailing" constant="20" id="XPW-DN-R0q"/>
+                            <constraint firstItem="ofk-NS-Jhd" firstAttribute="centerX" secondItem="95x-en-nvk" secondAttribute="centerX" id="kHc-2Q-Tzx"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="ASL-Jf-8Uh"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="T26-7u-CWO"/>
+                    </scrollView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="PT7-tE-MKe"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="95x-en-nvk" firstAttribute="leading" secondItem="PT7-tE-MKe" secondAttribute="leading" id="HY1-y7-Wjp"/>
+                    <constraint firstItem="95x-en-nvk" firstAttribute="top" secondItem="PT7-tE-MKe" secondAttribute="top" id="dd2-BP-uvb"/>
+                    <constraint firstAttribute="bottom" secondItem="95x-en-nvk" secondAttribute="bottom" id="fFG-sB-2Io"/>
+                    <constraint firstItem="PT7-tE-MKe" firstAttribute="trailing" secondItem="95x-en-nvk" secondAttribute="trailing" id="i0h-rh-ILk"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="codeLabel" destination="2QW-w0-vRI" id="CLC-Jh-uMJ"/>
+                <outlet property="dateLabel" destination="Ddt-sG-CiF" id="S3h-v0-76z"/>
+                <outlet property="unitOfMeasurementLabel" destination="edx-bN-Yfl" id="NJM-Yx-jR2"/>
+                <outlet property="valueLabel" destination="9tU-Bf-dU3" id="G9f-ek-W9c"/>
+            </connections>
+            <point key="canvasLocation" x="-170" y="26"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

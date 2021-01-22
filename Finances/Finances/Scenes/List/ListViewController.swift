@@ -10,6 +10,7 @@ import UIKit
 final class ListViewController: UIViewController {
 
     var viewModel: (ListViewModelProtocol & ListViewModelEntityProtocol)?
+    var coordinator: ListCoordinatorProtocol?
     var isopenSearch: Bool = false
 
     // MARK: - IB Outlets
@@ -57,8 +58,8 @@ extension ListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: IndicatorViewCell = tableView.dequeueReusableCell(for: indexPath)
-        if let data = viewModel?.indicators[indexPath.row] {
-            cell.configure(with: data)
+        if let indicator = viewModel?.indicators[indexPath.row] {
+            cell.configure(with: indicator)
         }
         return cell
     }
@@ -66,6 +67,9 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let indicator = viewModel?.indicators[indexPath.row] {
+            coordinator?.navigateToDetail(indicator)
+        }
     }
 }
 

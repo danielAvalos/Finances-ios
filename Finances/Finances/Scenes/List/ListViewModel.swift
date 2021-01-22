@@ -5,8 +5,6 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-import Foundation
-
 protocol ListViewModelProtocol {
     var delegate: ListViewModelDelegate? { get set }
     var state: ViewModelState<ConnectionStatus> { get set }
@@ -18,7 +16,7 @@ protocol ListViewModelEntityProtocol {
     var indicators: [Indicator] { get }
 }
 
-// MARK: - LoginViewModelEntityProtocol
+// MARK: - ListViewModelEntityProtocol
 final class ListViewModel: ListViewModelEntityProtocol {
 
     weak var delegate: ListViewModelDelegate?
