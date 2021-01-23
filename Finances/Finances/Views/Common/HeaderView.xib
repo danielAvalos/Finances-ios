@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="Finances" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-FU-b13" customClass="CustomView" customModule="Finances" customModuleProvider="target">
+                    <rect key="frame" x="20" y="5" width="374" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-n5-ysr">
+                            <rect key="frame" x="266" y="16.5" width="98" height="37.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="[Username]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-sg-lN1">
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="18"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                    <color key="textColor" name="grayLightColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="[LastConnection]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-KM-SP0">
+                                    <rect key="frame" x="0.0" y="23" width="98" height="14.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                    <color key="textColor" name="grayLightColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="whiteColor"/>
+                    <color key="tintColor" name="greenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6Py-n5-ysr" secondAttribute="bottom" id="B9N-IC-enM"/>
+                        <constraint firstItem="6Py-n5-ysr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="npQ-FU-b13" secondAttribute="leading" id="JIR-TR-nxs"/>
+                        <constraint firstItem="6Py-n5-ysr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="npQ-FU-b13" secondAttribute="top" id="MkD-0Z-szH"/>
+                        <constraint firstAttribute="trailing" secondItem="6Py-n5-ysr" secondAttribute="trailing" constant="10" id="Zvx-Ko-Wto"/>
+                        <constraint firstItem="6Py-n5-ysr" firstAttribute="centerY" secondItem="npQ-FU-b13" secondAttribute="centerY" id="pTJ-gU-nHj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="npQ-FU-b13" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="4S7-me-5gh"/>
+                <constraint firstItem="npQ-FU-b13" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6TQ-00-pAg"/>
+                <constraint firstItem="npQ-FU-b13" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Eaa-KI-4Ph"/>
+                <constraint firstItem="npQ-FU-b13" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="USG-yG-WVG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lastConnectionLabel" destination="uDJ-KM-SP0" id="gBr-F7-30m"/>
+                <outlet property="userNameLabel" destination="OkK-sg-lN1" id="Ld0-O1-GrK"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="grayLightColor">
+            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenColor">
+            <color red="0.50196078431372548" green="0.74117647058823533" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

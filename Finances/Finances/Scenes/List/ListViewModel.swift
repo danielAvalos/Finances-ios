@@ -11,6 +11,7 @@ protocol ListViewModelProtocol {
     func prepareList()
     func filterContent(forQuery: String?)
     func logout()
+    func getUserSession() -> SessionModel?
 }
 
 protocol ListViewModelEntityProtocol {
@@ -37,6 +38,9 @@ final class ListViewModel: ListViewModelEntityProtocol {
 
 // MARK: - ListViewModelProtocol
 extension ListViewModel: ListViewModelProtocol {
+    func getUserSession() -> SessionModel? {
+        return SessionCDManager.getSessionActive()
+    }
 
     func prepareList() {
         state = .loading

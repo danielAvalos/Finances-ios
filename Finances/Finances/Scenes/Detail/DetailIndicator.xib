@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,33 +21,109 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-NS-Jhd">
-                                <rect key="frame" x="20" y="30" width="374" height="158.5"/>
+                                <rect key="frame" x="20" y="30" width="374" height="354"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-w0-vRI">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad de Medida" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bN-Yfl">
-                                        <rect key="frame" x="0.0" y="44" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-sG-CiF">
-                                        <rect key="frame" x="0.0" y="84.5" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tU-Bf-dU3">
-                                        <rect key="frame" x="0.0" y="125" width="374" height="33.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-Xx-3Bh" customClass="CustomView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="73.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codígo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-w0-vRI">
+                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="TrL-OQ-7Jn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="grayLightColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="leading" secondItem="nV2-Xx-3Bh" secondAttribute="leading" constant="10" id="eAd-8N-2Ut"/>
+                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="centerY" secondItem="nV2-Xx-3Bh" secondAttribute="centerY" id="mpP-fW-YtJ"/>
+                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="top" secondItem="nV2-Xx-3Bh" secondAttribute="top" constant="5" id="obB-5W-RaF"/>
+                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="centerX" secondItem="nV2-Xx-3Bh" secondAttribute="centerX" id="ubW-1h-Oxf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-QX-Nqk" customClass="CustomView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="93.5" width="374" height="73.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad de Medida" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bN-Yfl">
+                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="grayLightColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="centerY" secondItem="R0J-QX-Nqk" secondAttribute="centerY" id="3LI-Hg-aqX"/>
+                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="leading" secondItem="R0J-QX-Nqk" secondAttribute="leading" constant="10" id="CcG-Wn-TFB"/>
+                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="centerX" secondItem="R0J-QX-Nqk" secondAttribute="centerX" id="X7V-si-K17"/>
+                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="top" secondItem="R0J-QX-Nqk" secondAttribute="top" constant="5" id="rwY-LJ-ptm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-Wd-eVX" customClass="CustomView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="187" width="374" height="73.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-sG-CiF">
+                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="grayLightColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="centerY" secondItem="WBY-Wd-eVX" secondAttribute="centerY" id="K1n-Lf-wgH"/>
+                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="leading" secondItem="WBY-Wd-eVX" secondAttribute="leading" constant="10" id="fS9-qY-oWx"/>
+                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="centerX" secondItem="WBY-Wd-eVX" secondAttribute="centerX" id="l00-KM-V1k"/>
+                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="top" secondItem="WBY-Wd-eVX" secondAttribute="top" constant="5" id="tD5-A1-Bas"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-Wx-1ON" customClass="CustomView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="280.5" width="374" height="73.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tU-Bf-dU3">
+                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="grayLightColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="leading" secondItem="HqX-Wx-1ON" secondAttribute="leading" constant="10" id="0hB-V4-30k"/>
+                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="top" secondItem="HqX-Wx-1ON" secondAttribute="top" constant="5" id="oku-nN-5f2"/>
+                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="centerX" secondItem="HqX-Wx-1ON" secondAttribute="centerX" id="rI6-1v-Shb"/>
+                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="centerY" secondItem="HqX-Wx-1ON" secondAttribute="centerY" id="rhj-SF-dq7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="WBY-Wd-eVX" firstAttribute="height" secondItem="R0J-QX-Nqk" secondAttribute="height" id="MRS-m5-1gx"/>
+                                    <constraint firstItem="HqX-Wx-1ON" firstAttribute="height" secondItem="WBY-Wd-eVX" secondAttribute="height" id="MYH-Mu-b1Y"/>
+                                    <constraint firstItem="R0J-QX-Nqk" firstAttribute="height" secondItem="nV2-Xx-3Bh" secondAttribute="height" id="cIJ-Tm-nm2"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
@@ -79,6 +156,12 @@
         </viewController>
     </objects>
     <resources>
+        <namedColor name="grayLightColor">
+            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

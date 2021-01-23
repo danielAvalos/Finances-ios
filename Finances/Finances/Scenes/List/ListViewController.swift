@@ -75,6 +75,21 @@ extension ListViewController: UITableViewDataSource {
         }
         return cell
     }
+
+    func tableView(_: UITableView, heightForHeaderInSection _: Int) -> CGFloat {
+        return 80
+    }
+
+    func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = HeaderView.nibInstance
+        if let userSession = viewModel?.getUserSession(),
+           let username = userSession.username,
+           let lastConnection = userSession.lastConnection {
+            headerView.configure(username: username,
+                                 lastConnection: lastConnection)
+        }
+        return headerView
+    }
 }
 
 extension ListViewController: UITableViewDelegate {
