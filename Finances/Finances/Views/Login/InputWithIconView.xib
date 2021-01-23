@@ -43,7 +43,7 @@
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UfL-SE-LXN">
                     <rect key="frame" x="39" y="0.0" width="231" height="24"/>
-                    <color key="textColor" name="blackColor"/>
+                    <color key="textColor" name="grayLightColor"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" textContentType="username"/>
                     <connections>
@@ -72,9 +72,6 @@
     </objects>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
-        <namedColor name="blackColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="grayLightColor">
             <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
