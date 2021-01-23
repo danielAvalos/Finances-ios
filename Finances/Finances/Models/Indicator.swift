@@ -26,3 +26,5 @@ extension Indicator: Codable {
         case value = "valor"
     }
 }
+
+extension Indicator: Equatable { }

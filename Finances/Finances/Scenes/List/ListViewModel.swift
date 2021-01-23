@@ -5,19 +5,6 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-protocol ListViewModelProtocol {
-    var delegate: ListViewModelDelegate? { get set }
-    var state: ViewModelState<ConnectionStatus> { get set }
-    func prepareList()
-    func filterContent(forQuery: String?)
-    func logout()
-    func getUserSession() -> SessionModel?
-}
-
-protocol ListViewModelEntityProtocol {
-    var indicators: [Indicator] { get }
-}
-
 // MARK: - ListViewModelEntityProtocol
 final class ListViewModel: ListViewModelEntityProtocol {
 
@@ -29,9 +16,9 @@ final class ListViewModel: ListViewModelEntityProtocol {
     }
     private var unfilteredIndicators: [Indicator] = []
     var indicators: [Indicator] = []
-    let service: IndicatorsService
+    let service: IndicatorServiceProtocol
 
-    init(service: IndicatorsService) {
+    init(service: IndicatorServiceProtocol) {
         self.service = service
     }
 }
@@ -58,6 +45,9 @@ extension ListViewModel: ListViewModelProtocol {
                 self?.state = .failed(error: error)
             }
         } else {
+            guard indicators.isEmpty else {
+                return
+            }
             state = .failed(error: Error(code: .notConnection))
         }
     }

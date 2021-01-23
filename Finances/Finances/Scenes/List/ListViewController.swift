@@ -162,9 +162,10 @@ extension ListViewController: ListViewModelDelegate {
 
     private func checkForEmptyContent(connectionStatus: ConnectionStatus) {
         tableView.refreshControl?.endRefreshing()
-        if connectionStatus == .offline {
+        let isEmpty = viewModel?.indicators.isEmpty == true
+        if connectionStatus == .offline, isEmpty {
             displayGenericViewStatus(message: Message(error: Error(code: .notConnection)))
-        } else if viewModel?.indicators.isEmpty == true {
+        } else if isEmpty {
             displayGenericViewStatus(message: Message(error: Error(code: .dataNotFound)))
         } else {
             tableView.tableHeaderView = nil

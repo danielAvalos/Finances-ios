@@ -13,3 +13,9 @@ enum ViewModelState<T> {
     case ready(value: T)
     case failed(error: Error)
 }
+
+extension ViewModelState: Equatable {
+    static func == (lhs: ViewModelState<T>, rhs: ViewModelState<T>) -> Bool {
+        return T.self == T.self
+    }
+}

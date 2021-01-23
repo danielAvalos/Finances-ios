@@ -5,11 +5,7 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-import Foundation
-
-import Alamofire
-
-final class IndicatorsService {
+final class IndicatorsService: IndicatorServiceProtocol {
 
     func getIndicatorsList(completionHandler: @escaping (IndicatorsResponse?, Error?) -> Void) {
         Service.request(apiRouter: APIRouter.getIndicators,

@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-dJ-hIp">
-                    <rect key="frame" x="145" y="50" width="124" height="124"/>
+                    <rect key="frame" x="187" y="50" width="40" height="40"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-fP-JDh">
-                            <rect key="frame" x="0.0" y="0.5" width="124" height="123"/>
+                            <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,6 +28,7 @@
                         <constraint firstItem="QBS-fP-JDh" firstAttribute="top" secondItem="tG9-dJ-hIp" secondAttribute="top" id="Faj-yx-NZQ"/>
                         <constraint firstAttribute="trailing" secondItem="QBS-fP-JDh" secondAttribute="trailing" id="GVD-Ek-kfm"/>
                         <constraint firstAttribute="width" secondItem="tG9-dJ-hIp" secondAttribute="height" multiplier="1:1" id="HkZ-kO-LGh"/>
+                        <constraint firstAttribute="width" constant="40" id="dcc-se-QxN"/>
                         <constraint firstItem="QBS-fP-JDh" firstAttribute="leading" secondItem="tG9-dJ-hIp" secondAttribute="leading" id="eqK-jP-N4U"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -37,7 +38,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="vTv-CO-x74">
-                    <rect key="frame" x="49" y="194" width="316" height="160"/>
+                    <rect key="frame" x="49" y="110" width="316" height="160"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" text="Conexión no detectada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQO-tg-L7b">
                             <rect key="frame" x="0.0" y="0.0" width="316" height="20.5"/>
@@ -86,7 +87,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </constraint>
-                <constraint firstItem="tG9-dJ-hIp" firstAttribute="width" secondItem="lQT-ZH-4H0" secondAttribute="width" multiplier="0.3" id="qgH-5Z-EcZ"/>
                 <constraint firstItem="tG9-dJ-hIp" firstAttribute="centerX" secondItem="lQT-ZH-4H0" secondAttribute="centerX" id="x4R-GG-jyu"/>
                 <constraint firstItem="vTv-CO-x74" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lQT-ZH-4H0" secondAttribute="leading" constant="30" id="xTc-Lb-B7H"/>
             </constraints>
@@ -114,7 +114,7 @@
             <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greenColor">
-            <color red="0.29800000786781311" green="0.85100001096725464" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.50196078431372548" green="0.74117647058823533" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

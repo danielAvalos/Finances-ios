@@ -7,34 +7,26 @@
 
 import Foundation
 
-protocol LoginViewModelProtocol {
-    var delegate: LoginViewModelDelegate? { get set }
-    func login()
-}
-
-protocol LoginViewModelEntityProtocol {
-    var userName: String? { get set }
-    var password: String? { get set }
-}
-
+// MARK: - LoginViewModelEntityProtocol
 final class LoginViewModel: LoginViewModelEntityProtocol {
     weak var delegate: LoginViewModelDelegate?
     var userName: String?
     var password: String?
 }
 
+// MARK: - LoginViewModelProtocol
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
         guard let username = userName else {
-            let error = NSError(domain: "debe ingresar el usuario",
+            let error = NSError(domain: "ingresa el usuario",
                                 code: 0,
                                 userInfo: nil)
             delegate?.loginDidFailWithError(error)
             return
         }
         guard let password = password else {
-            let error = NSError(domain: "debe ingresar la contraseña",
+            let error = NSError(domain: "ingresa la contraseña",
                                 code: 0,
                                 userInfo: nil)
             delegate?.loginDidFailWithError(error)

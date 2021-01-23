@@ -14,6 +14,23 @@
 		E905801B25BBB5D1000659D1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905801A25BBB5D1000659D1 /* CustomView.swift */; };
 		E905802325BBB982000659D1 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905802225BBB982000659D1 /* UIView+Shadow.swift */; };
 		E905802825BBBBDD000659D1 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905802725BBBBDD000659D1 /* Date+Format.swift */; };
+		E905804C25BBC942000659D1 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905804B25BBC942000659D1 /* LoginViewModelTest.swift */; };
+		E905805125BBC963000659D1 /* ListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905805025BBC963000659D1 /* ListViewModelTest.swift */; };
+		E905805625BBCCE7000659D1 /* MocIndicatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905805525BBCCE7000659D1 /* MocIndicatorService.swift */; };
+		E905805C25BBCD80000659D1 /* IndicatorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */; };
+		E905806025BBCD85000659D1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D2A25BAA4C0006D5E1A /* UserModel.swift */; };
+		E905806425BBCD89000659D1 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C913025BB6C17006BF9EC /* SessionModel.swift */; };
+		E905806825BBCD8D000659D1 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D8D25BABBA1006D5E1A /* Indicator.swift */; };
+		E905806D25BBCDAB000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
+		E905807225BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807125BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift */; };
+		E905807325BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807125BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift */; };
+		E905807825BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */; };
+		E905807925BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */; };
+		E905807E25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
+		E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
+		E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
+		E905808B25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
+		E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
 		E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */; };
 		E9194E6725BB4D8600B411A0 /* DetailIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */; };
 		E9194E6F25BB4FE400B411A0 /* DetailIndicatorViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */; };
@@ -21,6 +38,20 @@
 		E9194E7925BB501500B411A0 /* DetailIndicatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E7825BB501500B411A0 /* DetailIndicatorConfigurator.swift */; };
 		E9194E8C25BB541300B411A0 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E8B25BB541300B411A0 /* ListCoordinator.swift */; };
 		E9194E9125BB541E00B411A0 /* ListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E9025BB541E00B411A0 /* ListCoordinatorProtocol.swift */; };
+		E931C6F125BBDA4F008436D8 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */; };
+		E931C6F925BBDA82008436D8 /* ListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */; };
+		E931C70025BBDAB6008436D8 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CF325BA9B24006D5E1A /* ViewModelProtocol.swift */; };
+		E931C70425BBDAB9008436D8 /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CF825BA9B3E006D5E1A /* ViewModelDelegate.swift */; };
+		E931C70825BBDACA008436D8 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */; };
+		E931C70C25BBDADB008436D8 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6525BAB80C006D5E1A /* ListViewModel.swift */; };
+		E931C71025BBDAEC008436D8 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */; };
+		E931C71425BBDAFD008436D8 /* SessionCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */; };
+		E931C71825BBDB00008436D8 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */; };
+		E931C71C25BBDB03008436D8 /* UserCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D1625BAA44F006D5E1A /* UserCDManager.swift */; };
+		E931C72025BBDB30008436D8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DA725BABEA9006D5E1A /* Error.swift */; };
+		E931C72425BBDB36008436D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BF325BB346D0014DAE7 /* Message.swift */; };
+		E931C72825BBDB51008436D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BE225BA4222006D5E1A /* AppDelegate.swift */; };
+		E931C72C25BBDB5C008436D8 /* DetailIndicatorViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E7325BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift */; };
 		E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */; };
 		E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */; };
 		E9328BBA25BB2B250014DAE7 /* XibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BB925BB2B250014DAE7 /* XibName.swift */; };
@@ -35,7 +66,6 @@
 		E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9431BEB25BA4223006D5E1A /* Finances.xcdatamodeld */; };
 		E9431BEF25BA422D006D5E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9431BEE25BA422D006D5E1A /* Assets.xcassets */; };
 		E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9431BF025BA422D006D5E1A /* LaunchScreen.storyboard */; };
-		E9431BFD25BA422E006D5E1A /* FinancesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BFC25BA422E006D5E1A /* FinancesTests.swift */; };
 		E9431C0825BA422E006D5E1A /* FinancesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C0725BA422E006D5E1A /* FinancesUITests.swift */; };
 		E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */; };
 		E9431C7225BA7D93006D5E1A /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9431C7025BA7D93006D5E1A /* Login.xib */; };
@@ -111,6 +141,14 @@
 		E905801A25BBB5D1000659D1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E905802225BBB982000659D1 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		E905802725BBBBDD000659D1 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		E905804B25BBC942000659D1 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		E905805025BBC963000659D1 /* ListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTest.swift; sourceTree = "<group>"; };
+		E905805525BBCCE7000659D1 /* MocIndicatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocIndicatorService.swift; sourceTree = "<group>"; };
+		E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorServiceProtocol.swift; sourceTree = "<group>"; };
+		E905807125BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorViewModelProtocol.swift; sourceTree = "<group>"; };
+		E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
+		E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorListViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorViewController.swift; sourceTree = "<group>"; };
 		E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailIndicator.xib; sourceTree = "<group>"; };
 		E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailIndicatorViewModel .swift"; sourceTree = "<group>"; };
@@ -135,7 +173,6 @@
 		E9431BF125BA422D006D5E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9431BF325BA422D006D5E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9431BF825BA422E006D5E1A /* FinancesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9431BFC25BA422E006D5E1A /* FinancesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancesTests.swift; sourceTree = "<group>"; };
 		E9431BFE25BA422E006D5E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9431C0325BA422E006D5E1A /* FinancesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9431C0725BA422E006D5E1A /* FinancesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancesUITests.swift; sourceTree = "<group>"; };
@@ -234,6 +271,48 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E905804325BBC25E000659D1 /* Mocs */ = {
+			isa = PBXGroup;
+			children = (
+				E905805525BBCCE7000659D1 /* MocIndicatorService.swift */,
+				E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */,
+			);
+			path = Mocs;
+			sourceTree = "<group>";
+		};
+		E905804425BBC264000659D1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E905804725BBC286000659D1 /* Detail */,
+				E905804625BBC282000659D1 /* List */,
+				E905804525BBC27C000659D1 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E905804525BBC27C000659D1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E905804B25BBC942000659D1 /* LoginViewModelTest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E905804625BBC282000659D1 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				E905805025BBC963000659D1 /* ListViewModelTest.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		E905804725BBC286000659D1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		E9194E6325BB4D5900B411A0 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +321,7 @@
 				E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */,
 				E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */,
 				E9194E7325BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift */,
+				E905807125BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -319,7 +399,8 @@
 		E9431BFB25BA422E006D5E1A /* FinancesTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9431BFC25BA422E006D5E1A /* FinancesTests.swift */,
+				E905804325BBC25E000659D1 /* Mocs */,
+				E905804425BBC264000659D1 /* Scenes */,
 				E9431BFE25BA422E006D5E1A /* Info.plist */,
 			);
 			path = FinancesTests;
@@ -360,9 +441,10 @@
 			children = (
 				E9431C7025BA7D93006D5E1A /* Login.xib */,
 				E9431CE525BA9937006D5E1A /* LoginConfigurator.swift */,
+				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
 				E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */,
 				E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */,
-				E9431C6F25BA7D93006D5E1A /* LoginViewController.swift */,
+				E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -508,6 +590,7 @@
 				E9431D4825BAB2AF006D5E1A /* ListViewController.swift */,
 				E9431D6525BAB80C006D5E1A /* ListViewModel.swift */,
 				E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */,
+				E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -550,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */,
+				E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */,
 				E9431DA225BABE57006D5E1A /* RequestService.swift */,
 			);
 			path = Services;
@@ -640,6 +724,7 @@
 					};
 					E9431BF725BA422E006D5E1A = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = E9431BDE25BA4222006D5E1A;
 					};
 					E9431C0225BA422E006D5E1A = {
@@ -832,11 +917,13 @@
 				E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */,
 				E9431D9325BABC4E006D5E1A /* IndicatorsResponse.swift in Sources */,
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
+				E905808B25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */,
 				E9194E7925BB501500B411A0 /* DetailIndicatorConfigurator.swift in Sources */,
 				E9194E7425BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift in Sources */,
 				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
 				E905801125BBAFD5000659D1 /* HeaderView.swift in Sources */,
 				E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */,
+				E905807825BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
 				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
@@ -845,6 +932,7 @@
 				E9431C8925BA801C006D5E1A /* NibLoadableView.swift in Sources */,
 				E98C916C25BB807D006BF9EC /* AppCoordinatorProtocol.swift in Sources */,
 				E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */,
+				E905807E25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */,
 				E9431D1025BA9CE4006D5E1A /* UIViewController+Alerts.swift in Sources */,
 				E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */,
 				E9431D8E25BABBA1006D5E1A /* Indicator.swift in Sources */,
@@ -869,8 +957,10 @@
 				E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */,
 				E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
+				E905807225BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
 				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
 				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,
+				E905806D25BBCDAB000659D1 /* IndicatorServiceProtocol.swift in Sources */,
 				E9431D5425BAB525006D5E1A /* LoginCoordinator.swift in Sources */,
 				E9431DA825BABEA9006D5E1A /* Error.swift in Sources */,
 				E9431C9125BA8037006D5E1A /* NibNameIdentifiable.swift in Sources */,
@@ -891,7 +981,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9431BFD25BA422E006D5E1A /* FinancesTests.swift in Sources */,
+				E931C6F125BBDA4F008436D8 /* LoginViewModelDelegate.swift in Sources */,
+				E905805625BBCCE7000659D1 /* MocIndicatorService.swift in Sources */,
+				E931C72025BBDB30008436D8 /* Error.swift in Sources */,
+				E931C71025BBDAEC008436D8 /* ConnectionStatus.swift in Sources */,
+				E931C71C25BBDB03008436D8 /* UserCDManager.swift in Sources */,
+				E931C70825BBDACA008436D8 /* ViewModelState.swift in Sources */,
+				E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */,
+				E931C6F925BBDA82008436D8 /* ListViewModelDelegate.swift in Sources */,
+				E931C72C25BBDB5C008436D8 /* DetailIndicatorViewModelDelegate.swift in Sources */,
+				E905806825BBCD8D000659D1 /* Indicator.swift in Sources */,
+				E905805125BBC963000659D1 /* ListViewModelTest.swift in Sources */,
+				E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */,
+				E905806425BBCD89000659D1 /* SessionModel.swift in Sources */,
+				E905807925BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */,
+				E931C72825BBDB51008436D8 /* AppDelegate.swift in Sources */,
+				E931C70425BBDAB9008436D8 /* ViewModelDelegate.swift in Sources */,
+				E905805C25BBCD80000659D1 /* IndicatorsResponse.swift in Sources */,
+				E905806025BBCD85000659D1 /* UserModel.swift in Sources */,
+				E931C70025BBDAB6008436D8 /* ViewModelProtocol.swift in Sources */,
+				E931C71425BBDAFD008436D8 /* SessionCDManager.swift in Sources */,
+				E931C71825BBDB00008436D8 /* ReachabilityManager.swift in Sources */,
+				E931C70C25BBDADB008436D8 /* ListViewModel.swift in Sources */,
+				E905804C25BBC942000659D1 /* LoginViewModelTest.swift in Sources */,
+				E931C72425BBDB36008436D8 /* Message.swift in Sources */,
+				E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */,
+				E905807325BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,7 +1096,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1036,7 +1151,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1094,10 +1209,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56HKER56MM;
 				INFOPLIST_FILE = FinancesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1105,6 +1221,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamMobile.FinancesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Finances.app/Finances";
@@ -1117,10 +1234,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56HKER56MM;
 				INFOPLIST_FILE = FinancesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

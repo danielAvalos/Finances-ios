@@ -5,10 +5,13 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-import Foundation
 import Alamofire
 
-final class Service {
+protocol ServiceProtocol {
+    static func request<T: Decodable>(apiRouter: APIRouter, completionHandler: @escaping (T?, Error?) -> Void)
+}
+
+final class Service: ServiceProtocol {
 
     static func request<T: Decodable>(apiRouter: APIRouter, completionHandler: @escaping (T?, Error?) -> Void) {
         let request = AF.request(apiRouter)
