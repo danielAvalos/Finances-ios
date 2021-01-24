@@ -18,19 +18,19 @@ class ListViewModelTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testWhenListIsEmpty() throws {
+    func testWhenList_isEmpty() throws {
         let response = IndicatorsResponse(version: nil, author: nil, date: nil, indicators: [])
-        let mocService = MocIndicatorService(response: response, error: nil)
-        let viewModel = ListViewModel(service: mocService)
+        let mockService = MockIndicatorService(response: response, error: nil)
+        let viewModel = ListViewModel(service: mockService)
         viewModel.prepareList()
         XCTAssertEqual(viewModel.indicators, [])
     }
 
-    func testWhenTheServiceReturnError() throws {
+    func testWhenTheService_returnError() throws {
         let error = Error(code: .errorServer)
-        let mocService = MocIndicatorService(response: nil, error: error)
+        let mockService = MockIndicatorService(response: nil, error: error)
         let monitorListViewModelDelegate = MonitorListViewModelDelegate()
-        let viewModel = ListViewModel(service: mocService)
+        let viewModel = ListViewModel(service: mockService)
         viewModel.delegate = monitorListViewModelDelegate
         monitorListViewModelDelegate.stateDidChange = { state in
             XCTAssertEqual(state, .loading)
@@ -39,9 +39,9 @@ class ListViewModelTest: XCTestCase {
         viewModel.prepareList()
     }
 
-    func testWhenCallServiceInOfflineModeWithData() throws {
+    func testWhenCallService_inOfflineMode_withData() throws {
     }
     
-    func testWhenCallServiceInOfflineModeWithOutData() throws {
+    func testWhenCallService_inOfflineMode_WithOutData() throws {
     }
 }

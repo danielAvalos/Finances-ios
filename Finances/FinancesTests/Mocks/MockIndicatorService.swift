@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct MocIndicatorService: IndicatorServiceProtocol {
+struct MockIndicatorService: IndicatorServiceProtocol {
 
     var response: IndicatorsResponse?
     var error: Error?

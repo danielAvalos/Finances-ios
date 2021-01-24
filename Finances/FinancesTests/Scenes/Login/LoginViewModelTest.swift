@@ -30,7 +30,7 @@ class LoginViewModelTest: XCTestCase {
         viewModel.login()
     }
 
-    func testUserIsvalid() throws {
+    func testUser_isValid() throws {
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = "prueba"
@@ -42,7 +42,7 @@ class LoginViewModelTest: XCTestCase {
         viewModel.login()
     }
 
-    func testWhenDoNotEnterUsername() throws {
+    func testWhenDoNotEnter_username() throws {
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = ""
@@ -54,7 +54,7 @@ class LoginViewModelTest: XCTestCase {
         viewModel.login()
     }
 
-    func testWhenDoNotEnterPassword() throws {
+    func testWhenDoNotEnter_password() throws {
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = "prueba"
