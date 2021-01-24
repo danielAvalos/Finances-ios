@@ -20,6 +20,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" systemColor="secondarySystemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="dU5-vG-W0i" id="0gr-33-RSs"/>
                             <outlet property="delegate" destination="dU5-vG-W0i" id="1h5-27-fMz"/>

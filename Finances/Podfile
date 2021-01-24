@@ -7,6 +7,7 @@ target 'Finances' do
   pod 'Alamofire'
   pod 'IQKeyboardManagerSwift'
   pod 'ReachabilitySwift'
+  pod 'SkeletonView'
   pod 'SwiftLint'
 
   # Pods for Finances

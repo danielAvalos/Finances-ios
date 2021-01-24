@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 final class ListViewController: UIViewController {
 
@@ -42,6 +43,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        tableView.showAnimatedGradientSkeleton()
         viewModel?.prepareList()
     }
 
@@ -70,6 +72,7 @@ extension ListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: IndicatorViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.hideSkeleton()
         if let indicator = viewModel?.indicators[indexPath.row] {
             cell.configure(with: indicator)
         }
@@ -163,6 +166,7 @@ extension ListViewController: ListViewModelDelegate {
     private func checkForEmptyContent(connectionStatus: ConnectionStatus) {
         tableView.refreshControl?.endRefreshing()
         let isEmpty = viewModel?.indicators.isEmpty == true
+        tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(TimeInterval(0.5)))
         if connectionStatus == .offline, isEmpty {
             displayGenericViewStatus(message: Message(error: Error(code: .notConnection)))
         } else if isEmpty {
@@ -180,6 +184,7 @@ extension ListViewController: ListViewModelDelegate {
 extension ListViewController: GenericMessageStatusViewDelegate {
 
     func didTapAction(action: Message.ButtonItem) {
+        viewModel?.prepareList()
     }
 }
 
@@ -208,6 +213,7 @@ private extension ListViewController {
     }
 
     func displayGenericViewStatus(message: Message) {
+        tableView.hideSkeleton()
         genericStatusHeader.setup(message)
         genericStatusHeader.delegate = self
         genericStatusHeader.autoresizingMask = .flexibleWidth
@@ -237,5 +243,15 @@ private extension ListViewController {
     func refreshList(sender _: UIRefreshControl) {
         viewModel?.prepareList()
         refreshControl.endRefreshing()
+    }
+}
+
+extension ListViewController: SkeletonTableViewDataSource {
+    func collectionSkeletonView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        20
+    }
+
+    func collectionSkeletonView(_: UITableView, cellIdentifierForRowAt _: IndexPath) -> ReusableCellIdentifier {
+        "IndicatorViewCell"
     }
 }
