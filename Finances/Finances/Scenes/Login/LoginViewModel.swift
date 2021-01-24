@@ -19,25 +19,16 @@ extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
         guard let username = userName else {
-            let error = NSError(domain: "ingresa el usuario",
-                                code: 0,
-                                userInfo: nil)
-            delegate?.loginDidFailWithError(error)
+            delegate?.loginDidFailWithError(Error(code: .notUserName))
             return
         }
         guard let password = password else {
-            let error = NSError(domain: "ingresa la contraseña",
-                                code: 0,
-                                userInfo: nil)
-            delegate?.loginDidFailWithError(error)
+            delegate?.loginDidFailWithError(Error(code: .notPassword))
             return
         }
         guard UserCDManager.existsUser(username: username,
                                        password: password) else {
-            let error = NSError(domain: "Usuario o contraseña incorrecto",
-                                code: 0,
-                                userInfo: nil)
-            delegate?.loginDidFailWithError(error)
+            delegate?.loginDidFailWithError(Error(code: .userInvalid))
             return
         }
         _ = SessionCDManager.saveOrUpdate(username: username,

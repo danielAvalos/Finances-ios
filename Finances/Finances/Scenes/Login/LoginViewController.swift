@@ -69,8 +69,8 @@ extension LoginViewController: LoginViewModelDelegate {
         coordinator?.navigateToList()
     }
 
-    func loginDidFailWithError(_ error: NSError) {
-        showAlert(title: "Error", message: error.domain)
+    func loginDidFailWithError(_ error: Error) {
+        showAlert(title: error.title, message: error.description)
         loginButton.stopActivityIndicator()
     }
 }

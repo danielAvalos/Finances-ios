@@ -21,6 +21,12 @@ struct Error: ErrorRepresentable {
             return descriptionLocalizable ?? ""
         case .dataNotFound:
             return "No se encontraron registros"
+        case .notUserName:
+            return "ingresa el usuario"
+        case .notPassword:
+            return "ingresa la contraseña"
+        case .userInvalid:
+            return "Usuario o contraseña incorrecto"
         }
     }
 
@@ -42,6 +48,12 @@ struct Error: ErrorRepresentable {
             return descriptionLocalizable ?? ""
         case .dataNotFound:
             return "No hay resultados"
+        case .notUserName:
+            return "Usuario es requerido"
+        case .notPassword:
+            return "Password es requerido"
+        case .userInvalid:
+            return "Error de credenciales"
         }
     }
 
@@ -62,4 +74,7 @@ enum ErrorCode {
     case requestNotFound
     case dataNotFound
     case other
+    case notUserName
+    case notPassword
+    case userInvalid
 }

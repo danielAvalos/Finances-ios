@@ -37,7 +37,7 @@ struct Message {
             action = .reloadData
         case .requestNotFound:
             action = .notResult
-        case .dataNotFound:
+        default:
             action = nil
         }
     }
