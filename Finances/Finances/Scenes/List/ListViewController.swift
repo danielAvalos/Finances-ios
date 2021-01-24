@@ -65,48 +65,6 @@ extension ListViewController: NavigationConfigureProtocol {
     }
 }
 
-extension ListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.indicators.count ?? 0
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: IndicatorViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.hideSkeleton()
-        if let indicator = viewModel?.indicators[indexPath.row] {
-            cell.configure(with: indicator)
-        }
-        return cell
-    }
-
-    func tableView(_: UITableView, heightForHeaderInSection _: Int) -> CGFloat {
-        return 80
-    }
-
-    func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = HeaderView.nibInstance
-        if let userSession = viewModel?.getUserSession(),
-           let lastConnection = userSession.lastConnection {
-            let username = userSession.username
-            headerView.configure(username: username,
-                                 lastConnection: lastConnection)
-        }
-        return headerView
-    }
-}
-
-extension ListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let indicator = viewModel?.indicators[indexPath.row] {
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: { [weak self] () -> Void in
-                self?.navigationController?.navigationBar.prefersLargeTitles = false
-            }, completion: { [weak self] (_) -> Void in
-                self?.coordinator?.navigateToDetail(indicator)
-            })
-        }
-    }
-}
-
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -122,26 +80,6 @@ extension ListViewController: UISearchResultsUpdating {
             return
         }
         viewModel?.filterContent(forQuery: searchController.searchBar.text)
-    }
-}
-
-// MARK: - UISearchBarDelegate
-extension ListViewController: UISearchControllerDelegate {
-
-    func willPresentSearchController(_ searchController: UISearchController) {
-        isopenSearch = true
-    }
-
-    func willDismissSearchController(_ searchController: UISearchController) {
-        isopenSearch = false
-    }
-
-    func didDismissSearchController(_ searchController: UISearchController) {
-        guard let text = searchController.searchBar.text, !text.isEmpty else {
-            navigationItem.title = "Indicadores"
-            return
-        }
-        navigationItem.title = "Resultado de busqueda"
     }
 }
 
@@ -243,15 +181,5 @@ private extension ListViewController {
     func refreshList(sender _: UIRefreshControl) {
         viewModel?.prepareList()
         refreshControl.endRefreshing()
-    }
-}
-
-extension ListViewController: SkeletonTableViewDataSource {
-    func collectionSkeletonView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        20
-    }
-
-    func collectionSkeletonView(_: UITableView, cellIdentifierForRowAt _: IndexPath) -> ReusableCellIdentifier {
-        "IndicatorViewCell"
     }
 }

@@ -30,6 +30,10 @@
 		E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
 		E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
 		E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
+		E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */; };
+		E915CDEE25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */; };
+		E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */; };
+		E915CDF825BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */; };
 		E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */; };
 		E9194E6725BB4D8600B411A0 /* DetailIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */; };
 		E9194E6F25BB4FE400B411A0 /* DetailIndicatorViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */; };
@@ -154,6 +158,10 @@
 		E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorListViewModelDelegate.swift; sourceTree = "<group>"; };
+		E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+SkeletonTableViewDataSource.swift"; sourceTree = "<group>"; };
+		E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UISearchControllerDelegate.swift"; sourceTree = "<group>"; };
 		E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorViewController.swift; sourceTree = "<group>"; };
 		E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailIndicator.xib; sourceTree = "<group>"; };
 		E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailIndicatorViewModel .swift"; sourceTree = "<group>"; };
@@ -320,6 +328,17 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		E915CDE725BDF5BD002786C0 /* Controller+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */,
+				E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */,
+				E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */,
+				E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */,
+			);
+			path = "Controller+Extension";
 			sourceTree = "<group>";
 		};
 		E9194E6325BB4D5900B411A0 /* Detail */ = {
@@ -604,6 +623,7 @@
 		E9431D4725BAB254006D5E1A /* List */ = {
 			isa = PBXGroup;
 			children = (
+				E915CDE725BDF5BD002786C0 /* Controller+Extension */,
 				E9431D4925BAB2AF006D5E1A /* List.xib */,
 				E9431D6025BAB76F006D5E1A /* ListConfigurator.swift */,
 				E9431D4825BAB2AF006D5E1A /* ListViewController.swift */,
@@ -942,8 +962,10 @@
 				E9194E7425BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift in Sources */,
 				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
 				E905801125BBAFD5000659D1 /* HeaderView.swift in Sources */,
+				E915CDEE25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift in Sources */,
 				E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */,
 				E905807825BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */,
+				E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
 				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
@@ -994,7 +1016,9 @@
 				E9431BE525BA4222006D5E1A /* SceneDelegate.swift in Sources */,
 				E9431D9B25BABDD7006D5E1A /* APIManager.swift in Sources */,
 				E98C913125BB6C17006BF9EC /* SessionModel.swift in Sources */,
+				E915CDF825BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift in Sources */,
 				E9431D2B25BAA4C0006D5E1A /* UserModel.swift in Sources */,
+				E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
