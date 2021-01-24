@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,101 +20,50 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-NS-Jhd">
-                                <rect key="frame" x="20" y="30" width="374" height="354"/>
+                                <rect key="frame" x="20" y="30" width="374" height="372"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-Xx-3Bh" customClass="CustomView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="73.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codígo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-w0-vRI">
-                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="TrL-OQ-7Jn"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" name="grayLightColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="leading" secondItem="nV2-Xx-3Bh" secondAttribute="leading" constant="10" id="eAd-8N-2Ut"/>
-                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="centerY" secondItem="nV2-Xx-3Bh" secondAttribute="centerY" id="mpP-fW-YtJ"/>
-                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="top" secondItem="nV2-Xx-3Bh" secondAttribute="top" constant="5" id="obB-5W-RaF"/>
-                                            <constraint firstItem="2QW-w0-vRI" firstAttribute="centerX" secondItem="nV2-Xx-3Bh" secondAttribute="centerX" id="ubW-1h-Oxf"/>
-                                        </constraints>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-Xx-3Bh" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="78"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Codígo"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="barcode" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-QX-Nqk" customClass="CustomView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93.5" width="374" height="73.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidad de Medida" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edx-bN-Yfl">
-                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" name="grayLightColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="centerY" secondItem="R0J-QX-Nqk" secondAttribute="centerY" id="3LI-Hg-aqX"/>
-                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="leading" secondItem="R0J-QX-Nqk" secondAttribute="leading" constant="10" id="CcG-Wn-TFB"/>
-                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="centerX" secondItem="R0J-QX-Nqk" secondAttribute="centerX" id="X7V-si-K17"/>
-                                            <constraint firstItem="edx-bN-Yfl" firstAttribute="top" secondItem="R0J-QX-Nqk" secondAttribute="top" constant="5" id="rwY-LJ-ptm"/>
-                                        </constraints>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-QX-Nqk" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98" width="374" height="78"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Unidad de medida"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="thermometer" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-Wd-eVX" customClass="CustomView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="187" width="374" height="73.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-sG-CiF">
-                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" name="grayLightColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="centerY" secondItem="WBY-Wd-eVX" secondAttribute="centerY" id="K1n-Lf-wgH"/>
-                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="leading" secondItem="WBY-Wd-eVX" secondAttribute="leading" constant="10" id="fS9-qY-oWx"/>
-                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="centerX" secondItem="WBY-Wd-eVX" secondAttribute="centerX" id="l00-KM-V1k"/>
-                                            <constraint firstItem="Ddt-sG-CiF" firstAttribute="top" secondItem="WBY-Wd-eVX" secondAttribute="top" constant="5" id="tD5-A1-Bas"/>
-                                        </constraints>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-Wd-eVX" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="196" width="374" height="78"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ultima actualizacíon"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="calendar.badge.clock.rtl" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-Wx-1ON" customClass="CustomView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="280.5" width="374" height="73.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tU-Bf-dU3">
-                                                <rect key="frame" x="10" y="5" width="354" height="63.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" name="grayLightColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="leading" secondItem="HqX-Wx-1ON" secondAttribute="leading" constant="10" id="0hB-V4-30k"/>
-                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="top" secondItem="HqX-Wx-1ON" secondAttribute="top" constant="5" id="oku-nN-5f2"/>
-                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="centerX" secondItem="HqX-Wx-1ON" secondAttribute="centerX" id="rI6-1v-Shb"/>
-                                            <constraint firstItem="9tU-Bf-dU3" firstAttribute="centerY" secondItem="HqX-Wx-1ON" secondAttribute="centerY" id="rhj-SF-dq7"/>
-                                        </constraints>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-Wx-1ON" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="294" width="374" height="78"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Valor"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="dollarsign.circle.fill" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -147,21 +95,19 @@
                 </constraints>
             </view>
             <connections>
-                <outlet property="codeLabel" destination="2QW-w0-vRI" id="CLC-Jh-uMJ"/>
-                <outlet property="dateLabel" destination="Ddt-sG-CiF" id="S3h-v0-76z"/>
-                <outlet property="unitOfMeasurementLabel" destination="edx-bN-Yfl" id="NJM-Yx-jR2"/>
-                <outlet property="valueLabel" destination="9tU-Bf-dU3" id="G9f-ek-W9c"/>
+                <outlet property="codeView" destination="nV2-Xx-3Bh" id="1Sw-FT-dS3"/>
+                <outlet property="dateView" destination="WBY-Wd-eVX" id="Y0Z-eX-yKq"/>
+                <outlet property="unitOfMeasurementView" destination="R0J-QX-Nqk" id="spF-dH-FX4"/>
+                <outlet property="valueView" destination="HqX-Wx-1ON" id="F44-Uc-7pX"/>
             </connections>
             <point key="canvasLocation" x="-170" y="26"/>
         </viewController>
     </objects>
     <resources>
-        <namedColor name="grayLightColor">
-            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="whiteColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="barcode" catalog="system" width="128" height="93"/>
+        <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

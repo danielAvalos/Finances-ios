@@ -37,6 +37,8 @@
 		E9194E7925BB501500B411A0 /* DetailIndicatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E7825BB501500B411A0 /* DetailIndicatorConfigurator.swift */; };
 		E9194E8C25BB541300B411A0 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E8B25BB541300B411A0 /* ListCoordinator.swift */; };
 		E9194E9125BB541E00B411A0 /* ListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E9025BB541E00B411A0 /* ListCoordinatorProtocol.swift */; };
+		E91BC57125BD452000147B56 /* DetailIndicatorFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BC57025BD452000147B56 /* DetailIndicatorFieldView.swift */; };
+		E91BC57625BD452C00147B56 /* DetailIndicatorFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91BC57525BD452C00147B56 /* DetailIndicatorFieldView.xib */; };
 		E931C6F125BBDA4F008436D8 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CED25BA9A0E006D5E1A /* LoginViewModelDelegate.swift */; };
 		E931C6F925BBDA82008436D8 /* ListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D6D25BAB992006D5E1A /* ListViewModelDelegate.swift */; };
 		E931C70025BBDAB6008436D8 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431CF325BA9B24006D5E1A /* ViewModelProtocol.swift */; };
@@ -159,6 +161,8 @@
 		E9194E7825BB501500B411A0 /* DetailIndicatorConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorConfigurator.swift; sourceTree = "<group>"; };
 		E9194E8B25BB541300B411A0 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		E9194E9025BB541E00B411A0 /* ListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		E91BC57025BD452000147B56 /* DetailIndicatorFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorFieldView.swift; sourceTree = "<group>"; };
+		E91BC57525BD452C00147B56 /* DetailIndicatorFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailIndicatorFieldView.xib; sourceTree = "<group>"; };
 		E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorLoginViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
@@ -340,6 +344,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		E91BC56F25BD44EC00147B56 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E91BC57025BD452000147B56 /* DetailIndicatorFieldView.swift */,
+				E91BC57525BD452C00147B56 /* DetailIndicatorFieldView.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		E9328BA425BB25680014DAE7 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +511,7 @@
 		E9431C9525BA8146006D5E1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E91BC56F25BD44EC00147B56 /* Detail */,
 				E9431CB825BA8539006D5E1A /* Common */,
 				E9328BE825BB333D0014DAE7 /* List */,
 				E9431C9625BA8157006D5E1A /* Login */,
@@ -765,6 +779,7 @@
 			files = (
 				E9431C7225BA7D93006D5E1A /* Login.xib in Resources */,
 				E905801625BBAFE3000659D1 /* HeaderView.xib in Resources */,
+				E91BC57625BD452C00147B56 /* DetailIndicatorFieldView.xib in Resources */,
 				E9431BF225BA422D006D5E1A /* LaunchScreen.storyboard in Resources */,
 				E9194E6725BB4D8600B411A0 /* DetailIndicator.xib in Resources */,
 				E9431D4B25BAB2AF006D5E1A /* List.xib in Resources */,
@@ -953,6 +968,7 @@
 				E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */,
 				E905802825BBBBDD000659D1 /* Date+Format.swift in Sources */,
 				E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */,
+				E91BC57125BD452000147B56 /* DetailIndicatorFieldView.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,
 				E9431CB425BA84F0006D5E1A /* UITableView+RegisterCell.swift in Sources */,

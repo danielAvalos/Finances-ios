@@ -10,10 +10,10 @@ import UIKit
 final class DetailIndicatorViewController: UIViewController {
 
     // MARK: - IB Outlets
-    @IBOutlet private weak var codeLabel: UILabel!
-    @IBOutlet private weak var unitOfMeasurementLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var codeView: DetailIndicatorFieldView!
+    @IBOutlet private weak var unitOfMeasurementView: DetailIndicatorFieldView!
+    @IBOutlet private weak var dateView: DetailIndicatorFieldView!
+    @IBOutlet private weak var valueView: DetailIndicatorFieldView!
 
     var viewModel: (DetailIndicatorViewModelProtocol & DetailIndicatorViewModelEntityProtocol)?
 
@@ -46,18 +46,12 @@ extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
 
     func showIndicatorInfo(indicator: Indicator) {
         setupNavigation()
-        if let code = indicator.code {
-            codeLabel.text = "Codigo: \(code)"
-        }
-        if let date = indicator.date {
-            dateLabel.text = "Fecha: \(date)"
-        }
+        codeView.setValue(value: indicator.code)
+        dateView.setValue(value: indicator.date)
         if let value = indicator.value {
-            valueLabel.text = "Valor: \(value)"
+            valueView.setValue(value: "\(value)")
         }
-        if let unitOfMeasurement = indicator.unitOfMeasurement {
-            unitOfMeasurementLabel.text = "Unidad de medida: \(unitOfMeasurement)"
-        }
+        unitOfMeasurementView.setValue(value: indicator.unitOfMeasurement)
     }
 }
 

@@ -39,11 +39,11 @@ import UIKit
 
     private func sharedInit() {
         layer.cornerRadius = cornerRadius
-        genericShadow()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        genericShadow()
     }
 
     // MARK: - Activity indicator
