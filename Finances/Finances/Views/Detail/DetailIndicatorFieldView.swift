@@ -64,8 +64,28 @@ import UIKit
 
 extension DetailIndicatorFieldView {
     func setValue(value: String?) {
+        self.isHidden = true
         if let value = value {
             valueLabel.text = value
         }
+        let currentBound = self.bounds
+        UIView.transition(with: self, duration: 0.8,
+                          options: [.transitionFlipFromRight,
+                                    .allowAnimatedContent,
+                                    .beginFromCurrentState],
+          animations: {
+            self.frame = CGRect(x: currentBound.origin.x + UIScreen.main.bounds.width,
+                                y: currentBound.origin.y ,
+                                width: currentBound.width,
+                                height: currentBound.height)
+            self.isHidden = false
+          },
+          completion: { _ in
+            self.frame = CGRect(x: currentBound.origin.x,
+                                y: currentBound.origin.y,
+                                width: currentBound.width,
+                                height: currentBound.height)
+          }
+        )
     }
 }

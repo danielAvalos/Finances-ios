@@ -65,7 +65,6 @@ extension LoginViewController: InputWithIconViewDelegate {
 extension LoginViewController: LoginViewModelDelegate {
 
     func loginDidComplete() {
-        loginButton.stopActivityIndicator()
         coordinator?.navigateToList()
     }
 

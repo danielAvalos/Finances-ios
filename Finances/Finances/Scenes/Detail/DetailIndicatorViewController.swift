@@ -15,6 +15,7 @@ final class DetailIndicatorViewController: UIViewController {
     @IBOutlet private weak var dateView: DetailIndicatorFieldView!
     @IBOutlet private weak var valueView: DetailIndicatorFieldView!
 
+    private var isLoadded: Bool = false
     var viewModel: (DetailIndicatorViewModelProtocol & DetailIndicatorViewModelEntityProtocol)?
 
     // MARK: Object lifecycle
@@ -34,6 +35,11 @@ final class DetailIndicatorViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        guard !isLoadded else {
+            setupNavigation()
+            return
+        }
+        isLoadded = true
         viewModel?.prepareDetail()
     }
 }
@@ -48,9 +54,8 @@ extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
         setupNavigation()
         codeView.setValue(value: indicator.code)
         dateView.setValue(value: indicator.date)
-        if let value = indicator.value {
-            valueView.setValue(value: "\(value)")
-        }
+        let value = indicator.value ?? 0
+        valueView.setValue(value: "\(value)")
         unitOfMeasurementView.setValue(value: indicator.unitOfMeasurement)
     }
 }

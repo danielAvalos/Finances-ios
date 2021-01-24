@@ -17,19 +17,16 @@ import UIKit
             layer.cornerRadius = cornerRadius
         }
     }
-
     @IBInspectable var dottedBorderColor: UIColor? = nil {
         didSet {
             addDottedBorder()
         }
     }
-
     @IBInspectable var activityIndicatorColor: UIColor? = UIColor.color(named: .white) {
         didSet {
             createActivityIndicator()
         }
     }
-
     @IBInspectable var icon: UIImage? {
         didSet {
             self.setImage(icon, for: .normal)
@@ -51,32 +48,10 @@ import UIKit
         sharedInit()
     }
 
-    private func sharedInit() {
-        layer.cornerRadius = cornerRadius
-    }
-
-    private func addDottedBorder() {
-        if dottedLayer != nil {
-            dottedLayer?.removeFromSuperlayer()
-            dottedLayer = nil
-        }
-        guard let borderColor = dottedBorderColor else { return }
-        dottedLayer = CAShapeLayer()
-        let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
-        dottedLayer?.path = path.cgPath
-        dottedLayer?.strokeColor = borderColor.cgColor
-        dottedLayer?.lineDashPattern = [3, 3]
-        dottedLayer?.lineWidth = 2
-        dottedLayer?.backgroundColor = UIColor.clear.cgColor
-        dottedLayer?.fillColor = UIColor.clear.cgColor
-        // swiftlint:disable force_unwrapping
-        layer.addSublayer(dottedLayer!)
-    }
-
     override func layoutSubviews() {
         super.layoutSubviews()
-
         addDottedBorder()
+        genericShadow()
     }
 
     // MARK: - Activity indicator
@@ -106,8 +81,34 @@ import UIKit
             self.setImage(self.icon, for: .normal)
         }, completion: nil)
     }
+}
 
-    private func createActivityIndicator() {
+// MARK: - Private functions
+private extension CustomButton {
+
+    func sharedInit() {
+        layer.cornerRadius = cornerRadius
+    }
+
+    func addDottedBorder() {
+        if dottedLayer != nil {
+            dottedLayer?.removeFromSuperlayer()
+            dottedLayer = nil
+        }
+        guard let borderColor = dottedBorderColor else { return }
+        dottedLayer = CAShapeLayer()
+        let path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        dottedLayer?.path = path.cgPath
+        dottedLayer?.strokeColor = borderColor.cgColor
+        dottedLayer?.lineDashPattern = [3, 3]
+        dottedLayer?.lineWidth = 2
+        dottedLayer?.backgroundColor = UIColor.clear.cgColor
+        dottedLayer?.fillColor = UIColor.clear.cgColor
+        // swiftlint:disable force_unwrapping
+        layer.addSublayer(dottedLayer!)
+    }
+
+    func createActivityIndicator() {
         if activityIndicator == nil {
             activityIndicator = UIActivityIndicatorView()
             if let indicator = activityIndicator {
