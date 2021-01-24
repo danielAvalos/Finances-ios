@@ -43,7 +43,6 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        tableView.showAnimatedGradientSkeleton()
         viewModel?.prepareList()
     }
 
@@ -65,6 +64,26 @@ extension ListViewController: NavigationConfigureProtocol {
     }
 }
 
+// MARK: - ListViewModelDelegate
+extension ListViewController: ListViewModelDelegate {
+
+    func logout() {
+        coordinator?.logout()
+    }
+
+    func stateDidChange(state: ViewModelState<ConnectionStatus>) {
+        // Update UI
+        switch state {
+        case .initial, .loading:
+            tableView.showAnimatedGradientSkeleton()
+        case let .failed(error):
+            displayGenericViewStatus(message: Message(error: error))
+        case let .ready(connectionStatus):
+            checkForEmptyContent(connectionStatus: connectionStatus)
+        }
+    }
+}
+
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -80,41 +99,6 @@ extension ListViewController: UISearchResultsUpdating {
             return
         }
         viewModel?.filterContent(forQuery: searchController.searchBar.text)
-    }
-}
-
-extension ListViewController: ListViewModelDelegate {
-
-    func logout() {
-        coordinator?.logout()
-    }
-
-    func stateDidChange(state: ViewModelState<ConnectionStatus>) {
-        // Update UI
-        switch state {
-        case .initial, .loading:
-            break
-        case let .failed(error):
-            displayGenericViewStatus(message: Message(error: error))
-        case let .ready(connectionStatus):
-            checkForEmptyContent(connectionStatus: connectionStatus)
-        }
-    }
-
-    private func checkForEmptyContent(connectionStatus: ConnectionStatus) {
-        tableView.refreshControl?.endRefreshing()
-        let isEmpty = viewModel?.indicators.isEmpty == true
-        tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(TimeInterval(0.5)))
-        if connectionStatus == .offline, isEmpty {
-            displayGenericViewStatus(message: Message(error: Error(code: .notConnection)))
-        } else if isEmpty {
-            displayGenericViewStatus(message: Message(error: Error(code: .dataNotFound)))
-        } else {
-            tableView.tableHeaderView = nil
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-            self?.tableView.reloadData()
-        }
     }
 }
 
@@ -174,6 +158,22 @@ private extension ListViewController {
                     self?.viewModel?.logout()
                   },
                   cancelActionTitle: "NO")
+    }
+
+    func checkForEmptyContent(connectionStatus: ConnectionStatus) {
+        tableView.refreshControl?.endRefreshing()
+        let isEmpty = viewModel?.indicators.isEmpty == true
+        tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(TimeInterval(0.5)))
+        if connectionStatus == .offline, isEmpty {
+            displayGenericViewStatus(message: Message(error: Error(code: .notConnection)))
+        } else if isEmpty {
+            displayGenericViewStatus(message: Message(error: Error(code: .dataNotFound)))
+        } else {
+            tableView.tableHeaderView = nil
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 
     // MARK: - Actions

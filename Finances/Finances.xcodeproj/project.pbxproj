@@ -333,10 +333,10 @@
 		E915CDE725BDF5BD002786C0 /* Controller+Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */,
-				E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */,
 				E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */,
 				E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */,
+				E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */,
+				E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */,
 			);
 			path = "Controller+Extension";
 			sourceTree = "<group>";
