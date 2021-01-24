@@ -78,3 +78,9 @@ enum ErrorCode {
     case notPassword
     case userInvalid
 }
+
+extension Error: Equatable {
+    static func == (lhs: Error, rhs: Error) -> Bool {
+        lhs.code == rhs.code
+    }
+}

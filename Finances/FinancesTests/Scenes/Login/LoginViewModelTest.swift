@@ -19,15 +19,51 @@ class LoginViewModelTest: XCTestCase {
     }
 
     func testUserIsInvalid() throws {
+        let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
+        let viewModel = LoginViewModel()
+        viewModel.userName = "prueba"
+        viewModel.password = "12345"
+        viewModel.delegate = monitorViewModelDelegate
+        monitorViewModelDelegate.loginDidFailWithError = { error in
+            XCTAssertEqual(error, Error(code: .userInvalid))
+        }
+        viewModel.login()
     }
 
     func testUserIsvalid() throws {
+        let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
+        let viewModel = LoginViewModel()
+        viewModel.userName = "prueba"
+        viewModel.password = "123456"
+        viewModel.delegate = monitorViewModelDelegate
+        monitorViewModelDelegate.loginDidCompleteHandler = {
+            XCTAssertTrue(true, "User is valid")
+        }
+        viewModel.login()
     }
 
     func testWhenDoNotEnterUsername() throws {
+        let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
+        let viewModel = LoginViewModel()
+        viewModel.userName = ""
+        viewModel.password = "123456"
+        viewModel.delegate = monitorViewModelDelegate
+        monitorViewModelDelegate.loginDidFailWithError = { error in
+            XCTAssertEqual(error, Error(code: .notUserName))
+        }
+        viewModel.login()
     }
 
     func testWhenDoNotEnterPassword() throws {
+        let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
+        let viewModel = LoginViewModel()
+        viewModel.userName = "prueba"
+        viewModel.password = ""
+        viewModel.delegate = monitorViewModelDelegate
+        monitorViewModelDelegate.loginDidFailWithError = { error in
+            XCTAssertEqual(error, Error(code: .notPassword))
+        }
+        viewModel.login()
     }
 
     func testPerformanceExample() throws {

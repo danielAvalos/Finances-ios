@@ -5,7 +5,7 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
-class MonitorListViewModelDelegate: ListViewModelDelegate {
+final class MonitorListViewModelDelegate: ListViewModelDelegate {
 
     public var stateDidChange: ((_ state: ViewModelState<ConnectionStatus>) -> Void)?
     public var logoutHandler: (() -> Void)?

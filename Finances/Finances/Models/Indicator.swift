@@ -27,4 +27,8 @@ extension Indicator: Codable {
     }
 }
 
-extension Indicator: Equatable { }
+extension Indicator: Equatable {
+    static func == (lhs: Indicator, rhs: Indicator) -> Bool {
+        lhs.code == rhs.code
+    }
+}

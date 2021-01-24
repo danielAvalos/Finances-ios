@@ -18,11 +18,13 @@ final class LoginViewModel: LoginViewModelEntityProtocol {
 extension LoginViewModel: LoginViewModelProtocol {
 
     func login() {
-        guard let username = userName else {
+        guard let username = userName,
+              !username.isEmpty else {
             delegate?.loginDidFailWithError(Error(code: .notUserName))
             return
         }
-        guard let password = password else {
+        guard let password = password,
+              !password.isEmpty else {
             delegate?.loginDidFailWithError(Error(code: .notPassword))
             return
         }

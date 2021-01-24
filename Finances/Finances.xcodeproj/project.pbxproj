@@ -29,7 +29,6 @@
 		E905807E25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
 		E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
 		E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
-		E905808B25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
 		E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
 		E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */; };
 		E9194E6725BB4D8600B411A0 /* DetailIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */; };
@@ -52,6 +51,10 @@
 		E931C72425BBDB36008436D8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BF325BB346D0014DAE7 /* Message.swift */; };
 		E931C72825BBDB51008436D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431BE225BA4222006D5E1A /* AppDelegate.swift */; };
 		E931C72C25BBDB5C008436D8 /* DetailIndicatorViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E7325BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift */; };
+		E931C77A25BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */; };
+		E931C77E25BCF727008436D8 /* MonitorLoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */; };
+		E931C78F25BCF95C008436D8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431C7625BA7D9F006D5E1A /* LoginViewModel.swift */; };
+		E931C79325BCF96C008436D8 /* DetailIndicatorViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */; };
 		E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */; };
 		E9328BAF25BB25BF0014DAE7 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */; };
 		E9328BBA25BB2B250014DAE7 /* XibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9328BB925BB2B250014DAE7 /* XibName.swift */; };
@@ -156,6 +159,7 @@
 		E9194E7825BB501500B411A0 /* DetailIndicatorConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorConfigurator.swift; sourceTree = "<group>"; };
 		E9194E8B25BB541300B411A0 /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		E9194E9025BB541E00B411A0 /* ListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorLoginViewModelDelegate.swift; sourceTree = "<group>"; };
 		E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
 		E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		E9328BB925BB2B250014DAE7 /* XibName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibName.swift; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 			children = (
 				E905805525BBCCE7000659D1 /* MocIndicatorService.swift */,
 				E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */,
+				E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */,
 			);
 			path = Mocs;
 			sourceTree = "<group>";
@@ -917,7 +922,7 @@
 				E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */,
 				E9431D9325BABC4E006D5E1A /* IndicatorsResponse.swift in Sources */,
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
-				E905808B25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */,
+				E931C77E25BCF727008436D8 /* MonitorLoginViewModelDelegate.swift in Sources */,
 				E9194E7925BB501500B411A0 /* DetailIndicatorConfigurator.swift in Sources */,
 				E9194E7425BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift in Sources */,
 				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
@@ -1001,12 +1006,15 @@
 				E905806025BBCD85000659D1 /* UserModel.swift in Sources */,
 				E931C70025BBDAB6008436D8 /* ViewModelProtocol.swift in Sources */,
 				E931C71425BBDAFD008436D8 /* SessionCDManager.swift in Sources */,
+				E931C78F25BCF95C008436D8 /* LoginViewModel.swift in Sources */,
 				E931C71825BBDB00008436D8 /* ReachabilityManager.swift in Sources */,
 				E931C70C25BBDADB008436D8 /* ListViewModel.swift in Sources */,
 				E905804C25BBC942000659D1 /* LoginViewModelTest.swift in Sources */,
 				E931C72425BBDB36008436D8 /* Message.swift in Sources */,
+				E931C79325BCF96C008436D8 /* DetailIndicatorViewModel .swift in Sources */,
 				E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */,
 				E905807325BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
+				E931C77A25BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
