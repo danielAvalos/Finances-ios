@@ -9,9 +9,16 @@ import Foundation
 
 struct SessionModel {
 
-    static let entityName: String = "Session"
-
-    let username: String?
-    let lastConnection: Date?
     let isLogged: Bool
+    let username: String
+    let currentConnection: Date
+    let lastConnection: Date?
+}
+
+enum SessionEntity: String {
+    case entityName = "Session"
+    case isLogged
+    case username
+    case currentConnection
+    case lastConnection
 }

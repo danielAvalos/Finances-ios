@@ -16,7 +16,7 @@
 		E905802825BBBBDD000659D1 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905802725BBBBDD000659D1 /* Date+Format.swift */; };
 		E905804C25BBC942000659D1 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905804B25BBC942000659D1 /* LoginViewModelTest.swift */; };
 		E905805125BBC963000659D1 /* ListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905805025BBC963000659D1 /* ListViewModelTest.swift */; };
-		E905805625BBCCE7000659D1 /* MocIndicatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905805525BBCCE7000659D1 /* MocIndicatorService.swift */; };
+		E905805625BBCCE7000659D1 /* MockIndicatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905805525BBCCE7000659D1 /* MockIndicatorService.swift */; };
 		E905805C25BBCD80000659D1 /* IndicatorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */; };
 		E905806025BBCD85000659D1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D2A25BAA4C0006D5E1A /* UserModel.swift */; };
 		E905806425BBCD89000659D1 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C913025BB6C17006BF9EC /* SessionModel.swift */; };
@@ -146,7 +146,7 @@
 		E905802725BBBBDD000659D1 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		E905804B25BBC942000659D1 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		E905805025BBC963000659D1 /* ListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTest.swift; sourceTree = "<group>"; };
-		E905805525BBCCE7000659D1 /* MocIndicatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocIndicatorService.swift; sourceTree = "<group>"; };
+		E905805525BBCCE7000659D1 /* MockIndicatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockIndicatorService.swift; sourceTree = "<group>"; };
 		E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorServiceProtocol.swift; sourceTree = "<group>"; };
 		E905807125BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -275,14 +275,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E905804325BBC25E000659D1 /* Mocs */ = {
+		E905804325BBC25E000659D1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				E905805525BBCCE7000659D1 /* MocIndicatorService.swift */,
+				E905805525BBCCE7000659D1 /* MockIndicatorService.swift */,
 				E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */,
 				E931C77925BCF37B008436D8 /* MonitorLoginViewModelDelegate.swift */,
 			);
-			path = Mocs;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E905804425BBC264000659D1 /* Scenes */ = {
@@ -404,7 +404,7 @@
 		E9431BFB25BA422E006D5E1A /* FinancesTests */ = {
 			isa = PBXGroup;
 			children = (
-				E905804325BBC25E000659D1 /* Mocs */,
+				E905804325BBC25E000659D1 /* Mocks */,
 				E905804425BBC264000659D1 /* Scenes */,
 				E9431BFE25BA422E006D5E1A /* Info.plist */,
 			);
@@ -987,7 +987,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E931C6F125BBDA4F008436D8 /* LoginViewModelDelegate.swift in Sources */,
-				E905805625BBCCE7000659D1 /* MocIndicatorService.swift in Sources */,
+				E905805625BBCCE7000659D1 /* MockIndicatorService.swift in Sources */,
 				E931C72025BBDB30008436D8 /* Error.swift in Sources */,
 				E931C71025BBDAEC008436D8 /* ConnectionStatus.swift in Sources */,
 				E931C71C25BBDB03008436D8 /* UserCDManager.swift in Sources */,

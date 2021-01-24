@@ -16,7 +16,8 @@ class AppCoordinator: AppCoordinatorProtocol {
     }
 
     func start() {
-        if SessionCDManager.getSessionActive() != nil {
+        if let session = SessionCDManager.getSessionActive() {
+            _ = SessionCDManager.updateLastConnection(session: session)
             listController()
         } else {
             rootLoginController()

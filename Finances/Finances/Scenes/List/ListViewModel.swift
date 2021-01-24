@@ -5,6 +5,8 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
+import Foundation
+
 // MARK: - ListViewModelEntityProtocol
 final class ListViewModel: ListViewModelEntityProtocol {
 
@@ -68,14 +70,10 @@ extension ListViewModel: ListViewModelProtocol {
     }
 
     func logout() {
-        guard let sessionActive = SessionCDManager.getSessionActive(),
-              let username = sessionActive.username,
-              let lastConnection = sessionActive.lastConnection else {
+        guard let sessionActive = SessionCDManager.getSessionActive() else {
             return
         }
-        _ = SessionCDManager.saveOrUpdate(username: username,
-                                      lastConnection: lastConnection,
-                                      isLogged: false)
+        _ = SessionCDManager.inactiveSession(session: sessionActive)
         delegate?.logout()
     }
 }

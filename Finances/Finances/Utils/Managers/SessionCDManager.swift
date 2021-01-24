@@ -8,99 +8,145 @@
 import CoreData
 import UIKit
 
+protocol SessionCDManagerProtocol {
+    static func getSessionActive() -> SessionModel?
+    static func saveOrUpdate(session: SessionModel) -> Bool
+    static func updateLastConnection(session: SessionModel) -> Bool
+    static func inactiveSession(session: SessionModel) -> Bool
+}
+
 struct SessionCDManager {
 
-    static func saveOrUpdate(username: String, lastConnection: Date, isLogged: Bool) -> Bool {
-        guard !existsSession(username: username) else {
-            return update(username: username,
-                   lastConnection: lastConnection,
-                   isLogged: isLogged)
+    static private var managedContext: NSManagedObjectContext? {
+        get {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return nil
+            }
+            return appDelegate.persistentContainer.viewContext
         }
-        return save(username: username,
-                    lastConnection: lastConnection,
-                    isLogged: isLogged)
+    }
+}
+
+// MARK: - SessionCDManagerProtocol
+extension SessionCDManager: SessionCDManagerProtocol {
+
+    static func inactiveSession(session: SessionModel) -> Bool {
+        let inactive = SessionModel(isLogged: false,
+                                   username: session.username,
+                                   currentConnection: session.currentConnection,
+                                   lastConnection: session.lastConnection)
+        return update(session: inactive)
+    }
+
+    static func updateLastConnection(session: SessionModel) -> Bool {
+        let newSession = SessionModel(isLogged: session.isLogged,
+                                      username: session.username,
+                                      currentConnection: Date(),
+                                      lastConnection: session.currentConnection)
+        return update(session: newSession)
+    }
+
+    static func saveOrUpdate(session: SessionModel) -> Bool {
+        guard !existsSession(username: session.username) else {
+            return update(session: session)
+        }
+        return save(session: session)
     }
 
     static func getSessionActive() -> SessionModel? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionModel.entityName)
-        let usernameKeyPredicate = NSPredicate(format: "isLogged = %d", true)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionEntity.entityName.rawValue)
+        let usernameKeyPredicate = NSPredicate(format: "\(SessionEntity.isLogged.rawValue) = %d",
+                                               true)
         fetchRequest.predicate = usernameKeyPredicate
         do {
-            guard let result = try managedContext.fetch(fetchRequest) as? [NSManagedObject],
+            guard let result = try managedContext?.fetch(fetchRequest) as? [NSManagedObject],
                   result.isEmpty == false,
                   let sessionFirst = result.first else {
                 return nil
             }
-            let session = SessionModel(username: sessionFirst.value(forKey: "username") as? String,
-                                       lastConnection: sessionFirst.value(forKey: "lastConnection") as? Date,
-                                       isLogged: sessionFirst.value(forKey: "isLogged") as? Bool ?? false)
+            guard let isLogged = sessionFirst.value(forKey: SessionEntity.isLogged.rawValue) as? Bool,
+                  let username = sessionFirst.value(forKey: SessionEntity.username.rawValue) as? String,
+                  let currentConnection = sessionFirst.value(forKey: SessionEntity.currentConnection.rawValue) as? Date else {
+                return nil
+            }
+            let lastConnection = sessionFirst.value(forKey: SessionEntity.lastConnection.rawValue) as? Date
+            let session = SessionModel(isLogged: isLogged,
+                                       username: username,
+                                       currentConnection: currentConnection,
+                                       lastConnection: lastConnection)
             return session
         } catch let error {
-            print("could not get \(error.localizedDescription)")
+            print("Error in getSessionActive \(error.localizedDescription)")
             return nil
         }
     }
 }
 
 private extension SessionCDManager {
-    static func update(username: String, lastConnection: Date, isLogged: Bool) -> Bool {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionModel.entityName)
-        let usernameKeyPredicate = NSPredicate(format: "username = %@", username)
+
+    static func getSession(username: String) -> NSManagedObject? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionEntity.entityName.rawValue)
+        let usernameKeyPredicate = NSPredicate(format: "\(SessionEntity.username.rawValue) = %@",
+                                               username)
         fetchRequest.predicate = usernameKeyPredicate
         do {
-            guard let result = try managedContext.fetch(fetchRequest) as? [NSManagedObject],
+            guard let result = try managedContext?.fetch(fetchRequest) as? [NSManagedObject],
                   result.isEmpty == false,
                   let sessionFirst = result.first else {
-                return false
+                return nil
             }
-            sessionFirst.setValue(isLogged, forKey: "isLogged")
-            sessionFirst.setValue(lastConnection, forKey: "lastConnection")
-            try managedContext.save()
+            return sessionFirst
+        } catch {
+            return nil
+        }
+    }
+
+    static func update(session: SessionModel) -> Bool {
+        guard let sessionFirst = getSession(username: session.username) else {
+            return false
+        }
+        do {
+            sessionFirst.setValue(session.isLogged,
+                                  forKey: SessionEntity.isLogged.rawValue)
+            let currentConnection = sessionFirst.value(forKey: SessionEntity.currentConnection.rawValue)
+            sessionFirst.setValue(currentConnection,
+                                  forKey: SessionEntity.lastConnection.rawValue)
+            sessionFirst.setValue(session.currentConnection,
+                                  forKey: SessionEntity.currentConnection.rawValue)
+            try managedContext?.save()
             return true
         } catch {
             return false
         }
     }
 
-    static func save(username: String, lastConnection: Date, isLogged: Bool) -> Bool {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        guard let entityName = NSEntityDescription.entity(forEntityName: SessionModel.entityName,
+    static func save(session: SessionModel) -> Bool {
+        guard let managedContext = managedContext else {
+            return false
+        }
+        guard let entityName = NSEntityDescription.entity(forEntityName: SessionEntity.entityName.rawValue,
                                                           in: managedContext) else {
             return false
         }
         let entity = NSManagedObject(entity: entityName, insertInto: managedContext)
-        entity.setValue("\(username)", forKey: "username")
-        entity.setValue(lastConnection, forKey: "lastConnection")
-        entity.setValue(isLogged, forKey: "isLogged")
+        entity.setValue(session.username,
+                        forKey: SessionEntity.username.rawValue)
+        entity.setValue(session.currentConnection,
+                        forKey: SessionEntity.lastConnection.rawValue)
+        entity.setValue(session.currentConnection,
+                        forKey: SessionEntity.currentConnection.rawValue)
+        entity.setValue(session.isLogged,
+                        forKey: SessionEntity.isLogged.rawValue)
         do {
             try managedContext.save()
             return true
         } catch let error {
-            print("could not save \(error.localizedDescription)")
+            print("Error in save Session \(error.localizedDescription)")
             return false
         }
     }
 
     static func existsSession(username: String) -> Bool {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionModel.entityName)
-        let usernameKeyPredicate = NSPredicate(format: "username = %@", username)
-        fetchRequest.predicate = usernameKeyPredicate
-        do {
-            guard let result = try managedContext.fetch(fetchRequest) as? [NSManagedObject],
-                  result.isEmpty == false else {
-                return false
-            }
-            return true
-        } catch let error {
-            print("could not get \(error.localizedDescription)")
-            return false
-        }
+        return getSession(username: username) != nil
     }
 }

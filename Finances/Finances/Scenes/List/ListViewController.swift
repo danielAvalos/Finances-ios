@@ -83,8 +83,8 @@ extension ListViewController: UITableViewDataSource {
     func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = HeaderView.nibInstance
         if let userSession = viewModel?.getUserSession(),
-           let username = userSession.username,
            let lastConnection = userSession.lastConnection {
+            let username = userSession.username
             headerView.configure(username: username,
                                  lastConnection: lastConnection)
         }
