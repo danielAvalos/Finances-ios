@@ -10,50 +10,50 @@ struct Error: ErrorRepresentable {
     var description: String {
         switch code {
         case .notConnection:
-            return "Comprueba tu conexión a Internet y vuelve a intentarlo."
+            return MessagesLocalizable.notConnectionMessage.rawValue.localized
         case .unknown, .badRequest, .requestNotFound:
-            return "Algo salió mal, verifique su conexión e intente nuevamente"
+            return MessagesLocalizable.unknownMessage.rawValue.localized
         case .errorServer:
-            return "Algo salió mal, el servicio no está disponible, inténtelo de nuevo más tarde"
+            return MessagesLocalizable.errorServerMessage.rawValue.localized
         case .notAuthorized:
-            return "No está autorizado para utilizar el servicio"
+            return MessagesLocalizable.notAuthorizedMessage.rawValue.localized
         case .other:
-            return descriptionLocalizable ?? ""
+            return descriptionLocalizable?.localized ?? ""
         case .dataNotFound:
-            return "No se encontraron registros"
-        case .notUserName:
-            return "ingresa el usuario"
-        case .notPassword:
-            return "ingresa la contraseña"
+            return MessagesLocalizable.dataNotFoundMessage.rawValue.localized
+        case .userRequired:
+            return MessagesLocalizable.userRequiredTitle.rawValue.localized
+        case .passwordRequired:
+            return MessagesLocalizable.passwordRequiredMessage.rawValue.localized
         case .userInvalid:
-            return "Usuario o contraseña incorrecto"
+            return MessagesLocalizable.userInvalidMessage.rawValue.localized
         }
     }
 
     var title: String {
         switch code {
         case .notConnection:
-            return "Sin conexión"
+            return MessagesLocalizable.notConnectionTitle.rawValue.localized
         case .unknown:
-            return "Error desconocido"
+            return MessagesLocalizable.unknownTitle.rawValue.localized
         case .badRequest:
-            return "Solicitud incorrecta"
+            return MessagesLocalizable.badRequestTitle.rawValue.localized
         case .requestNotFound:
-            return "Petición no encontrada"
+            return MessagesLocalizable.requestNotFoundTitle.rawValue.localized
         case .errorServer:
-            return "Error en el servidor"
+            return MessagesLocalizable.errorServerTitle.rawValue.localized
         case .notAuthorized:
-            return "No autorizado"
+            return MessagesLocalizable.notAuthorizedTitle.rawValue.localized
         case .other:
             return descriptionLocalizable ?? ""
         case .dataNotFound:
-            return "No hay resultados"
-        case .notUserName:
-            return "Usuario es requerido"
-        case .notPassword:
-            return "Password es requerido"
+            return MessagesLocalizable.dataNotFoundTitle.rawValue.localized
+        case .userRequired:
+            return MessagesLocalizable.userRequiredTitle.rawValue.localized
+        case .passwordRequired:
+            return MessagesLocalizable.passwordRequiredTitle.rawValue.localized
         case .userInvalid:
-            return "Error de credenciales"
+            return MessagesLocalizable.userInvalidTitle.rawValue.localized
         }
     }
 
@@ -65,7 +65,7 @@ protocol ErrorRepresentable {
     var code: ErrorCode { get set }
 }
 
-enum ErrorCode {
+enum ErrorCode: String {
     case notConnection
     case unknown
     case badRequest
@@ -74,8 +74,8 @@ enum ErrorCode {
     case requestNotFound
     case dataNotFound
     case other
-    case notUserName
-    case notPassword
+    case userRequired
+    case passwordRequired
     case userInvalid
 }
 

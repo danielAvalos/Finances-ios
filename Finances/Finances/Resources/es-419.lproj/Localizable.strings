@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  Finances
+
+  Created by DESARROLLO on 25/01/21.
+  
+*/
+
+"username" = "usuario";
+"password" = "contraseña";
+"continueString" = "continuar";
+"notConnectionTitle" = "Sin conexión";
+"notConnectionMessage" = "Comprueba tu conexión a Internet y vuelve a intentarlo.";
+"unknownTitle" = "Error desconocido";
+"unknownMessage" = "Algo salió mal, verifique su conexión e intente nuevamente";
+"notAuthorizedTitle" = "No autorizado";
+"notAuthorizedMessage" = "No está autorizado para utilizar el servicio";
+"errorServerTitle" = "Error en el servidor";
+"errorServerMessage" = "Algo salió mal, el servicio no está disponible, inténtelo de nuevo más tarde";
+"requestNotFoundTitle" = "Petición no encontrada";
+"requestNotFoundMessage" = "Ocurrio un error en la solicitud, intentelo de nuevo mas tarde";
+"dataNotFoundTitle" = "No hay resultados";
+"dataNotFoundMessage" = "No se encontraron registros";
+"userRequiredTitle" = "Usuario es requerido";
+"userRequiredMessage" = "Ingresa el usuario";
+"passwordRequiredTitle" = "Password es requerido";
+"passwordRequiredMessage" = "Ingresa la contraseña";
+"userInvalidTitle" = "Error de credenciales";
+"userInvalidMessage" = "El Usuario y/o contraseña son invalidos";
+"badRequestTitle" = "Solicitud incorrecta";
+"retryText" = "Reintentar";

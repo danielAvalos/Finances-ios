@@ -17,9 +17,9 @@ struct Message {
         var title: String {
             switch self {
             case .reloadData:
-                return "Reintentar"
+                return MessagesLocalizable.retryText.rawValue.localized
             case .notResult:
-                return "No se encontro información"
+                return MessagesLocalizable.dataNotFoundMessage.rawValue.localized
             }
         }
     }

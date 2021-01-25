@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="landscape" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -14,14 +14,14 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="cci-Kq-4K5" customClass="LoginViewController" customModule="Finances" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="6aa-24-6Ge">
-                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="jCO-4J-v4i">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-OT-evg">
-                                <rect key="frame" x="236" y="27" width="96" height="100.5"/>
+                                <rect key="frame" x="80" y="27" width="160" height="164.5"/>
                                 <color key="tintColor" name="greenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dX2-OT-evg" secondAttribute="height" multiplier="1:1" id="jzU-e7-ZNT"/>
@@ -30,13 +30,13 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-j3-54G">
-                                <rect key="frame" x="20" y="156" width="528" height="160"/>
+                                <rect key="frame" x="20" y="220" width="280" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yst-O2-xZ0">
-                                        <rect key="frame" x="0.0" y="0.0" width="528" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="90"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRr-q4-Nu1" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="528" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" name="grayLightColor"/>
                                                 <constraints>
@@ -56,7 +56,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we0-S8-nNq" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="55" width="528" height="35"/>
+                                                <rect key="frame" x="0.0" y="55" width="280" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" name="grayLightColor"/>
                                                 <constraints>
@@ -80,11 +80,12 @@
                                         <constraints>
                                             <constraint firstItem="we0-S8-nNq" firstAttribute="width" secondItem="PRr-q4-Nu1" secondAttribute="width" id="g4o-1h-lnD"/>
                                         </constraints>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                         <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                                         <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qz-Wc-lmB" customClass="CustomButton" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="110" width="528" height="50"/>
+                                        <rect key="frame" x="0.0" y="110" width="280" height="50"/>
                                         <color key="backgroundColor" name="greenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bOo-zr-rxq"/>

@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  Finances
+
+  Created by DESARROLLO on 25/01/21.
+  
+*/
+
+"username" = "username";
+"password" = "password";
+"continueString" = "continue";
+"notConnectionTitle" = "Without connection";
+"notConnectionMessage" = "Please check your internet connection and try again.";
+"unknownTitle" = "Unknown error";
+"unknownMessage" = "Something went wrong, check your connection and try again";
+"notAuthorizedTitle" = "Not authorized";
+"notAuthorizedMessage" = "You are not authorized to use the service";
+"errorServerTitle" = "Server error";
+"errorServerMessage" = "Something went wrong, the service is not available, please try again later";
+"requestNotFoundTitle" = "Petition not found";
+"requestNotFoundMessage" = "An error occurred in the request, please try again later";
+"dataNotFoundTitle" = "No results";
+"dataNotFoundMessage" = "No records found";
+"userRequiredTitle" = "User is required";
+"userRequiredMessage" = "Enter username";
+"passwordRequiredTitle" = "Password is required";
+"passwordRequiredMessage" = "Enter password";
+"userInvalidTitle" = "Credentials error";
+"userInvalidMessage" = "The username or password are invalid";
+"badRequestTitle" = "Bad Request";
+"retryText" = "Retry";

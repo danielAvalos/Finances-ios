@@ -20,12 +20,12 @@ extension LoginViewModel: LoginViewModelProtocol {
     func login() {
         guard let username = userName,
               !username.isEmpty else {
-            delegate?.loginDidFailWithError(Error(code: .notUserName))
+            delegate?.loginDidFailWithError(Error(code: .userRequired))
             return
         }
         guard let password = password,
               !password.isEmpty else {
-            delegate?.loginDidFailWithError(Error(code: .notPassword))
+            delegate?.loginDidFailWithError(Error(code: .passwordRequired))
             return
         }
         DispatchQueue(label: "com.user.login").async { [weak self] in

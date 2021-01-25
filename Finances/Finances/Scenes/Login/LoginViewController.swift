@@ -32,6 +32,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLocalized()
         userEmailInput.delegate = self
         passwordInput.delegate = self
     }
@@ -42,6 +43,12 @@ private extension LoginViewController {
 
     func setup() {
         LoginConfigurator.configure(self)
+    }
+
+    func setupLocalized() {
+        userEmailInput.placeholder = MessagesLocalizable.username.rawValue.localized
+        passwordInput.placeholder = MessagesLocalizable.password.rawValue.localized
+        loginButton.setTitle(MessagesLocalizable.continueString.rawValue.localized, for: .normal)
     }
 
     @IBAction func didTapLoginButton(_: Any) {
