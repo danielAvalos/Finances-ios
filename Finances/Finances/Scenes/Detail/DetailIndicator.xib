@@ -16,14 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="95x-en-nvk">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="95x-en-nvk">
                         <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-NS-Jhd">
-                                <rect key="frame" x="20" y="30" width="374" height="372"/>
+                                <rect key="frame" x="20" y="30" width="374" height="892"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-Xx-3Bh" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="208"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -34,7 +34,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-QX-Nqk" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="98" width="374" height="78"/>
+                                        <rect key="frame" x="0.0" y="228" width="374" height="208"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -45,7 +45,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBY-Wd-eVX" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="196" width="374" height="78"/>
+                                        <rect key="frame" x="0.0" y="456" width="374" height="208"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -56,7 +56,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqX-Wx-1ON" customClass="DetailIndicatorFieldView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="294" width="374" height="78"/>
+                                        <rect key="frame" x="0.0" y="684" width="374" height="208"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -68,26 +68,27 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="WBY-Wd-eVX" firstAttribute="height" secondItem="R0J-QX-Nqk" secondAttribute="height" id="MRS-m5-1gx"/>
-                                    <constraint firstItem="HqX-Wx-1ON" firstAttribute="height" secondItem="WBY-Wd-eVX" secondAttribute="height" id="MYH-Mu-b1Y"/>
-                                    <constraint firstItem="R0J-QX-Nqk" firstAttribute="height" secondItem="nV2-Xx-3Bh" secondAttribute="height" id="cIJ-Tm-nm2"/>
+                                    <constraint firstItem="R0J-QX-Nqk" firstAttribute="height" secondItem="nV2-Xx-3Bh" secondAttribute="height" id="Ams-LH-372"/>
+                                    <constraint firstItem="WBY-Wd-eVX" firstAttribute="height" secondItem="R0J-QX-Nqk" secondAttribute="height" id="CQo-64-8XD"/>
+                                    <constraint firstItem="HqX-Wx-1ON" firstAttribute="height" secondItem="WBY-Wd-eVX" secondAttribute="height" id="TS1-ly-434"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ofk-NS-Jhd" secondAttribute="bottom" constant="20" id="0Fw-SM-DJa"/>
                             <constraint firstItem="ofk-NS-Jhd" firstAttribute="top" secondItem="95x-en-nvk" secondAttribute="top" constant="30" id="0eB-kx-SBc"/>
-                            <constraint firstAttribute="bottom" secondItem="ofk-NS-Jhd" secondAttribute="bottom" constant="20" id="6ZP-m0-wva"/>
+                            <constraint firstItem="ofk-NS-Jhd" firstAttribute="centerX" secondItem="95x-en-nvk" secondAttribute="centerX" id="Dje-nY-mDT"/>
                             <constraint firstItem="ofk-NS-Jhd" firstAttribute="leading" secondItem="95x-en-nvk" secondAttribute="leading" constant="20" id="QyH-9U-jIQ"/>
                             <constraint firstAttribute="trailing" secondItem="ofk-NS-Jhd" secondAttribute="trailing" constant="20" id="XPW-DN-R0q"/>
-                            <constraint firstItem="ofk-NS-Jhd" firstAttribute="centerX" secondItem="95x-en-nvk" secondAttribute="centerX" id="kHc-2Q-Tzx"/>
                         </constraints>
-                        <viewLayoutGuide key="contentLayoutGuide" id="ASL-Jf-8Uh"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="T26-7u-CWO"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="g2h-8t-2c5"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="gvE-tr-aim"/>
                     </scrollView>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="PT7-tE-MKe"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
+                    <constraint firstItem="95x-en-nvk" firstAttribute="centerX" secondItem="Sbh-5t-faI" secondAttribute="centerX" id="9JQ-v7-9gX"/>
                     <constraint firstItem="95x-en-nvk" firstAttribute="leading" secondItem="PT7-tE-MKe" secondAttribute="leading" id="HY1-y7-Wjp"/>
                     <constraint firstItem="95x-en-nvk" firstAttribute="top" secondItem="PT7-tE-MKe" secondAttribute="top" id="dd2-BP-uvb"/>
                     <constraint firstAttribute="bottom" secondItem="95x-en-nvk" secondAttribute="bottom" id="fFG-sB-2Io"/>

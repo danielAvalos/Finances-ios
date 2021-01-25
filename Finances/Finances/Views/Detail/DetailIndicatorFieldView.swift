@@ -69,13 +69,11 @@ extension DetailIndicatorFieldView {
             valueLabel.text = value
         }
         let currentBound = self.bounds
-        UIView.transition(with: self, duration: 0.8,
-                          options: [.transitionFlipFromRight,
-                                    .allowAnimatedContent,
-                                    .beginFromCurrentState],
+        UIView.transition(with: self, duration: 0.7,
+                          options: [.curveEaseIn],
           animations: {
             self.frame = CGRect(x: currentBound.origin.x + UIScreen.main.bounds.width,
-                                y: currentBound.origin.y ,
+                                y: currentBound.origin.y + UIScreen.main.bounds.width,
                                 width: currentBound.width,
                                 height: currentBound.height)
             self.isHidden = false

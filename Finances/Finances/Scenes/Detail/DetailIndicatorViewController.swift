@@ -53,10 +53,10 @@ extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
     func showIndicatorInfo(indicator: Indicator) {
         setupNavigation()
         codeView.setValue(value: indicator.code)
+        unitOfMeasurementView.setValue(value: indicator.unitOfMeasurement)
         dateView.setValue(value: indicator.date)
         let value = indicator.value ?? 0
         valueView.setValue(value: "\(value)")
-        unitOfMeasurementView.setValue(value: indicator.unitOfMeasurement)
     }
 }
 
@@ -70,5 +70,6 @@ private extension DetailIndicatorViewController {
     func setupNavigation() {
         navigationItem.title = viewModel?.indicator?.name
         navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.tintColor = UIColor.color(named: .green)
     }
 }
