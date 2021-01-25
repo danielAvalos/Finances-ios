@@ -32,47 +32,57 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-j3-54G">
                                 <rect key="frame" x="20" y="156" width="528" height="160"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRr-q4-Nu1" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="528" height="35"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" name="grayLightColor"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yst-O2-xZ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="528" height="90"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRr-q4-Nu1" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="528" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="grayLightColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="mFR-xf-roE"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon">
+                                                        <imageReference key="value" image="person" catalog="system" renderingMode="template"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="activeIcon">
+                                                        <imageReference key="value" image="person.fill" catalog="system" renderingMode="template"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" name="grayLightColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we0-S8-nNq" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="55" width="528" height="35"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="grayLightColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="M8B-5M-ysU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureEntry" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon">
+                                                        <imageReference key="value" image="key" catalog="system" renderingMode="template"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="activeIcon">
+                                                        <imageReference key="value" image="key.fill" catalog="system" renderingMode="template"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" name="grayLightColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="mFR-xf-roE"/>
+                                            <constraint firstItem="we0-S8-nNq" firstAttribute="width" secondItem="PRr-q4-Nu1" secondAttribute="width" id="g4o-1h-lnD"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Username"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon">
-                                                <imageReference key="value" image="person" catalog="system" renderingMode="template"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon">
-                                                <imageReference key="value" image="person.fill" catalog="system" renderingMode="template"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" name="grayLightColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="we0-S8-nNq" customClass="InputWithIconView" customModule="Finances" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55" width="528" height="35"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" name="grayLightColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="M8B-5M-ysU"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureEntry" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon">
-                                                <imageReference key="value" image="key" catalog="system" renderingMode="template"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon">
-                                                <imageReference key="value" image="key.fill" catalog="system" renderingMode="template"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" name="grayLightColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                        <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qz-Wc-lmB" customClass="CustomButton" customModule="Finances" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110" width="528" height="50"/>
                                         <color key="backgroundColor" name="greenColor"/>
@@ -93,11 +103,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="we0-S8-nNq" firstAttribute="width" secondItem="PRr-q4-Nu1" secondAttribute="width" id="KEK-lc-XEN"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal" spacing="30"/>
-                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
