@@ -11,6 +11,7 @@ It allows to log in locally with CoreData and obtains the data from the API "htt
 * Clean code
 * CoreData for login
 * UnitTest
+* Support Dark & light Mode
 
 ### How do I get set up? ###
 
