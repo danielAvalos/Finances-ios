@@ -46,11 +46,11 @@ private extension AppCoordinator {
         fadeTransitionOnRootViewController(controller: navigationController)
     }
 
-    func fadeTransitionOnRootViewController(controller: UIViewController, duration: TimeInterval = 0.5, completion: ((_ newController: UIViewController?) -> Void)? = nil) {
+    func fadeTransitionOnRootViewController(controller: UIViewController, duration: TimeInterval = 0.3, completion: ((_ newController: UIViewController?) -> Void)? = nil) {
         let currentController = window.rootViewController
         let frame = CGRect(x: 0, y: 0, width: controller.view.frame.width, height: controller.view.frame.height)
         let subView = UIView(frame: frame)
-        window.backgroundColor = UIColor.black
+        window.backgroundColor = UIColor.color(named: .white) ?? UIColor.white
         window.rootViewController = nil
         window.rootViewController = controller
         if let oldController = currentController {

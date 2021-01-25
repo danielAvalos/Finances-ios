@@ -65,11 +65,15 @@ extension LoginViewController: InputWithIconViewDelegate {
 extension LoginViewController: LoginViewModelDelegate {
 
     func loginDidComplete() {
-        coordinator?.navigateToList()
+        DispatchQueue.main.async { [weak self] in
+            self?.coordinator?.navigateToList()
+        }
     }
 
     func loginDidFailWithError(_ error: Error) {
-        showAlert(title: error.title, message: error.description)
-        loginButton.stopActivityIndicator()
+        DispatchQueue.main.async { [weak self] in
+            self?.showAlert(title: error.title, message: error.description)
+            self?.loginButton.stopActivityIndicator()
+        }
     }
 }
