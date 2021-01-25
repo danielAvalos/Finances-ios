@@ -19,50 +19,64 @@ class LoginViewModelTest: XCTestCase {
     }
 
     func testUserIsInvalid() throws {
+        // Given
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = "prueba"
         viewModel.password = "12345"
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidFailWithError = { error in
+            // Then
             XCTAssertEqual(error, Error(code: .userInvalid))
         }
+
+        // When
         viewModel.login()
     }
 
     func testUser_isValid() throws {
+        // Given
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = "prueba"
         viewModel.password = "123456"
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidCompleteHandler = {
+            // Then
             XCTAssertTrue(true, "User is valid")
         }
+        
+        // When
         viewModel.login()
     }
 
     func testWhenDoNotEnter_username() throws {
+        // Given
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = ""
         viewModel.password = "123456"
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidFailWithError = { error in
+            // Then
             XCTAssertEqual(error, Error(code: .notUserName))
         }
+        // When
         viewModel.login()
     }
 
     func testWhenDoNotEnter_password() throws {
+        // Given
         let monitorViewModelDelegate = MonitorLoginViewModelDelegate()
         let viewModel = LoginViewModel()
         viewModel.userName = "prueba"
         viewModel.password = ""
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidFailWithError = { error in
+            // Then
             XCTAssertEqual(error, Error(code: .notPassword))
         }
+        // When
         viewModel.login()
     }
 

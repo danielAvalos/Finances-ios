@@ -16,7 +16,7 @@ final class ListViewModel: ListViewModelEntityProtocol {
             delegate?.stateDidChange(state: state)
         }
     }
-    private var unfilteredIndicators: [Indicator] = []
+    var unfilteredIndicators: [Indicator] = []
     var indicators: [Indicator] = []
     let service: IndicatorServiceProtocol
 

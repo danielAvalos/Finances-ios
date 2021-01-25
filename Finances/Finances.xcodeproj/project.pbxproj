@@ -34,6 +34,7 @@
 		E915CDEE25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */; };
 		E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */; };
 		E915CDF825BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */; };
+		E915CE4B25BE5D3B002786C0 /* IndicatorResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E915CE4A25BE5D3B002786C0 /* IndicatorResponse.json */; };
 		E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */; };
 		E9194E6725BB4D8600B411A0 /* DetailIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */; };
 		E9194E6F25BB4FE400B411A0 /* DetailIndicatorViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */; };
@@ -162,6 +163,7 @@
 		E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+SkeletonTableViewDataSource.swift"; sourceTree = "<group>"; };
 		E915CDF725BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UISearchControllerDelegate.swift"; sourceTree = "<group>"; };
+		E915CE4A25BE5D3B002786C0 /* IndicatorResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IndicatorResponse.json; sourceTree = "<group>"; };
 		E9194E6425BB4D8600B411A0 /* DetailIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorViewController.swift; sourceTree = "<group>"; };
 		E9194E6525BB4D8600B411A0 /* DetailIndicator.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailIndicator.xib; sourceTree = "<group>"; };
 		E9194E6E25BB4FE400B411A0 /* DetailIndicatorViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailIndicatorViewModel .swift"; sourceTree = "<group>"; };
@@ -341,6 +343,14 @@
 			path = "Controller+Extension";
 			sourceTree = "<group>";
 		};
+		E915CE4925BE5CC1002786C0 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				E915CE4A25BE5D3B002786C0 /* IndicatorResponse.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		E9194E6325BB4D5900B411A0 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +446,7 @@
 		E9431BFB25BA422E006D5E1A /* FinancesTests */ = {
 			isa = PBXGroup;
 			children = (
+				E915CE4925BE5CC1002786C0 /* Fixtures */,
 				E905804325BBC25E000659D1 /* Mocks */,
 				E905804425BBC264000659D1 /* Scenes */,
 				E9431BFE25BA422E006D5E1A /* Info.plist */,
@@ -815,6 +826,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E915CE4B25BE5D3B002786C0 /* IndicatorResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

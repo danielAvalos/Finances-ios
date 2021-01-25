@@ -19,10 +19,6 @@ extension ListViewController: UITableViewDataSource {
         if let indicator = viewModel?.indicators[indexPath.row] {
             cell.configure(with: indicator)
         }
-        cell.alpha = 0
-        UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
-              cell.alpha = 1
-        })
         return cell
     }
 
