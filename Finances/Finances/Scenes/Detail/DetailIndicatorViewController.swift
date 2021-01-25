@@ -54,7 +54,7 @@ extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
         setupNavigation()
         codeView.setValue(value: indicator.code)
         unitOfMeasurementView.setValue(value: indicator.unitOfMeasurement)
-        dateView.setValue(value: indicator.date)
+        dateView.setValue(value: indicator.date?.getDate()?.string(.full, .short))
         let value = indicator.value ?? 0
         valueView.setValue(value: "\(value)")
     }

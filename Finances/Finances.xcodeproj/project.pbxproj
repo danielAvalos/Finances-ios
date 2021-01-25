@@ -112,6 +112,7 @@
 		E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DA225BABE57006D5E1A /* RequestService.swift */; };
 		E9431DA825BABEA9006D5E1A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DA725BABEA9006D5E1A /* Error.swift */; };
 		E9431DB025BABEEC006D5E1A /* IndicatorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */; };
+		E94C50FB25BE9A530061F84D /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C50FA25BE9A530061F84D /* String+Format.swift */; };
 		E98C912925BB6BD3006BF9EC /* SessionCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */; };
 		E98C913125BB6C17006BF9EC /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C913025BB6C17006BF9EC /* SessionModel.swift */; };
 		E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */; };
@@ -230,6 +231,7 @@
 		E9431DA225BABE57006D5E1A /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		E9431DA725BABEA9006D5E1A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsService.swift; sourceTree = "<group>"; };
+		E94C50FA25BE9A530061F84D /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
 		E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCDManager.swift; sourceTree = "<group>"; };
 		E98C913025BB6C17006BF9EC /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemTag.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				E905802725BBBBDD000659D1 /* Date+Format.swift */,
+				E94C50FA25BE9A530061F84D /* String+Format.swift */,
 				E9431CA925BA8490006D5E1A /* UIColor+Brand.swift */,
 				E9328C0C25BB3D7D0014DAE7 /* UITableView+RegistrationHelpers.swift */,
 				E9431CB325BA84F0006D5E1A /* UITableView+RegisterCell.swift */,
@@ -1003,6 +1006,7 @@
 				E905802825BBBBDD000659D1 /* Date+Format.swift in Sources */,
 				E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */,
 				E91BC57125BD452000147B56 /* DetailIndicatorFieldView.swift in Sources */,
+				E94C50FB25BE9A530061F84D /* String+Format.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,
 				E9431CB425BA84F0006D5E1A /* UITableView+RegisterCell.swift in Sources */,

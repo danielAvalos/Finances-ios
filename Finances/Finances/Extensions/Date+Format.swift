@@ -9,10 +9,10 @@ import Foundation
 
 extension Date {
 
-    func getWithFormat() -> String {
+    func string(_ dateStyle: DateFormatter.Style, _ timeStyle: DateFormatter.Style) -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        formatter.timeStyle = .full
+        formatter.dateStyle = dateStyle
+        formatter.timeStyle = timeStyle
         let dateWithFormat = formatter.string(from: self)
         return "\(dateWithFormat)"
     }
