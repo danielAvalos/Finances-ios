@@ -93,6 +93,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="we0-S8-nNq" firstAttribute="width" secondItem="PRr-q4-Nu1" secondAttribute="width" id="KEK-lc-XEN"/>
+                                </constraints>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal" spacing="30"/>
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>

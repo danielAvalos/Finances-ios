@@ -30,6 +30,23 @@ struct SessionCDManager {
 // MARK: - SessionCDManagerProtocol
 extension SessionCDManager: SessionCDManagerProtocol {
 
+    static func getSession(username: String) -> NSManagedObject? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionEntity.entityName.rawValue)
+        let usernameKeyPredicate = NSPredicate(format: "\(SessionEntity.username.rawValue) = %@",
+                                               username)
+        fetchRequest.predicate = usernameKeyPredicate
+        do {
+            guard let result = try managedContext?.fetch(fetchRequest) as? [NSManagedObject],
+                  result.isEmpty == false,
+                  let sessionFirst = result.first else {
+                return nil
+            }
+            return sessionFirst
+        } catch {
+            return nil
+        }
+    }
+
     static func changeStatus(username: String, isLogged: Bool) -> Bool {
         guard let managedObject = getSession(username: username) else {
             return false
@@ -88,23 +105,6 @@ extension SessionCDManager: SessionCDManagerProtocol {
 }
 
 private extension SessionCDManager {
-
-    static func getSession(username: String) -> NSManagedObject? {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: SessionEntity.entityName.rawValue)
-        let usernameKeyPredicate = NSPredicate(format: "\(SessionEntity.username.rawValue) = %@",
-                                               username)
-        fetchRequest.predicate = usernameKeyPredicate
-        do {
-            guard let result = try managedContext?.fetch(fetchRequest) as? [NSManagedObject],
-                  result.isEmpty == false,
-                  let sessionFirst = result.first else {
-                return nil
-            }
-            return sessionFirst
-        } catch {
-            return nil
-        }
-    }
 
     static func update(session: SessionModel) -> Bool {
         guard let sessionFirst = getSession(username: session.username) else {

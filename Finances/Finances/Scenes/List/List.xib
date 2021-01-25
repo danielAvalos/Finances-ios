@@ -37,7 +37,7 @@
                     <constraint firstAttribute="bottom" secondItem="TC2-SH-7im" secondAttribute="bottom" id="8mr-Oc-cyg"/>
                     <constraint firstItem="TC2-SH-7im" firstAttribute="top" secondItem="ewb-BG-5hL" secondAttribute="top" id="ACn-w1-AwC"/>
                     <constraint firstItem="TC2-SH-7im" firstAttribute="leading" secondItem="ewb-BG-5hL" secondAttribute="leading" id="SJa-JS-Inu"/>
-                    <constraint firstAttribute="trailing" secondItem="TC2-SH-7im" secondAttribute="trailing" id="dxp-pm-Uwd"/>
+                    <constraint firstItem="ewb-BG-5hL" firstAttribute="trailing" secondItem="TC2-SH-7im" secondAttribute="trailing" id="dxp-pm-Uwd"/>
                 </constraints>
             </view>
             <connections>

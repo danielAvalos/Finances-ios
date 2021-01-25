@@ -33,6 +33,12 @@ extension LoginViewModel: LoginViewModelProtocol {
             delegate?.loginDidFailWithError(Error(code: .userInvalid))
             return
         }
+        guard SessionCDManager.getSession(username: username) != nil else {
+            let session = SessionModel(isLogged: true, username: username, currentConnection: Date(), lastConnection: nil)
+            _ = SessionCDManager.saveOrUpdate(session: session)
+            delegate?.loginDidComplete()
+            return
+        }
         _ = SessionCDManager.changeStatus(username: username, isLogged: true)
         delegate?.loginDidComplete()
     }
