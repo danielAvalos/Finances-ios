@@ -73,7 +73,8 @@ extension ListViewModel: ListViewModelProtocol {
         guard let sessionActive = SessionCDManager.getSessionActive() else {
             return
         }
-        _ = SessionCDManager.inactiveSession(session: sessionActive)
+        _ = SessionCDManager.changeStatus(username: sessionActive.username,
+                                          isLogged: false)
         delegate?.logout()
     }
 }

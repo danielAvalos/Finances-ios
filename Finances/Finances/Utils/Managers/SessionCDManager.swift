@@ -12,7 +12,7 @@ protocol SessionCDManagerProtocol {
     static func getSessionActive() -> SessionModel?
     static func saveOrUpdate(session: SessionModel) -> Bool
     static func updateLastConnection(session: SessionModel) -> Bool
-    static func inactiveSession(session: SessionModel) -> Bool
+    static func changeStatus(username: String, isLogged: Bool) -> Bool
 }
 
 struct SessionCDManager {
@@ -30,12 +30,17 @@ struct SessionCDManager {
 // MARK: - SessionCDManagerProtocol
 extension SessionCDManager: SessionCDManagerProtocol {
 
-    static func inactiveSession(session: SessionModel) -> Bool {
-        let inactive = SessionModel(isLogged: false,
-                                   username: session.username,
-                                   currentConnection: session.currentConnection,
-                                   lastConnection: session.lastConnection)
-        return update(session: inactive)
+    static func changeStatus(username: String, isLogged: Bool) -> Bool {
+        guard let managedObject = getSession(username: username) else {
+            return false
+        }
+        managedObject.setValue(isLogged, forKey: SessionEntity.isLogged.rawValue)
+        do {
+            try managedContext?.save()
+            return true
+        } catch {
+            return false
+        }
     }
 
     static func updateLastConnection(session: SessionModel) -> Bool {
