@@ -59,7 +59,7 @@ class LoginViewModelTest: XCTestCase {
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidFailWithError = { error in
             // Then
-            XCTAssertEqual(error, Error(code: .notUserName))
+            XCTAssertEqual(error, Error(code: .userRequired))
         }
         // When
         viewModel.login()
@@ -74,7 +74,7 @@ class LoginViewModelTest: XCTestCase {
         viewModel.delegate = monitorViewModelDelegate
         monitorViewModelDelegate.loginDidFailWithError = { error in
             // Then
-            XCTAssertEqual(error, Error(code: .notPassword))
+            XCTAssertEqual(error, Error(code: .passwordRequired))
         }
         // When
         viewModel.login()
