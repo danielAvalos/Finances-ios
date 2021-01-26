@@ -28,7 +28,7 @@ extension LoginViewModel: LoginViewModelProtocol {
             delegate?.loginDidFailWithError(Error(code: .passwordRequired))
             return
         }
-        DispatchQueue(label: "com.user.login").async { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             guard UserCDManager.existsUser(username: username,
                                            password: password) else {
                 self?.delegate?.loginDidFailWithError(Error(code: .userInvalid))
