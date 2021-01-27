@@ -29,3 +29,15 @@
 "userInvalidMessage" = "El Usuario y/o contraseña son invalidos";
 "badRequestTitle" = "Solicitud incorrecta";
 "retryText" = "Reintentar";
+"indicators" = "Indicadores";
+"logoutTitle" = "Se cerrará la sesión";
+"logoutMessage" = "¿Estas seguro que quieres cerrar la sesión actual?";
+"yesText" = "Si";
+"noText" = "No";
+"codeText" = "Codígo";
+"unitOfMeasurementText" = "Unidad de medida";
+"dateText" = "Fecha";
+"valueText" = "Valor";
+"searchResultText" = "Resultado de busqueda";
+"helloText" = "Hola";
+"lastLogin" = "Último Ingreso";

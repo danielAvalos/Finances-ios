@@ -31,6 +31,7 @@ final class DetailIndicatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLocalized()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,13 @@ extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
 
 // MARK: - Private functions
 private extension DetailIndicatorViewController {
+
+    func setupLocalized() {
+        codeView.title = MessagesLocalizable.codeText.rawValue.localized
+        unitOfMeasurementView.title = MessagesLocalizable.unitOfMeasurementText.rawValue.localized
+        dateView.title = MessagesLocalizable.dateText.rawValue.localized
+        valueView.title = MessagesLocalizable.valueText.rawValue.localized
+    }
 
     func setup() {
         DetailIndicatorConfigurator.configure(self)

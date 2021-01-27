@@ -117,7 +117,7 @@ private extension ListViewController {
     }
 
     func setupNavigation() {
-        navigationItem.title = "Indicadores"
+        navigationItem.title = MessagesLocalizable.indicators.rawValue.localized
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
         searchController.delegate = self
@@ -151,13 +151,13 @@ private extension ListViewController {
     }
 
     func showConfirmLogout() {
-        showAlert(title: "Se cerrará la sesión",
-                  message: "¿Estas seguro que quieres cerrar la sesión actual?",
-                  customActionTitle: "SI",
+        showAlert(title: MessagesLocalizable.logoutTitle.rawValue.localized,
+                  message: MessagesLocalizable.logoutMessage.rawValue.localized,
+                  customActionTitle: MessagesLocalizable.yesText.rawValue.localized,
                   handler: { [weak self] (_) in
                     self?.viewModel?.logout()
                   },
-                  cancelActionTitle: "NO")
+                  cancelActionTitle: MessagesLocalizable.noText.rawValue.localized)
     }
 
     func checkForEmptyContent(connectionStatus: ConnectionStatus) {

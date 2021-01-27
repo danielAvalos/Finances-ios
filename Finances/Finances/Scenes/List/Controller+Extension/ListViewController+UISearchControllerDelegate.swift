@@ -20,9 +20,9 @@ extension ListViewController: UISearchControllerDelegate {
 
     func didDismissSearchController(_ searchController: UISearchController) {
         guard let text = searchController.searchBar.text, !text.isEmpty else {
-            navigationItem.title = "Indicadores"
+            navigationItem.title = MessagesLocalizable.indicators.rawValue.localized
             return
         }
-        navigationItem.title = "Resultado de busqueda"
+        navigationItem.title = MessagesLocalizable.searchResultText.rawValue.localized
     }
 }

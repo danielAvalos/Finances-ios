@@ -21,7 +21,7 @@ final class HeaderView: UIView, NibLoadableView {
 
 extension HeaderView {
     func configure(username: String, lastConnection: Date) {
-        userNameLabel.text = "Hola \(username)!"
-        lastConnectionLabel.text = "Último Ingreso: \(lastConnection.string(.full, .full))"
+        userNameLabel.text = "\(MessagesLocalizable.helloText.rawValue.localized) \(username)!"
+        lastConnectionLabel.text = "\(MessagesLocalizable.lastLogin.rawValue.localized): \(lastConnection.string(.full, .full))"
     }
 }

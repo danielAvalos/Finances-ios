@@ -32,4 +32,16 @@ enum MessagesLocalizable: String {
     case userInvalidMessage
     case badRequestTitle
     case retryText
+    case indicators
+    case logoutTitle
+    case logoutMessage
+    case yesText
+    case noText
+    case codeText
+    case unitOfMeasurementText
+    case dateText
+    case valueText
+    case searchResultText
+    case helloText
+    case lastLogin
 }
