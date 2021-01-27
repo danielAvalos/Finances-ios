@@ -28,20 +28,18 @@ extension LoginViewModel: LoginViewModelProtocol {
             delegate?.loginDidFailWithError(Error(code: .passwordRequired))
             return
         }
-        DispatchQueue.main.async { [weak self] in
-            guard UserCDManager.existsUser(username: username,
-                                           password: password) else {
-                self?.delegate?.loginDidFailWithError(Error(code: .userInvalid))
-                return
-            }
-            guard SessionCDManager.getSession(username: username) != nil else {
-                let session = SessionModel(isLogged: true, username: username, currentConnection: Date(), lastConnection: nil)
-                _ = SessionCDManager.saveOrUpdate(session: session)
-                self?.delegate?.loginDidComplete()
-                return
-            }
-            _ = SessionCDManager.changeStatus(username: username, isLogged: true)
-            self?.delegate?.loginDidComplete()
+        guard UserCDManager.existsUser(username: username,
+                                       password: password) else {
+            delegate?.loginDidFailWithError(Error(code: .userInvalid))
+            return
         }
+        guard SessionCDManager.getSession(username: username) != nil else {
+            let session = SessionModel(isLogged: true, username: username, currentConnection: Date(), lastConnection: nil)
+            _ = SessionCDManager.saveOrUpdate(session: session)
+            delegate?.loginDidComplete()
+            return
+        }
+        _ = SessionCDManager.changeStatus(username: username, isLogged: true)
+        delegate?.loginDidComplete()
     }
 }

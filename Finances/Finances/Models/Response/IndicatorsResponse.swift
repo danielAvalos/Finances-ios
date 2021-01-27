@@ -43,9 +43,6 @@ extension IndicatorsResponse: Decodable {
 extension IndicatorsResponse {
 
     enum CodingKeys: String, CodingKey {
-        case version = "version"
-        case author = "autor"
-        case date = "fecha"
         case uDeF = "uf"
         case ivp = "ivp"
         case dolar = "dolar"
@@ -58,5 +55,8 @@ extension IndicatorsResponse {
         case libraCobre = "libra_cobre"
         case tasaDesempleo = "tasa_desempleo"
         case bitcoin = "bitcoin"
+        case version = "version"
+        case author = "autor"
+        case date = "fecha"
     }
 }

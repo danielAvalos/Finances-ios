@@ -121,6 +121,8 @@
 		E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */; };
 		E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */; };
 		E98C916C25BB807D006BF9EC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */; };
+		E9C0F8A925C1FB5E001F3C4F /* IndicatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */; };
+		E9C0F8B225C1FFC9001F3C4F /* IndicatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0F8B125C1FFC9001F3C4F /* IndicatorResponse.swift */; };
 		F13C6A798F158E3215B8AC7C /* Pods_FinancesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD0C06F0748C658B202E88D /* Pods_FinancesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -244,6 +246,8 @@
 		E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemTag.swift; sourceTree = "<group>"; };
 		E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigureProtocol.swift; sourceTree = "<group>"; };
 		E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorType.swift; sourceTree = "<group>"; };
+		E9C0F8B125C1FFC9001F3C4F /* IndicatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorResponse.swift; sourceTree = "<group>"; };
 		EEA038403FD9BECE90472C90 /* Pods-Finances-FinancesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances-FinancesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -396,6 +400,7 @@
 			children = (
 				E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */,
 				E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */,
+				E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */,
 				E931CFF625BF353D00A4FF49 /* MessagesLocalizable.swift */,
 				E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */,
 				E9328BB925BB2B250014DAE7 /* XibName.swift */,
@@ -634,9 +639,9 @@
 		E9431D2925BAA4B3006D5E1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9C0F8B025C1FFAA001F3C4F /* Response */,
 				E9431DA725BABEA9006D5E1A /* Error.swift */,
 				E9431D8D25BABBA1006D5E1A /* Indicator.swift */,
-				E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */,
 				E9328BF325BB346D0014DAE7 /* Message.swift */,
 				E98C913025BB6C17006BF9EC /* SessionModel.swift */,
 				E9431D2A25BAA4C0006D5E1A /* UserModel.swift */,
@@ -709,6 +714,15 @@
 				E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		E9C0F8B025C1FFAA001F3C4F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E9C0F8B125C1FFC9001F3C4F /* IndicatorResponse.swift */,
+				E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -986,6 +1000,7 @@
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
 				E931C77E25BCF727008436D8 /* MonitorLoginViewModelDelegate.swift in Sources */,
 				E9194E7925BB501500B411A0 /* DetailIndicatorConfigurator.swift in Sources */,
+				E9C0F8B225C1FFC9001F3C4F /* IndicatorResponse.swift in Sources */,
 				E9194E7425BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift in Sources */,
 				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
 				E905801125BBAFD5000659D1 /* HeaderView.swift in Sources */,
@@ -1031,6 +1046,7 @@
 				E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
 				E905807225BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
+				E9C0F8A925C1FB5E001F3C4F /* IndicatorType.swift in Sources */,
 				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
 				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,
 				E905806D25BBCDAB000659D1 /* IndicatorServiceProtocol.swift in Sources */,

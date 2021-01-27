@@ -53,7 +53,9 @@ private extension LoginViewController {
 
     @IBAction func didTapLoginButton(_: Any) {
         loginButton.startActivityIndicator()
-        viewModel?.login()
+        DispatchQueue.main.async { [weak self] in
+            self?.viewModel?.login()
+        }
     }
 }
 

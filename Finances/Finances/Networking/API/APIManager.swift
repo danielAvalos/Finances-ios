@@ -10,10 +10,14 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
 
     case getIndicators
+    case getHistoricalIndicatorByType(_ type: IndicatorType)
+    case getHistoricalIndicatorBy(type: IndicatorType, date: String)
 
     var method: HTTPMethod {
         switch self {
-        case .getIndicators:
+        case .getIndicators,
+             .getHistoricalIndicatorBy,
+             .getHistoricalIndicatorByType:
             return .get
         }
     }
@@ -22,12 +26,18 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .getIndicators:
             return "/api"
+        case let .getHistoricalIndicatorByType(type):
+            return "/api/\(type)"
+        case let .getHistoricalIndicatorBy(type, date):
+            return "/api/\(type)/\(date)"
         }
     }
 
     var parameters: Parameters? {
         switch self {
-        case .getIndicators:
+        case .getIndicators,
+             .getHistoricalIndicatorBy,
+             .getHistoricalIndicatorByType:
             return nil
         }
     }
