@@ -40,8 +40,13 @@ extension ListViewModel: ListViewModelProtocol {
                 }
                 guard let error = error else {
                     strongSelf.indicators = response?.indicators ?? []
-                    strongSelf.unfilteredIndicators = strongSelf.indicators
-                    strongSelf.state = .ready(value: .online)
+                    if Locale.current.languageCode != "es" {
+                        strongSelf.unfilteredIndicators = []
+                        strongSelf.translateIndicators()
+                    } else {
+                        strongSelf.unfilteredIndicators = strongSelf.indicators
+                        strongSelf.state = .ready(value: .online)
+                    }
                     return
                 }
                 self?.state = .failed(error: error)
@@ -79,4 +84,38 @@ extension ListViewModel: ListViewModelProtocol {
     }
 }
 
-private extension ListViewModel { }
+private extension ListViewModel {
+
+    func translateIndicators() {
+        let dataToTranslate = self.indicators
+        guard let next = dataToTranslate.first else {
+            self.indicators = self.unfilteredIndicators
+            self.state = .ready(value: .online)
+            return
+        }
+        textToTranslate(model: next)
+    }
+
+    func textToTranslate(model: Indicator) {
+        guard let name = model.name else {
+            unfilteredIndicators.append(model)
+            return
+        }
+        GoogleTranslateManager.translate(text: name) { [weak self] (textTranslated) in
+            guard let strongSelf = self else {
+                return
+            }
+            if let index = strongSelf.indicators.firstIndex(where: { $0.name == name }) {
+                let indicator = strongSelf.indicators[index]
+                let indicatorTranslated = Indicator(code: indicator.code,
+                                                    name: textTranslated,
+                                                    unitOfMeasurement: indicator.unitOfMeasurement,
+                                                    date: indicator.date,
+                                                    value: indicator.value)
+                strongSelf.unfilteredIndicators.append(indicatorTranslated)
+                strongSelf.indicators.remove(at: index)
+            }
+            strongSelf.translateIndicators()
+        }
+    }
+}

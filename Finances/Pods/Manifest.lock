@@ -3,14 +3,73 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - GoogleDataTransport (8.2.0):
+    - nanopb (~> 2.30907.0)
+  - GoogleMLKit/MLKitCore (2.0.0):
+    - MLKitCommon (~> 2.0.0)
+  - GoogleMLKit/Translate (2.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTranslate (~> 1.1.0)
+  - GoogleToolboxForMac/DebugUtils (2.3.0):
+    - GoogleToolboxForMac/Defines (= 2.3.0)
+  - GoogleToolboxForMac/Defines (2.3.0)
+  - GoogleToolboxForMac/Logger (2.3.0):
+    - GoogleToolboxForMac/Defines (= 2.3.0)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.0)":
+    - GoogleToolboxForMac/Defines (= 2.3.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.0)
+    - GoogleToolboxForMac/Defines (= 2.3.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.0)"
+  - GoogleToolboxForMac/StringEncoding (2.3.0):
+    - GoogleToolboxForMac/Defines (= 2.3.0)
+  - GoogleUtilities/Environment (7.2.0):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (7.2.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/UserDefaults (7.2.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.0.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.5.0)
   - IQKeyboardManagerSwift (6.5.6)
+  - MLKitCommon (2.0.0):
+    - GoogleDataTransport (~> 8.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 7.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.12)
+  - MLKitNaturalLanguage (1.1.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleToolboxForMac/StringEncoding (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - MLKitCommon (~> 2.0)
+    - Protobuf (~> 3.12)
+  - MLKitTranslate (1.1.0):
+    - MLKitNaturalLanguage (~> 1.1)
+    - SSZipArchive (~> 2.1)
+  - nanopb (2.30907.0):
+    - nanopb/decode (= 2.30907.0)
+    - nanopb/encode (= 2.30907.0)
+  - nanopb/decode (2.30907.0)
+  - nanopb/encode (2.30907.0)
+  - PromisesObjC (1.2.12)
+  - Protobuf (3.14.0)
   - ReachabilitySwift (5.0.0)
   - SkeletonView (1.11.0)
+  - SSZipArchive (2.2.3)
   - SwiftLint (0.41.0)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
+  - GoogleMLKit/Translate
   - IQKeyboardManagerSwift
   - ReachabilitySwift
   - SkeletonView
@@ -20,19 +79,45 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Charts
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GoogleUtilitiesComponents
+    - GTMSessionFetcher
     - IQKeyboardManagerSwift
+    - MLKitCommon
+    - MLKitNaturalLanguage
+    - MLKitTranslate
+    - nanopb
+    - PromisesObjC
+    - Protobuf
     - ReachabilitySwift
     - SkeletonView
+    - SSZipArchive
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
+  GoogleMLKit: 2a9032170872c4464d516700a04661d6e5b98a77
+  GoogleToolboxForMac: 1350d40e86a76f7863928d63bcb0b89c84c521c5
+  GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
+  GoogleUtilitiesComponents: a69c0b3b369ba443e988141e75ef49d9010b1c80
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  MLKitCommon: 746a9b06e05a6a5dc9636a8ea376c3145f0a5338
+  MLKitNaturalLanguage: 59c9147e8f8701b0184af776419b2acbe784e193
+  MLKitTranslate: 823079cdd2d07c43c7443582f537b7dc78ccf1db
+  nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SkeletonView: cc84ce90a804dd0dd7198dd802833411c8a64eaf
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: 48ea3000e05199ab101fbfd95e6f5cddb136ef86
+PODFILE CHECKSUM: 45f1551992d12d6d8f9f7f9270bc0cf6b9527fdd
 
 COCOAPODS: 1.10.0

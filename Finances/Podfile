@@ -6,6 +6,7 @@ target 'Finances' do
   use_frameworks!
   pod 'Alamofire'
   pod 'Charts'
+  pod 'GoogleMLKit/Translate'
   pod 'IQKeyboardManagerSwift'
   pod 'ReachabilitySwift'
   pod 'SkeletonView'

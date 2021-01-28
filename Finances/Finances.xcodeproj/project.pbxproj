@@ -30,6 +30,7 @@
 		E905807F25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */; };
 		E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
 		E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
+		E90ED0F825C27E560041FBB8 /* GoogleTranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED0F725C27E560041FBB8 /* GoogleTranslateManager.swift */; };
 		E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */; };
 		E915CDEE25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */; };
 		E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */; };
@@ -172,6 +173,7 @@
 		E905807725BBCE0A000659D1 /* ListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorListViewModelDelegate.swift; sourceTree = "<group>"; };
+		E90ED0F725C27E560041FBB8 /* GoogleTranslateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTranslateManager.swift; sourceTree = "<group>"; };
 		E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+SkeletonTableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 		E9431D1425BAA3DB006D5E1A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E90ED0F725C27E560041FBB8 /* GoogleTranslateManager.swift */,
 				E9328BAE25BB25BF0014DAE7 /* ReachabilityManager.swift */,
 				E98C912825BB6BD3006BF9EC /* SessionCDManager.swift */,
 				E9431D1625BAA44F006D5E1A /* UserCDManager.swift */,
@@ -775,6 +778,7 @@
 				E9431BDD25BA4222006D5E1A /* Resources */,
 				5A6B6F0B74D2589D004FAAEB /* [CP] Embed Pods Frameworks */,
 				E9431C6825BA7CEE006D5E1A /* Run Script - Swiftlint */,
+				264449B1CF31635990455E4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -813,6 +817,7 @@
 				E9431C0025BA422E006D5E1A /* Frameworks */,
 				E9431C0125BA422E006D5E1A /* Resources */,
 				C2CFE3AEAE5AB79EDC6AEFF2 /* [CP] Embed Pods Frameworks */,
+				99C612289DBD8E97E5CAFB6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -929,6 +934,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		264449B1CF31635990455E4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A6B6F0B74D2589D004FAAEB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -966,6 +988,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99C612289DBD8E97E5CAFB6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2CFE3AEAE5AB79EDC6AEFF2 /* [CP] Embed Pods Frameworks */ = {
@@ -1051,6 +1090,7 @@
 				E905807825BBCE0A000659D1 /* ListViewModelProtocol.swift in Sources */,
 				E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
+				E90ED0F825C27E560041FBB8 /* GoogleTranslateManager.swift in Sources */,
 				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
 				E9E7FC9725C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
