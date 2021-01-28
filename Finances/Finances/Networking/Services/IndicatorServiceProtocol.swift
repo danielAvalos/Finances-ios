@@ -7,7 +7,7 @@
 
 protocol IndicatorServiceProtocol {
 
-    func getHistoricalIndicatorBy(type: IndicatorType, date: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void)
-    func getHistoricalIndicatorByType(_ type: IndicatorType, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void)
+    func getHistoricalIndicatorBy(type: String, date: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void)
+    func getHistoricalIndicatorByType(_ type: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void)
     func getIndicatorsList(completionHandler: @escaping (IndicatorsResponse?, Error?) -> Void)
 }

@@ -5,6 +5,8 @@
 //  Created by DESARROLLO on 22/01/21.
 //
 
+import Charts
+
 // MARK: - DetailIndicatorViewModelEntityProtocol
 final class DetailIndicatorViewModel: DetailIndicatorViewModelEntityProtocol {
 

@@ -7,13 +7,13 @@
 
 final class IndicatorsService: IndicatorServiceProtocol {
 
-    func getHistoricalIndicatorBy(type: IndicatorType, date: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void) {
-        Service.request(apiRouter: APIRouter.getIndicators,
+    func getHistoricalIndicatorBy(type: String, date: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void) {
+        Service.request(apiRouter: APIRouter.getHistoricalIndicatorBy(type: type, date: date),
                         completionHandler: completionHandler)
     }
 
-    func getHistoricalIndicatorByType(_ type: IndicatorType, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void) {
-        Service.request(apiRouter: APIRouter.getIndicators,
+    func getHistoricalIndicatorByType(_ type: String, completionHandler: @escaping (IndicatorResponse?, Error?) -> Void) {
+        Service.request(apiRouter: APIRouter.getHistoricalIndicatorByType(type),
                         completionHandler: completionHandler)
     }
 

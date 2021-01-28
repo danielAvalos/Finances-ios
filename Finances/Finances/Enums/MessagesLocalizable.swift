@@ -44,4 +44,5 @@ enum MessagesLocalizable: String {
     case searchResultText
     case helloText
     case lastLogin
+    case seeHistoricalText
 }

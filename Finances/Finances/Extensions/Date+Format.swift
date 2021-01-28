@@ -16,4 +16,10 @@ extension Date {
         let dateWithFormat = formatter.string(from: self)
         return "\(dateWithFormat)"
     }
+
+    func string(format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
 }

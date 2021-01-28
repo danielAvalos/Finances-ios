@@ -121,8 +121,15 @@
 		E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */; };
 		E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */; };
 		E98C916C25BB807D006BF9EC /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */; };
-		E9C0F8A925C1FB5E001F3C4F /* IndicatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */; };
 		E9C0F8B225C1FFC9001F3C4F /* IndicatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0F8B125C1FFC9001F3C4F /* IndicatorResponse.swift */; };
+		E9E7FC8425C249EF00F17F2D /* HistoricalValuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FC8225C249EF00F17F2D /* HistoricalValuesViewController.swift */; };
+		E9E7FC8525C249EF00F17F2D /* HistoricalValues.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E7FC8325C249EF00F17F2D /* HistoricalValues.xib */; };
+		E9E7FC8D25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FC8C25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift */; };
+		E9E7FC9225C24D1600F17F2D /* HistoricalValuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FC9125C24D1600F17F2D /* HistoricalValuesViewModel.swift */; };
+		E9E7FC9725C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FC9625C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift */; };
+		E9E7FC9C25C24D3400F17F2D /* HistoricalValuesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FC9B25C24D3400F17F2D /* HistoricalValuesViewModelProtocol.swift */; };
+		E9E7FCA525C2502200F17F2D /* DetailIndicatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FCA425C2502200F17F2D /* DetailIndicatorCoordinator.swift */; };
+		E9E7FCAA25C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E7FCA925C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift */; };
 		F13C6A798F158E3215B8AC7C /* Pods_FinancesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD0C06F0748C658B202E88D /* Pods_FinancesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -246,8 +253,15 @@
 		E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemTag.swift; sourceTree = "<group>"; };
 		E98C915B25BB762D006BF9EC /* NavigationConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigureProtocol.swift; sourceTree = "<group>"; };
 		E98C916B25BB807D006BF9EC /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorType.swift; sourceTree = "<group>"; };
 		E9C0F8B125C1FFC9001F3C4F /* IndicatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorResponse.swift; sourceTree = "<group>"; };
+		E9E7FC8225C249EF00F17F2D /* HistoricalValuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalValuesViewController.swift; sourceTree = "<group>"; };
+		E9E7FC8325C249EF00F17F2D /* HistoricalValues.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalValues.xib; sourceTree = "<group>"; };
+		E9E7FC8C25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalValuesConfigurator.swift; sourceTree = "<group>"; };
+		E9E7FC9125C24D1600F17F2D /* HistoricalValuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalValuesViewModel.swift; sourceTree = "<group>"; };
+		E9E7FC9625C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalValuesViewModelDelegate.swift; sourceTree = "<group>"; };
+		E9E7FC9B25C24D3400F17F2D /* HistoricalValuesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalValuesViewModelProtocol.swift; sourceTree = "<group>"; };
+		E9E7FCA425C2502200F17F2D /* DetailIndicatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorCoordinator.swift; sourceTree = "<group>"; };
+		E9E7FCA925C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailIndicatorCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		EEA038403FD9BECE90472C90 /* Pods-Finances-FinancesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances-FinancesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finances-FinancesUITests/Pods-Finances-FinancesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -400,7 +414,6 @@
 			children = (
 				E98C915025BB75E9006BF9EC /* BarButtonItemTag.swift */,
 				E9328BA525BB25780014DAE7 /* ConnectionStatus.swift */,
-				E9C0F8A825C1FB5E001F3C4F /* IndicatorType.swift */,
 				E931CFF625BF353D00A4FF49 /* MessagesLocalizable.swift */,
 				E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */,
 				E9328BB925BB2B250014DAE7 /* XibName.swift */,
@@ -493,6 +506,7 @@
 			children = (
 				E9431D7225BAB9D0006D5E1A /* Common */,
 				E9194E6325BB4D5900B411A0 /* Detail */,
+				E9E7FC7E25C2493D00F17F2D /* HistoricalValues */,
 				E9431D4725BAB254006D5E1A /* List */,
 				E9431C6E25BA7D74006D5E1A /* Login */,
 			);
@@ -593,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				E98C916A25BB806C006BF9EC /* App */,
+				E9E7FCA325C2500C00F17F2D /* Detail */,
 				E9194E8A25BB540400B411A0 /* List */,
 				E9431D5225BAB516006D5E1A /* Login */,
 			);
@@ -725,6 +740,28 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		E9E7FC7E25C2493D00F17F2D /* HistoricalValues */ = {
+			isa = PBXGroup;
+			children = (
+				E9E7FC8325C249EF00F17F2D /* HistoricalValues.xib */,
+				E9E7FC8C25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift */,
+				E9E7FC8225C249EF00F17F2D /* HistoricalValuesViewController.swift */,
+				E9E7FC9125C24D1600F17F2D /* HistoricalValuesViewModel.swift */,
+				E9E7FC9625C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift */,
+				E9E7FC9B25C24D3400F17F2D /* HistoricalValuesViewModelProtocol.swift */,
+			);
+			path = HistoricalValues;
+			sourceTree = "<group>";
+		};
+		E9E7FCA325C2500C00F17F2D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E9E7FCA425C2502200F17F2D /* DetailIndicatorCoordinator.swift */,
+				E9E7FCA925C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -846,6 +883,7 @@
 				E9328BEF25BB33EC0014DAE7 /* GenericMessageStatusView.xib in Resources */,
 				E9431C9D25BA8191006D5E1A /* InputWithIconView.xib in Resources */,
 				E9431CA225BA843E006D5E1A /* Colors.xcassets in Resources */,
+				E9E7FC8525C249EF00F17F2D /* HistoricalValues.xib in Resources */,
 				E9328BFE25BB3B9C0014DAE7 /* IndicatorViewCell.xib in Resources */,
 				E9431BEF25BA422D006D5E1A /* Assets.xcassets in Resources */,
 			);
@@ -995,6 +1033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9431D5C25BAB530006D5E1A /* LoginCoordinatorProtocol.swift in Sources */,
+				E9E7FC9C25C24D3400F17F2D /* HistoricalValuesViewModelProtocol.swift in Sources */,
 				E9431CBA25BA8588006D5E1A /* CustomButton.swift in Sources */,
 				E9431D9325BABC4E006D5E1A /* IndicatorsResponse.swift in Sources */,
 				E9431BED25BA4223006D5E1A /* Finances.xcdatamodeld in Sources */,
@@ -1003,6 +1042,7 @@
 				E9C0F8B225C1FFC9001F3C4F /* IndicatorResponse.swift in Sources */,
 				E9194E7425BB4FF600B411A0 /* DetailIndicatorViewModelDelegate.swift in Sources */,
 				E9328BEA25BB33DE0014DAE7 /* GenericMessageStatusView.swift in Sources */,
+				E9E7FC9225C24D1600F17F2D /* HistoricalValuesViewModel.swift in Sources */,
 				E905801125BBAFD5000659D1 /* HeaderView.swift in Sources */,
 				E931CFF725BF353D00A4FF49 /* MessagesLocalizable.swift in Sources */,
 				E931CFE325BF2B0300A4FF49 /* String+Localize.swift in Sources */,
@@ -1012,6 +1052,7 @@
 				E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */,
 				E9431CAF25BA84D0006D5E1A /* UITableViewCell+RegisterCell.swift in Sources */,
 				E9431CE625BA9937006D5E1A /* LoginConfigurator.swift in Sources */,
+				E9E7FC9725C24D2A00F17F2D /* HistoricalValuesViewModelDelegate.swift in Sources */,
 				E9431CDB25BA9359006D5E1A /* LoadUI.swift in Sources */,
 				E9328BF425BB346D0014DAE7 /* Message.swift in Sources */,
 				E9431D1725BAA44F006D5E1A /* UserCDManager.swift in Sources */,
@@ -1020,6 +1061,7 @@
 				E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */,
 				E905807E25BBCE72000659D1 /* LoginViewModelProtocol.swift in Sources */,
 				E9431D1025BA9CE4006D5E1A /* UIViewController+Alerts.swift in Sources */,
+				E9E7FC8D25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift in Sources */,
 				E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */,
 				E9431D8E25BABBA1006D5E1A /* Indicator.swift in Sources */,
 				E9194E6F25BB4FE400B411A0 /* DetailIndicatorViewModel .swift in Sources */,
@@ -1036,6 +1078,7 @@
 				E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */,
 				E91BC57125BD452000147B56 /* DetailIndicatorFieldView.swift in Sources */,
 				E94C50FB25BE9A530061F84D /* String+Format.swift in Sources */,
+				E9E7FC8425C249EF00F17F2D /* HistoricalValuesViewController.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
 				E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */,
 				E9431CB425BA84F0006D5E1A /* UITableView+RegisterCell.swift in Sources */,
@@ -1046,11 +1089,11 @@
 				E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
 				E905807225BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
-				E9C0F8A925C1FB5E001F3C4F /* IndicatorType.swift in Sources */,
 				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
 				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,
 				E905806D25BBCDAB000659D1 /* IndicatorServiceProtocol.swift in Sources */,
 				E9431D5425BAB525006D5E1A /* LoginCoordinator.swift in Sources */,
+				E9E7FCA525C2502200F17F2D /* DetailIndicatorCoordinator.swift in Sources */,
 				E9431DA825BABEA9006D5E1A /* Error.swift in Sources */,
 				E9431C9125BA8037006D5E1A /* NibNameIdentifiable.swift in Sources */,
 				E9328BBA25BB2B250014DAE7 /* XibName.swift in Sources */,
@@ -1063,6 +1106,7 @@
 				E9431D9B25BABDD7006D5E1A /* APIManager.swift in Sources */,
 				E98C913125BB6C17006BF9EC /* SessionModel.swift in Sources */,
 				E915CDF825BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift in Sources */,
+				E9E7FCAA25C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift in Sources */,
 				E9431D2B25BAA4C0006D5E1A /* UserModel.swift in Sources */,
 				E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */,
 			);

@@ -10,8 +10,8 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
 
     case getIndicators
-    case getHistoricalIndicatorByType(_ type: IndicatorType)
-    case getHistoricalIndicatorBy(type: IndicatorType, date: String)
+    case getHistoricalIndicatorByType(_ type: String)
+    case getHistoricalIndicatorBy(type: String, date: String)
 
     var method: HTTPMethod {
         switch self {

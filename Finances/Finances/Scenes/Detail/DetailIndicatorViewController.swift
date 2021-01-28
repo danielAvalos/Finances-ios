@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 final class DetailIndicatorViewController: UIViewController {
 
@@ -14,9 +15,11 @@ final class DetailIndicatorViewController: UIViewController {
     @IBOutlet private weak var unitOfMeasurementView: DetailIndicatorFieldView!
     @IBOutlet private weak var dateView: DetailIndicatorFieldView!
     @IBOutlet private weak var valueView: DetailIndicatorFieldView!
+    @IBOutlet private weak var historicalButton: CustomButton!
 
     private var isLoadded: Bool = false
     var viewModel: (DetailIndicatorViewModelProtocol & DetailIndicatorViewModelEntityProtocol)?
+    var coordinator: DetailIndicatorCoordinatorProtocol?
 
     // MARK: Object lifecycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -47,6 +50,7 @@ final class DetailIndicatorViewController: UIViewController {
 
 // MARK: - DetailIndicatorViewModelDelegate
 extension DetailIndicatorViewController: DetailIndicatorViewModelDelegate {
+
     func showError(error: Error) {
         showAlert(title: error.title, message: error.description )
     }
@@ -69,6 +73,11 @@ private extension DetailIndicatorViewController {
         unitOfMeasurementView.title = MessagesLocalizable.unitOfMeasurementText.rawValue.localized
         dateView.title = MessagesLocalizable.dateText.rawValue.localized
         valueView.title = MessagesLocalizable.valueText.rawValue.localized
+        historicalButton.setTitle(MessagesLocalizable.seeHistoricalText.rawValue.localized, for: .normal)
+        historicalButton.alpha = 0
+        UIView.animate(withDuration: 0.8, delay: 0.1, animations: { [weak self] in
+            self?.historicalButton.alpha = 1
+        })
     }
 
     func setup() {
@@ -79,5 +88,13 @@ private extension DetailIndicatorViewController {
         navigationItem.title = viewModel?.indicator?.name
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationBar.tintColor = UIColor.color(named: .green)
+    }
+
+    // MARK: - IB Actions
+    @IBAction func didTapHistorical(_ sender: Any) {
+        guard let code = viewModel?.indicator?.code else {
+            return
+        }
+        coordinator?.navigateToHistorical(code: code)
     }
 }
