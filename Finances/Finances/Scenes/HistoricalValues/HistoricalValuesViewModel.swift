@@ -44,6 +44,15 @@ extension HistoricalValuesViewModel: HistoricalValuesViewModelProtocol {
                     return entryOne.x < entryTwo.x
                 }
                 let lineChartDataSet = LineChartDataSet.init(entries: dataEntry, label: "Historico")
+                if let color = UIColor.color(named: .white)?.cgColor {
+                    lineChartDataSet.circleColors = [NSUIColor.init(cgColor: color)]
+                }
+                lineChartDataSet.drawCirclesEnabled = false
+                lineChartDataSet.mode = .cubicBezier
+                lineChartDataSet.lineWidth = 5
+                lineChartDataSet.fill = Fill(color: .white)
+                lineChartDataSet.fillAlpha = 0.8
+                lineChartDataSet.drawValuesEnabled = true
                 let chartData = ChartData(dataSet: lineChartDataSet)
                 self?.delegate?.showHistoricalIndicator(data: chartData)
             }

@@ -12,8 +12,6 @@ final class HistoricalValuesViewController: UIViewController {
 
     @IBOutlet private weak var chartView: LineChartView! {
         didSet {
-            chartView.isHidden = true
-            chartView.backgroundColor = UIColor.color(named: .green)
             chartView.delegate = self
         }
     }
@@ -50,7 +48,6 @@ extension HistoricalValuesViewController: HistoricalValuesViewModelDelegate {
 
     func showHistoricalIndicator(data: ChartData) {
         chartView.data = data
-        chartView.isHidden = false
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,44 +13,57 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController id="al1-bK-ZVZ" customClass="HistoricalValuesViewController" customModule="Finances" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="B2c-bX-aiZ">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSD-cE-EnO" customClass="LineChartView" customModule="Charts">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                        <rect key="frame" x="20" y="203" width="335" height="406"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="Uq3-dX-4GT"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
+                    <constraint firstItem="kSD-cE-EnO" firstAttribute="top" secondItem="Uq3-dX-4GT" secondAttribute="top" id="4NL-ir-ua4"/>
                     <constraint firstItem="kSD-cE-EnO" firstAttribute="height" secondItem="B2c-bX-aiZ" secondAttribute="height" multiplier="0.5" id="6c2-d6-lDL"/>
-                    <constraint firstItem="kSD-cE-EnO" firstAttribute="top" secondItem="B2c-bX-aiZ" secondAttribute="top" id="GQa-Eu-U29"/>
-                    <constraint firstAttribute="trailing" secondItem="kSD-cE-EnO" secondAttribute="trailing" id="cUm-bS-s2o"/>
-                    <constraint firstItem="kSD-cE-EnO" firstAttribute="leading" secondItem="B2c-bX-aiZ" secondAttribute="leading" id="hMJ-eu-pol"/>
+                    <constraint firstItem="kSD-cE-EnO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Uq3-dX-4GT" secondAttribute="top" id="GQa-Eu-U29">
+                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                    </constraint>
+                    <constraint firstAttribute="trailing" secondItem="kSD-cE-EnO" secondAttribute="trailing" constant="20" id="cUm-bS-s2o"/>
+                    <constraint firstItem="kSD-cE-EnO" firstAttribute="leading" secondItem="B2c-bX-aiZ" secondAttribute="leading" constant="20" id="hMJ-eu-pol"/>
                     <constraint firstItem="Uq3-dX-4GT" firstAttribute="bottom" secondItem="kSD-cE-EnO" secondAttribute="bottom" id="rjh-Ux-fSq"/>
+                    <constraint firstItem="kSD-cE-EnO" firstAttribute="centerY" secondItem="B2c-bX-aiZ" secondAttribute="centerY" id="uB7-ob-thH"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="GQa-Eu-U29"/>
+                        <exclude reference="uB7-ob-thH"/>
                         <exclude reference="rjh-Ux-fSq"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=compact-widthClass=compact">
                     <mask key="constraints">
-                        <include reference="rjh-Ux-fSq"/>
                         <exclude reference="6c2-d6-lDL"/>
+                        <include reference="rjh-Ux-fSq"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=compact-widthClass=regular">
                     <mask key="constraints">
-                        <include reference="rjh-Ux-fSq"/>
                         <exclude reference="6c2-d6-lDL"/>
+                        <include reference="rjh-Ux-fSq"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="constraints">
+                        <exclude reference="4NL-ir-ua4"/>
+                        <include reference="GQa-Eu-U29"/>
+                        <include reference="uB7-ob-thH"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=regular-widthClass=regular">
                     <mask key="constraints">
-                        <include reference="rjh-Ux-fSq"/>
                         <exclude reference="6c2-d6-lDL"/>
+                        <include reference="rjh-Ux-fSq"/>
                     </mask>
                 </variation>
             </view>
