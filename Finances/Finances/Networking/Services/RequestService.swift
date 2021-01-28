@@ -8,12 +8,12 @@
 import Alamofire
 
 protocol ServiceProtocol {
-    static func request<T: Decodable>(apiRouter: APIRouter, completionHandler: @escaping (T?, Error?) -> Void)
+    static func request<T: Decodable>(apiRouter: URLRequestConvertible, completionHandler: @escaping (T?, Error?) -> Void)
 }
 
 final class Service: ServiceProtocol {
 
-    static func request<T: Decodable>(apiRouter: APIRouter, completionHandler: @escaping (T?, Error?) -> Void) {
+    static func request<T: Decodable>(apiRouter: URLRequestConvertible, completionHandler: @escaping (T?, Error?) -> Void) {
         let request = AF.request(apiRouter)
         request.responseDecodable(of: T.self) { (response) in
             guard let httpURLResponse = response.response else {

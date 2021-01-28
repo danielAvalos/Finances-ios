@@ -31,6 +31,17 @@
 		E905808625BBCF4D000659D1 /* IndicatorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */; };
 		E905808C25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */; };
 		E90ED0F825C27E560041FBB8 /* GoogleTranslateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED0F725C27E560041FBB8 /* GoogleTranslateManager.swift */; };
+		E90ED14B25C286FF0041FBB8 /* TiingoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED14A25C286FF0041FBB8 /* TiingoAPIManager.swift */; };
+		E90ED15325C2881B0041FBB8 /* ApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED15225C2881B0041FBB8 /* ApiBase.swift */; };
+		E90ED15825C325610041FBB8 /* TechportAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED15725C325610041FBB8 /* TechportAPIManager.swift */; };
+		E90ED16625C327190041FBB8 /* TechportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED16525C327190041FBB8 /* TechportService.swift */; };
+		E90ED16E25C327230041FBB8 /* TechportServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED16D25C327230041FBB8 /* TechportServiceProtocol.swift */; };
+		E90ED19825C32BBD0041FBB8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED19725C32BBD0041FBB8 /* Project.swift */; };
+		E90ED1A125C32C140041FBB8 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED1A025C32C140041FBB8 /* ProjectsResponse.swift */; };
+		E90ED1A925C32C560041FBB8 /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED1A825C32C560041FBB8 /* ProjectResponse.swift */; };
+		E90ED1B125C32CD80041FBB8 /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED1B025C32CD80041FBB8 /* ProjectDetail.swift */; };
+		E90ED1B625C32D040041FBB8 /* ProjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED1B525C32D040041FBB8 /* ProjectProtocol.swift */; };
+		E90ED1C225C32E700041FBB8 /* ProjectDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90ED1C125C32E700041FBB8 /* ProjectDetailResponse.swift */; };
 		E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */; };
 		E915CDEE25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */; };
 		E915CDF325BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */; };
@@ -112,7 +123,7 @@
 		E9431D7425BAB9F0006D5E1A /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */; };
 		E9431D8E25BABBA1006D5E1A /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D8D25BABBA1006D5E1A /* Indicator.swift */; };
 		E9431D9325BABC4E006D5E1A /* IndicatorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */; };
-		E9431D9B25BABDD7006D5E1A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D9A25BABDD7006D5E1A /* APIManager.swift */; };
+		E9431D9B25BABDD7006D5E1A /* MindicatorAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431D9A25BABDD7006D5E1A /* MindicatorAPIManager.swift */; };
 		E9431DA325BABE57006D5E1A /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DA225BABE57006D5E1A /* RequestService.swift */; };
 		E9431DA825BABEA9006D5E1A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DA725BABEA9006D5E1A /* Error.swift */; };
 		E9431DB025BABEEC006D5E1A /* IndicatorsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */; };
@@ -174,6 +185,17 @@
 		E905807D25BBCE72000659D1 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		E905808A25BBD0E9000659D1 /* MonitorListViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorListViewModelDelegate.swift; sourceTree = "<group>"; };
 		E90ED0F725C27E560041FBB8 /* GoogleTranslateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTranslateManager.swift; sourceTree = "<group>"; };
+		E90ED14A25C286FF0041FBB8 /* TiingoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiingoAPIManager.swift; sourceTree = "<group>"; };
+		E90ED15225C2881B0041FBB8 /* ApiBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBase.swift; sourceTree = "<group>"; };
+		E90ED15725C325610041FBB8 /* TechportAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechportAPIManager.swift; sourceTree = "<group>"; };
+		E90ED16525C327190041FBB8 /* TechportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechportService.swift; sourceTree = "<group>"; };
+		E90ED16D25C327230041FBB8 /* TechportServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechportServiceProtocol.swift; sourceTree = "<group>"; };
+		E90ED19725C32BBD0041FBB8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		E90ED1A025C32C140041FBB8 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
+		E90ED1A825C32C560041FBB8 /* ProjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
+		E90ED1B025C32CD80041FBB8 /* ProjectDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetail.swift; sourceTree = "<group>"; };
+		E90ED1B525C32D040041FBB8 /* ProjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectProtocol.swift; sourceTree = "<group>"; };
+		E90ED1C125C32E700041FBB8 /* ProjectDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailResponse.swift; sourceTree = "<group>"; };
 		E915CDE825BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		E915CDED25BDF62C002786C0 /* ListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		E915CDF225BDF673002786C0 /* ListViewController+SkeletonTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+SkeletonTableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -245,7 +267,7 @@
 		E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		E9431D8D25BABBA1006D5E1A /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		E9431D9225BABC4E006D5E1A /* IndicatorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsResponse.swift; sourceTree = "<group>"; };
-		E9431D9A25BABDD7006D5E1A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E9431D9A25BABDD7006D5E1A /* MindicatorAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindicatorAPIManager.swift; sourceTree = "<group>"; };
 		E9431DA225BABE57006D5E1A /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		E9431DA725BABEA9006D5E1A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsService.swift; sourceTree = "<group>"; };
@@ -361,6 +383,112 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		E90ED15C25C326350041FBB8 /* Mindicator */ = {
+			isa = PBXGroup;
+			children = (
+				E9C0F8B025C1FFAA001F3C4F /* Response */,
+				E9431D8D25BABBA1006D5E1A /* Indicator.swift */,
+			);
+			path = Mindicator;
+			sourceTree = "<group>";
+		};
+		E90ED15D25C326400041FBB8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E98C913025BB6C17006BF9EC /* SessionModel.swift */,
+				E9431D2A25BAA4C0006D5E1A /* UserModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E90ED15E25C326550041FBB8 /* Nasa */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED19625C32B910041FBB8 /* Techport */,
+			);
+			path = Nasa;
+			sourceTree = "<group>";
+		};
+		E90ED15F25C3265B0041FBB8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E9431DA725BABEA9006D5E1A /* Error.swift */,
+				E9328BF325BB346D0014DAE7 /* Message.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E90ED16325C326ED0041FBB8 /* Mindicator */ = {
+			isa = PBXGroup;
+			children = (
+				E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */,
+				E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */,
+			);
+			path = Mindicator;
+			sourceTree = "<group>";
+		};
+		E90ED16425C326F70041FBB8 /* Nasa */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED1BC25C32DB60041FBB8 /* Techport */,
+			);
+			path = Nasa;
+			sourceTree = "<group>";
+		};
+		E90ED17225C329440041FBB8 /* Nasa */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED15725C325610041FBB8 /* TechportAPIManager.swift */,
+			);
+			path = Nasa;
+			sourceTree = "<group>";
+		};
+		E90ED19625C32B910041FBB8 /* Techport */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED19F25C32C030041FBB8 /* Response */,
+				E90ED19725C32BBD0041FBB8 /* Project.swift */,
+				E90ED1B025C32CD80041FBB8 /* ProjectDetail.swift */,
+				E90ED1B525C32D040041FBB8 /* ProjectProtocol.swift */,
+			);
+			path = Techport;
+			sourceTree = "<group>";
+		};
+		E90ED19F25C32C030041FBB8 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED1C125C32E700041FBB8 /* ProjectDetailResponse.swift */,
+				E90ED1A825C32C560041FBB8 /* ProjectResponse.swift */,
+				E90ED1A025C32C140041FBB8 /* ProjectsResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E90ED1BA25C32D9A0041FBB8 /* Mindicator */ = {
+			isa = PBXGroup;
+			children = (
+				E9431D9A25BABDD7006D5E1A /* MindicatorAPIManager.swift */,
+			);
+			path = Mindicator;
+			sourceTree = "<group>";
+		};
+		E90ED1BB25C32DA10041FBB8 /* Tiingo */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED14A25C286FF0041FBB8 /* TiingoAPIManager.swift */,
+			);
+			path = Tiingo;
+			sourceTree = "<group>";
+		};
+		E90ED1BC25C32DB60041FBB8 /* Techport */ = {
+			isa = PBXGroup;
+			children = (
+				E90ED16525C327190041FBB8 /* TechportService.swift */,
+				E90ED16D25C327230041FBB8 /* TechportServiceProtocol.swift */,
+			);
+			path = Techport;
+			sourceTree = "<group>";
+		};
 		E915CDE725BDF5BD002786C0 /* Controller+Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +547,7 @@
 				E931CFF625BF353D00A4FF49 /* MessagesLocalizable.swift */,
 				E9431D7325BAB9F0006D5E1A /* ViewModelState.swift */,
 				E9328BB925BB2B250014DAE7 /* XibName.swift */,
+				E90ED15225C2881B0041FBB8 /* ApiBase.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -657,12 +786,10 @@
 		E9431D2925BAA4B3006D5E1A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E9C0F8B025C1FFAA001F3C4F /* Response */,
-				E9431DA725BABEA9006D5E1A /* Error.swift */,
-				E9431D8D25BABBA1006D5E1A /* Indicator.swift */,
-				E9328BF325BB346D0014DAE7 /* Message.swift */,
-				E98C913025BB6C17006BF9EC /* SessionModel.swift */,
-				E9431D2A25BAA4C0006D5E1A /* UserModel.swift */,
+				E90ED15F25C3265B0041FBB8 /* Common */,
+				E90ED15E25C326550041FBB8 /* Nasa */,
+				E90ED15C25C326350041FBB8 /* Mindicator */,
+				E90ED15D25C326400041FBB8 /* User */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -710,7 +837,9 @@
 		E9431D9825BABDB8006D5E1A /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E9431D9A25BABDD7006D5E1A /* APIManager.swift */,
+				E90ED1BA25C32D9A0041FBB8 /* Mindicator */,
+				E90ED17225C329440041FBB8 /* Nasa */,
+				E90ED1BB25C32DA10041FBB8 /* Tiingo */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -718,8 +847,8 @@
 		E9431D9925BABDBD006D5E1A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E9431DAF25BABEEC006D5E1A /* IndicatorsService.swift */,
-				E905806C25BBCDAB000659D1 /* IndicatorServiceProtocol.swift */,
+				E90ED16325C326ED0041FBB8 /* Mindicator */,
+				E90ED16425C326F70041FBB8 /* Nasa */,
 				E9431DA225BABE57006D5E1A /* RequestService.swift */,
 			);
 			path = Services;
@@ -1104,6 +1233,7 @@
 				E9E7FC8D25C24D0C00F17F2D /* HistoricalValuesConfigurator.swift in Sources */,
 				E9431D6E25BAB992006D5E1A /* ListViewModelDelegate.swift in Sources */,
 				E9431D8E25BABBA1006D5E1A /* Indicator.swift in Sources */,
+				E90ED1B625C32D040041FBB8 /* ProjectProtocol.swift in Sources */,
 				E9194E6F25BB4FE400B411A0 /* DetailIndicatorViewModel .swift in Sources */,
 				E905801B25BBB5D1000659D1 /* CustomView.swift in Sources */,
 				E9431CAA25BA8490006D5E1A /* UIColor+Brand.swift in Sources */,
@@ -1115,8 +1245,11 @@
 				E9431CC325BA8753006D5E1A /* AppCoordinator.swift in Sources */,
 				E98C915C25BB762D006BF9EC /* NavigationConfigureProtocol.swift in Sources */,
 				E905802825BBBBDD000659D1 /* Date+Format.swift in Sources */,
+				E90ED1B125C32CD80041FBB8 /* ProjectDetail.swift in Sources */,
 				E9194E6625BB4D8600B411A0 /* DetailIndicatorViewController.swift in Sources */,
 				E91BC57125BD452000147B56 /* DetailIndicatorFieldView.swift in Sources */,
+				E90ED16625C327190041FBB8 /* TechportService.swift in Sources */,
+				E90ED19825C32BBD0041FBB8 /* Project.swift in Sources */,
 				E94C50FB25BE9A530061F84D /* String+Format.swift in Sources */,
 				E9E7FC8425C249EF00F17F2D /* HistoricalValuesViewController.swift in Sources */,
 				E9431C7725BA7D9F006D5E1A /* LoginViewModel.swift in Sources */,
@@ -1127,26 +1260,33 @@
 				E9194E9125BB541E00B411A0 /* ListCoordinatorProtocol.swift in Sources */,
 				E9328BA625BB25780014DAE7 /* ConnectionStatus.swift in Sources */,
 				E98C915125BB75E9006BF9EC /* BarButtonItemTag.swift in Sources */,
+				E90ED16E25C327230041FBB8 /* TechportServiceProtocol.swift in Sources */,
 				E9431C7125BA7D93006D5E1A /* LoginViewController.swift in Sources */,
+				E90ED15825C325610041FBB8 /* TechportAPIManager.swift in Sources */,
 				E905807225BBCDDE000659D1 /* DetailIndicatorViewModelProtocol.swift in Sources */,
 				E9431CF925BA9B3E006D5E1A /* ViewModelDelegate.swift in Sources */,
 				E9431D4A25BAB2AF006D5E1A /* ListViewController.swift in Sources */,
+				E90ED1A925C32C560041FBB8 /* ProjectResponse.swift in Sources */,
 				E905806D25BBCDAB000659D1 /* IndicatorServiceProtocol.swift in Sources */,
 				E9431D5425BAB525006D5E1A /* LoginCoordinator.swift in Sources */,
 				E9E7FCA525C2502200F17F2D /* DetailIndicatorCoordinator.swift in Sources */,
 				E9431DA825BABEA9006D5E1A /* Error.swift in Sources */,
 				E9431C9125BA8037006D5E1A /* NibNameIdentifiable.swift in Sources */,
+				E90ED1C225C32E700041FBB8 /* ProjectDetailResponse.swift in Sources */,
 				E9328BBA25BB2B250014DAE7 /* XibName.swift in Sources */,
 				E9194E8C25BB541300B411A0 /* ListCoordinator.swift in Sources */,
 				E9431C9825BA8186006D5E1A /* InputWithIconView.swift in Sources */,
 				E9431D6625BAB80C006D5E1A /* ListViewModel.swift in Sources */,
 				E9431DB025BABEEC006D5E1A /* IndicatorsService.swift in Sources */,
 				E9431CF425BA9B24006D5E1A /* ViewModelProtocol.swift in Sources */,
+				E90ED1A125C32C140041FBB8 /* ProjectsResponse.swift in Sources */,
 				E9431BE525BA4222006D5E1A /* SceneDelegate.swift in Sources */,
-				E9431D9B25BABDD7006D5E1A /* APIManager.swift in Sources */,
+				E9431D9B25BABDD7006D5E1A /* MindicatorAPIManager.swift in Sources */,
 				E98C913125BB6C17006BF9EC /* SessionModel.swift in Sources */,
 				E915CDF825BDF6B4002786C0 /* ListViewController+UISearchControllerDelegate.swift in Sources */,
 				E9E7FCAA25C2503300F17F2D /* DetailIndicatorCoordinatorProtocol.swift in Sources */,
+				E90ED14B25C286FF0041FBB8 /* TiingoAPIManager.swift in Sources */,
+				E90ED15325C2881B0041FBB8 /* ApiBase.swift in Sources */,
 				E9431D2B25BAA4C0006D5E1A /* UserModel.swift in Sources */,
 				E915CDE925BDF5EA002786C0 /* ListViewController+UITableViewDataSource.swift in Sources */,
 			);

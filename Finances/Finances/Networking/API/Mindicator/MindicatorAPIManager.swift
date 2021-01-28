@@ -7,7 +7,7 @@
 
 import Alamofire
 
-enum APIRouter: URLRequestConvertible {
+enum MindicatorAPIRouter: URLRequestConvertible {
 
     case getIndicators
     case getHistoricalIndicatorByType(_ type: String)
@@ -50,14 +50,10 @@ enum APIRouter: URLRequestConvertible {
     }
 
     func asURLRequest() throws -> URLRequest {
-        let url = try Config.apiBaseUrl.asURL().appendingPathComponent(path)
+        let url = try ApiBase.mindicator.rawValue.asURL().appendingPathComponent(path)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest = try encoding.encode(urlRequest, with: parameters)
         return urlRequest
     }
-}
-
-struct Config {
-    static let apiBaseUrl = "https://www.mindicador.cl"
 }
